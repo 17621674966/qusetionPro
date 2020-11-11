@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "添加大类";
+}
+    <form class="layui-form layui-form-pane" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">大类名称</label>
+            <div class="layui-input-block">
+                <select id="ddl_Type" name="ddl_Type">
+                    <option value="">请选择</option>
+                    @foreach (var item in ViewBag.TypeMain)
+                    {
+                        <option value="@item.RowGuid">@item.Type</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">小类名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="Type" autocomplete="off" id="txt_Type" placeholder="请输入大类名称" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">排序值</label>
+            <div class="layui-input-block">
+                <input type="number" name="SortNumber" id="txt_SortNumber" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">备注</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入备注" id="txt_Note" class="layui-textarea"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn" id="btn_ok">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="/layui/layui.js"></script>
+        <script type="text/javascript">
+
+            layui.config({
+                base: "/js/"
+            }).use(['form', 'layer', 'jquery'], function () {
+                var form = layui.form,
+                    layer = layui.layer,
+                    $ = layui.jquery;
+
+                $("#btn_ok").click(function () {
+                    var type = $("#txt_Type").val();
+                    var mainType = $("#ddl_Type").val();
+                    var sortNumber = $("#txt_SortNumber").val();
+                    var note = $("#txt_Note").val();
+
+                    if (type == "") {
+                        layer.msg("请输入大类类型!");
+                        return;
+                    }
+
+                    var obj = new Object();
+                    obj.ItemName = type;
+                    obj.SortNumber = sortNumber;
+                    obj.Note = note;
+                    obj.TypeGuid = mainType;
+
+                    GetDataByJson('/TypeItem/Add/', 'Post', { obj: JSON.stringify(obj) }, function (res) {
+                        if (res.Code == 200) {
+                            layer.msg("添加成功!");
+                        }
+                        else {
+                            layer.msg(res.Message);
+                        }
+
+                    })
+
+                })
+
+
+
+            })
+        </script>
+
+
+    </form>

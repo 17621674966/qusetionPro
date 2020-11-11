@@ -1,0 +1,326 @@
+﻿
+
+
+@{
+    ViewBag.Title = "用户列表";
+}
+<!--上面的查询按钮-->
+<blockquote class="layui-elem-quote layui-text">
+
+    <form class="layui-form" action="">
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">姓名/昵称</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="txt_Name" id="txt_Name" autocomplete="off" placeholder="请输入姓名/昵称查询" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">发布人</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="txt_CompanyName" id="txt_CompanyName" autocomplete="off" placeholder="请输入发布人、发布公司" class="layui-input">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">审核状态</label>
+                <div class="layui-input-inline">
+                    <select id="ddl_AuditStatus" name="ddl_AuditStatus">
+                        <option value="">所有状态</option>
+                        <option value="-1">未提交认证资料</option>
+                        <option value="0">待审核</option>
+                        <option value="1">审核通过</option>
+                        <option value="2">审核不通过</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">账号状态</label>
+                <div class="layui-input-inline">
+                    <select id="ddl_IsEnable" name="ddl_IsEnable">
+                        <option value=-1>所有状态</option>
+                        <option value=0>不可用</option>
+                        <option value=1>可用</option>
+
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn" id="btn_ok">查询</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</blockquote>
+
+<table class="layui-hide" id="grid" lay-filter="grid"></table>
+<script type="text/html" id="toolBarDemo">
+    <div class="layui-btn-container">
+
+        <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="setUnEnable">置为不可用</button>
+        <button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="setEnable">置为可用</button>
+    </div>
+</script>
+
+<script type="text/html" id="auditStatus">
+
+    {{#  if(d.IsAuth ==-1){ }}
+
+    <button class="layui-btn layui-btn-normal layui-btn-xs">
+        <i class="layui-icon">&#x1006;</i>未提交资料
+    </button>
+    {{#  } }}
+
+    {{#  if(d.IsAuth ==0){ }}
+
+    <button class="layui-btn layui-btn-primary layui-btn-xs">
+        <i class="layui-icon">&#x1006;</i>未审核
+    </button>
+    {{#  } }}
+    {{#  if(d.IsAuth ==1){ }}
+
+    <button class="layui-btn layui-btn-xs">
+        <i class="layui-icon">&#xe605;</i>审核通过
+    </button>
+    {{#  } }}
+    {{#  if(d.IsAuth ==2){ }}
+
+    <button class="layui-btn layui-btn-xs layui-btn-danger">
+        审核不通过
+    </button>
+    {{#  } }}
+
+
+</script>
+
+
+
+<script type="text/html" id="isEnable">
+
+    {{#  if(d.IsEnable ==true){ }}
+
+    <button class="layui-btn layui-btn-normal layui-btn-xs">
+        <i class="layui-icon">&#xe605;</i>可用
+    </button>
+    {{#  } }}
+
+    {{#  if(d.IsEnable ==false){ }}
+
+    <button class="layui-btn layui-btn-xs layui-btn-danger">
+        禁用
+    </button>
+    {{#  } }}
+    
+
+
+</script>
+
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail">查看</a>
+</script>
+
+
+<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.config({
+        base: "/js/"
+    }).use(['form', 'layer', 'jquery', 'table'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.jquery;
+        var table = layui.table;
+
+        table.render({
+            elem: '#grid'
+            , url: '/UserInfo/GetList/'
+            , page: true
+            , toolbar: "#toolBarDemo"
+            , method: 'POST'
+            , limit: 10
+            , limits: [10, 20, 30]
+            , event: true
+            , loading: true
+            , id: 'grid'
+            , cols: [[
+                { checkbox: true, title: '序号' }
+
+                , { align: 'center', width:80, title:'操作', toolbar: '#barDemo'}
+                , { field: 'Name', width: 120, title: '姓名' }
+                , { field: 'IsEnable', width: 110, title: '账号状态', toolbar: "#isEnable" }
+                , { field: 'AuditStatus', width: 110, title: '审核状态', toolbar: "#auditStatus" }
+                , { field: 'NickName', width: 150, title: '昵称' }
+                , { field: 'Tel', width: 180, title: '电话' }
+                , { field: 'CompanyName', width: 180, title: '所属公司' }
+                , { field: 'DeptName', width: 180, title: '部门' }
+                , { field: 'Position', width: 180, title: '职位' }
+                , { field: 'AddTimeStr', width: 180, title: '注册时间' }
+
+            ]]
+            , where: {
+                name: $("#txt_Name").val(),
+                companyName: $("#txt_CompanyName").val(),
+                auditStatus: $("#ddl_AuditStatus").val(),
+                isEnable: $("#ddl_IsEnable").val()
+
+            }
+
+        });
+
+
+        //toolBar事件
+        table.on('toolbar(grid)', function (obj) {
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+                case "setUnEnable":
+                    var data = checkStatus.data;
+
+                    layer.confirm("你确定要将选中的用户账号置为不可用么?", function () {
+                        if (data.length <= 0 || data.length > 1) {
+                            layer.msg("请选择一行数据!");
+                            return;
+                        }
+                        GetDataByJson('/UserInfo/SetUnEnable/', 'Post', { rowGuid: data[0].RowGuid }, function (res) {
+
+                            if (res.Code == 200) {
+                                layer.msg("置为不可用成功!");
+                                table.reload('grid', {
+                                    page: {
+                                        curr: 1 //重新从第 1 页开始
+                                    }
+                                    , where: {
+
+                                        name: $("#txt_Name").val(),
+                                        companyName: $("#txt_CompanyName").val(),
+                                        auditStatus: $("#ddl_AuditStatus").val(),
+                                        isEnable: $("#ddl_IsEnable").val()
+                                    }
+                                })
+                            }
+                            else {
+                                layer.msg(res.Message);
+                            }
+
+                        })
+
+                    })
+                    break;
+
+                case "setEnable":
+                    var data = checkStatus.data;
+
+                    layer.confirm("你确定要将选中的用户账号置为可用么?", function () {
+                        if (data.length <= 0 || data.length > 1) {
+                            layer.msg("请选择一行数据!");
+                            return;
+                        }
+                        GetDataByJson('/UserInfo/SetEnable/', 'Post', { rowGuid: data[0].RowGuid }, function (res) {
+
+                            if (res.Code == 200) {
+                                layer.msg("置为可用成功!");
+                                table.reload('grid', {
+                                    page: {
+                                        curr: 1 //重新从第 1 页开始
+                                    }
+                                    , where: {
+
+                                        name: $("#txt_Name").val(),
+                                        companyName: $("#txt_CompanyName").val(),
+                                        auditStatus: $("#ddl_AuditStatus").val(),
+                                        isEnable: $("#ddl_IsEnable").val()
+                                    }
+                                })
+                            }
+                            else {
+                                layer.msg(res.Message);
+                            }
+
+                        })
+
+                    })
+                    break;
+
+            }
+
+        })
+
+        table.on('tool(grid)', function (obj) {
+            var data = obj.data;
+            if (obj.event === 'detail') {
+
+                  var index =layer.open({
+                        type: 2
+                        , title: '用户认证审核'
+                      , content: '@Url.Action("Detail", "UserInfo")' + "?rowGuid=" + data.AuthGuid
+                        , area: ['1000px', '800px']
+                        , shade: 0.4 //不显示遮罩
+                        , end: function () {
+
+                            table.reload('grid', {
+                                page: {
+                                    curr: 1 //重新从第 1 页开始
+                                }
+                                , where: {
+                                    name: $("#txt_Name").val(),
+                                    companyName: $("#txt_CompanyName").val(),
+                                    auditStatus: $("#ddl_AuditStatus").val(),
+                                    isEnable: $("#ddl_IsEnable").val()
+
+                                }
+                            })
+
+                        }
+
+                  });
+                layer.full(index);
+
+
+            }
+        })
+        //点击查询
+        $("#btn_ok").click(function () {
+
+            table.reload('grid', {
+                page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+                , where: {
+                    name: $("#txt_Name").val(),
+                    companyName: $("#txt_CompanyName").val(),
+                    auditStatus: $("#ddl_AuditStatus").val(),
+                    isEnable: $("#ddl_IsEnable").val()
+
+                }
+            })
+        });
+
+
+    })
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
