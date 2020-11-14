@@ -1,11 +1,9 @@
-﻿using System;
-using System.Web.Http;
-using System.Web.Mvc;
-using Infrastructure;
+﻿using Infrastructure;
 using OpenAuth.App;
 using OpenAuth.App.Request;
-using OpenAuth.App.Response;
 using OpenAuth.Repository.Domain;
+using System;
+using System.Web.Http;
 
 namespace OpenAuth.Mvc.Controllers
 {

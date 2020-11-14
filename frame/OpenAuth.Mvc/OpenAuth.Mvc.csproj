@@ -148,8 +148,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ApplicationsController.cs" />
-    <Compile Include="Controllers\NeedsController.cs" />
-    <Compile Include="Controllers\InformationController.cs" />
     <Compile Include="Controllers\ResourcesController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
@@ -162,10 +160,6 @@
     <Compile Include="Controllers\OrgManagerController.cs" />
     <Compile Include="Controllers\RelevanceManagerController.cs" />
     <Compile Include="Controllers\RoleManagerController.cs" />
-    <Compile Include="Controllers\TypeItemController.cs" />
-    <Compile Include="Controllers\TypeMainController.cs" />
-    <Compile Include="Controllers\UserHomeController.cs" />
-    <Compile Include="Controllers\UserInfoController.cs" />
     <Compile Include="Controllers\UserManagerController.cs" />
     <Compile Include="Controllers\UserSessionController.cs" />
     <Compile Include="Models\JobjectModelBinder.cs" />
@@ -1233,20 +1227,9 @@
     <Content Include="Views\Resources\Index.cshtml" />
     <Content Include="Views\Resources\Assign.cshtml" />
     <Content Include="Views\FlowSchemes\Preview.cshtml" />
-    <Content Include="Views\TypeMain\Index.cshtml" />
-    <Content Include="Views\TypeMain\Add.cshtml" />
-    <Content Include="Views\TypeMain\Edit.cshtml" />
-    <Content Include="Views\TypeItem\Index.cshtml" />
-    <Content Include="Views\TypeItem\Add.cshtml" />
-    <Content Include="Views\TypeItem\Edit.cshtml" />
-    <Content Include="Views\Information\Add.cshtml" />
-    <Content Include="Views\Information\AuditListIndex.cshtml" />
-    <Content Include="Views\Information\Detail.cshtml" />
     <Content Include="Views\Needs\Add.cshtml" />
     <Content Include="Views\Needs\AuditListIndex.cshtml" />
     <Content Include="Views\Needs\Detail.cshtml" />
-    <Content Include="Views\UserInfo\UserList.cshtml" />
-    <Content Include="Views\UserInfo\Detail.cshtml" />
     <Content Include="ueditor\net\fileUp.ashx" />
     <Content Include="ueditor\net\getContent.ashx" />
     <Content Include="ueditor\net\getMovie.ashx" />
@@ -1259,7 +1242,6 @@
   <ItemGroup>
     <Folder Include="layui\lay\modules\mobile\" />
     <Folder Include="ueditor\net\upload1\" />
-    <Folder Include="Views\UserHome\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -1272,7 +1254,7 @@
       <Name>Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\OpenAuth.App\OpenAuth.App.csproj">
-      <Project>{0bbf2d65-fffd-4272-b138-8ea4fb6fec48}</Project>
+      <Project>{0BBF2D65-FFFD-4272-B138-8EA4FB6FEC48}</Project>
       <Name>OpenAuth.App</Name>
     </ProjectReference>
     <ProjectReference Include="..\OpenAuth.Repository\OpenAuth.Repository.csproj">
