@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录</title>
+  <link href="Content/jquery-weui/dist/lib/weui.min.css" rel="stylesheet">
+  <link href="Content/jquery-weui/dist/demos/css/demos.css" rel="stylesheet">
+  <link href="Content/jquery-weui/dist/css/jquery-weui.css" rel="stylesheet">
+  <link href="Content/layui/css/layui.css" rel="stylesheet">
+  <link href="CSS/Base.css" rel="stylesheet">
+  <link href="CSS/WoYaoZhuCe.css" rel="stylesheet">
+</head>
+
+<body>
+  <!--最顶部的轮播图-->
+  <div class="layui-carousel" id="test10">
+    <div carousel-item="">
+      <div><img class="lunbo" src="Content/jquery-weui/dist/demos/images/11.png"></div>
+      <div><img class="lunbo" src="Content/jquery-weui/dist/demos/images/11.png"></div>
+      <div><img class="lunbo" src="Content/jquery-weui/dist/demos/images/11.png"></div>
+    </div>
+  </div>
+
+  <div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">账号</label></div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" id="name" type="text" placeholder="请输入系统分配的账号"">
+      </div>
+    </div>
+    
+    <div class="
+          weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">密码</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="pwd" type="text" placeholder="请输入密码"">
+      </div>
+    </div>
+   
+
+  </div>
+
+  <a href="
+            javascript:;" class="weui-btn weui-btn_primary" id="btn_Submit">登录</a>
+          <script src="Content/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+          <script src="Content/jquery-weui/dist/lib/fastclick.js"></script>
+          <script src="Content/jquery-weui/dist/js/jquery-weui.js"></script>
+          <script src="Content/layui/layui.js"></script>
+          <script>
+            layui.use(['carousel', 'form', 'layer'], function () {
+              var carousel = layui.carousel
+                , form = layui.form, layer = layui.layer
+              //图片轮播
+              carousel.render({
+                elem: '#test10'
+                , width: '100%'
+                , height: '100px'
+                , interval: 5000
+              });
+            })
+
+            $("#btn_Submit").click(function () {
+              var name = $("#name").val();
+              var pwd = $("#pwd").val();
+              if (name == "test" && pwd == "test") {
+                window.location.href = "home.html";
+              }
+              else {
+                $.toast("用户名或密码错误!", "forbidden");
+                return;
+              }
+            })
+          </script>
+</body>
+
+</html>

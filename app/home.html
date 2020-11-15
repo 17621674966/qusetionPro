@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>主页</title>
+  <link href="Content/jquery-weui/dist/lib/weui.min.css" rel="stylesheet">
+  <link href="Content/jquery-weui/dist/demos/css/demos.css" rel="stylesheet">
+  <link href="Content/jquery-weui/dist/css/jquery-weui.css" rel="stylesheet">
+  <link href="Content/layui/css/layui.css" rel="stylesheet">
+  <link href="CSS/Base.css" rel="stylesheet">
+  <link href="CSS/home.css" rel="stylesheet">
+</head>
+
+<body ontouchstart>
+  <div class="weui-tab">
+    <div class="weui-tab__bd">
+
+      <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+        <blockquote class="layui-elem-quote layui-text" style="margin-bottom: 50px">
+          请选择食品经营实体示范店认证评估评分标准模板
+        </blockquote>
+        <a href="Type1.html" class="weui-btn weui-btn_primary">适用于便利店</a>
+        <a href="javascript:;" class="weui-btn weui-btn_primary">适用于小型餐饮单位</a>
+        <a href="javascript:;" class="weui-btn weui-btn_primary">适用于中型饭店及以上</a>
+        <a href="javascript:;" class="weui-btn weui-btn_primary">适用于标准超市</a>
+        <a href="javascript:;" class="weui-btn weui-btn_primary">适用于大卖场</a>
+      </div>
+      <div id="tab2" class="weui-tab__bd-item">
+
+        <div class="wode_header">
+          <p>调查员张三</p>
+
+
+        </div>
+        <div class="wode_link">
+          <ul>
+
+            <li class="item_detail">
+              <a href="#">
+                <div class="item_img">
+                  <img src="Content/jquery-weui/dist/demos/images/1.png" alt="">
+                </div>
+                <div class="item_text">
+                  密码修改
+                </div>
+                <div class="more"> <span>&gt;</span></div>
+              </a>
+            </li>
+            <li class="item_detail">
+              <a href="#">
+                <div class="item_img">
+                  <img src="Content/jquery-weui/dist/demos/images/2.png" alt="">
+                </div>
+                <div class="item_text">
+                  调查历史
+                </div>
+                <div class="more"> <span>&gt;</span></div>
+              </a>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="weui-tabbar">
+      <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
+        <div class="weui-tabbar__icon">
+          <img src="Content/jquery-weui/dist/demos/images/icon_nav_button.png" alt="">
+        </div>
+        <p class="weui-tabbar__label">新增调查</p>
+      </a>
+      <a href="#tab2" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+          <img src="Content/jquery-weui/dist/demos/images/icon_nav_button.png" alt="">
+        </div>
+        <p class="weui-tabbar__label">调查历史</p>
+      </a>
+    </div>
+  </div>
+  <script src="Content/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+  <script src="Content/jquery-weui/dist/lib/fastclick.js"></script>
+  <script src="Content/jquery-weui/dist/js/jquery-weui.js"></script>
+  <script src="Content/layui/layui.js"></script>
+  <script>
+    layui.use(['form', 'layer'], function () {
+      var form = layui.form, layer = layui.layer
+    })
+
+  </script>
+</body>
+
+</html>

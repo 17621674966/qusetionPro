@@ -1,0 +1,3158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>适用于便利店</title>
+  <link href="Content/jquery-weui/dist/lib/weui.min.css" rel="stylesheet">
+  <link href="Content/jquery-weui/dist/demos/css/demos.css" rel="stylesheet">
+  <link href="Content/jquery-weui/dist/css/jquery-weui.css" rel="stylesheet">
+  <link href="Content/layui/css/layui.css" rel="stylesheet">
+  <link href="CSS/Base.css" rel="stylesheet">
+
+  <style>
+    .footContent{position:fixed;left: 0px;bottom: 0px;width: 100%;padding: 0px}
+
+.footContent a{display: inline-block;width: 30%;margin: 0px;border: 0px;padding: 0px;}
+
+.footContent1 a{display: inline-block;width: 49%;margin: 0px;border: 0px;padding: 0px;}
+
+#div3 h1{
+
+  color:white;background-color: aqua
+}
+
+
+#div3 h3{
+
+color:white;background-color:blueviolet
+}
+  </style>
+</head>
+
+<body ontouchstart>
+
+  <blockquote class="layui-elem-quote layui-text">
+    食品经营实体示范店认证评估评分标准（适用于便利店）
+  </blockquote>
+
+  <div id="div1">
+    <h1 style="margin-left:10px">被调查单位信息</h1>
+
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">单位名称</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="companyName" type="text" placeholder="请输入单位名称">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">店招名</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="dianZhaoName" type="text" placeholder="请输入店招名">
+        </div>
+      </div>
+
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">单位地址</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="address" type="text" placeholder="请输入单位地址">
+        </div>
+      </div>
+
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">经营项目</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="businessPro" type="text" placeholder="请输入经营项目">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">法定代表人</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="legalName" type="text" placeholder="请输入法定代表人">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">食品安全管理员</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="secutyName" type="text" placeholder="请输入食品安全管理员">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">联系电话</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="linkTel" type="text" placeholder="请输入联系电话">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">评估时间</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="checkTime" type="date" placeholder="请输入评估时间">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">所属区/商圈</label></div>
+        <div class="weui-cell__bd">
+          <select class="weui-select" name="belongArea" id="belongArea">
+
+            <option value="0">请选择</option>
+            <option value="黄浦区">黄浦区</option>
+            <option value="徐汇区">徐汇区</option>
+            <option value="长宁区">长宁区</option>
+            <option value="静安区">静安区</option>
+            <option value="普陀区">普陀区</option>
+            <option value="虹口区">虹口区</option>
+            <option value="杨浦区">杨浦区</option>
+            <option value="浦东新区">浦东新区</option>
+            <option value="闵行区">闵行区</option>
+            <option value="宝山区">宝山区</option>
+            <option value="嘉定区">嘉定区</option>
+            <option value="金山区">金山区</option>
+            <option value="松江区">松江区</option>
+            <option value="青浦区">青浦区</option>
+            <option value="奉贤区">奉贤区</option>
+            <option value="崇明区">崇明区</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">食品经营许可证号</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="code" type="text" placeholder="请输入食品经营许可证号">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">成立日期</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="buildTime" type="date" placeholder="请输入成立日期">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">人数</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="peopleCount" type="text" placeholder="请输入人数">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">面积</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="area" type="text" placeholder="请输入面积">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">类型</label></div>
+        <div class="weui-cell__bd">
+          <select class="weui-select" name="companyType" id="companyType">
+            <option value="0">请选择</option>
+            <option value="便利店">便利店</option>
+            <option value="小型餐饮单位">小型餐饮单位</option>
+            <option value="中型饭店及以上">中型饭店及以上</option>
+            <option value="标准超市">标准超市</option>
+            <option value="大卖场">大卖场</option>
+          </select>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+    <div style="margin-bottom:40px;height: 30px"></div>
+
+    <div class="footContent1">
+      <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn22">暂存</a>
+      <a href="#" class="weui-btn weui-btn_primary" id="btn1">下一步</a>
+    </div>
+  </div>
+
+
+  <div id="div2" style="display:none">
+    <h1 style="margin-left:10px;">否决项</h1>
+
+    <div class="weui-cells weui-cells_radio">
+      <h3 style="margin-top: 10px">否决项1(按许可的方式及范围从事食品经营活动；)</h3>
+      <label class="weui-cell weui-check__label" for="x11">
+        <div class="weui-cell__bd">
+          <p>符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" class="weui-check" name="radio1" id="x11" value="1">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <label class="weui-cell weui-check__label" for="x12">
+
+        <div class="weui-cell__bd">
+          <p>不符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" name="radio1" class="weui-check" id="x12" value="0">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" id="desc1" placeholder="请输入描述" rows="3"></textarea>
+        </div>
+      </div>
+
+      <!-- <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="uploaderFiles1">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="file1" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+
+
+    <div class="weui-cells weui-cells_radio">
+      <h3 style="margin-top: 20px">否决项2(不存在销售过期食品的现象；)</h3>
+      <label class="weui-cell weui-check__label" for="x13">
+        <div class="weui-cell__bd">
+          <p>符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" class="weui-check" name="radio2" id="x13" value="1">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <label class="weui-cell weui-check__label" for="x14">
+
+        <div class="weui-cell__bd">
+          <p>不符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" name="radio2" class="weui-check" id="x14" value="0">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" id="desc2" placeholder="请输入描述" rows="3"></textarea>
+        </div>
+      </div>
+
+      <!-- <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="uploaderFiles2">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="file2" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+
+
+
+
+    <div class="weui-cells weui-cells_radio">
+      <h3 style="margin-top: 20px">否决项3（现场检查未发现老鼠或有明显老鼠活动现象（比如鼠粪等）；）</h3>
+      <label class="weui-cell weui-check__label" for="x17">
+        <div class="weui-cell__bd">
+          <p>符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" class="weui-check" name="radio3" id="x17" value="1">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <label class="weui-cell weui-check__label" for="x18">
+
+        <div class="weui-cell__bd">
+          <p>不符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" name="radio3" class="weui-check" id="x18" value="0">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" id="des3" placeholder="请输入描述" rows="3"></textarea>
+        </div>
+      </div>
+
+      <!-- <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="uploaderFiles3">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="file3" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+
+
+    <div class="weui-cells weui-cells_radio">
+      <h3 style="margin-top: 20px">否决项4（连续2年监督抽检不存在发现该店因管理不善造成的销售不合格食品问题；）</h3>
+      <label class="weui-cell weui-check__label" for="x19">
+        <div class="weui-cell__bd">
+          <p>符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" class="weui-check" name="radio4" id="x19" value="1">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <label class="weui-cell weui-check__label" for="x20">
+
+        <div class="weui-cell__bd">
+          <p>不符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" name="radio4" class="weui-check" id="x20" value="0">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" id="desc4" placeholder="请输入描述" rows="3"></textarea>
+        </div>
+      </div>
+      <!-- <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="uploaderFiles4">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="file4" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+
+    <div class="weui-cells weui-cells_radio">
+      <h3 style="margin-top: 20px">否决项5（开展“放心食品超市自我承诺活动”，向社会公开放心食品自我承诺，并在经营场所醒目位置张贴承诺内容；）</h3>
+      <label class="weui-cell weui-check__label" for="x21">
+        <div class="weui-cell__bd">
+          <p>符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" class="weui-check" name="radio5" id="x21" value="1">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <label class="weui-cell weui-check__label" for="x22">
+
+        <div class="weui-cell__bd">
+          <p>不符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" name="radio5" class="weui-check" id="x22" value="0">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" id="desc5" placeholder="请输入描述" rows="3"></textarea>
+        </div>
+      </div>
+      <!-- <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="uploaderFiles5">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="file5" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <div style="margin-bottom:40px;height: 30px"></div>
+
+    <div class="footContent">
+      <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn2">上一步</a>
+      <a href="#" class="weui-btn weui-btn_primary" id="btn33">暂存</a>
+      <a href="#" class="weui-btn weui-btn_primary" id="btn3">下一步</a>
+    </div>
+
+
+  </div>
+
+
+  <div id="div3" style="display:none">
+    <h1 style="margin-top:20px;">1.信息公开透明（15分)</h1>
+    <h3 style="margin-top:20px">1.1实施“亮证经营”制度（5分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（1）未在超市显著位置设置食品安全信息公示栏的扣一分(分值：1分)</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade1" placeholder="请输入得分">
+        </div>
+      </div>
+
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck1" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck1">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="note1"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles1">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file1" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（2）未公示食品经营许可证扣1分；(分值：1分)</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="grade2" type="number" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck2" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" id="note2" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles2">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file2" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（3）未公示营业执照扣一分；(分值：1分)</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="grade3" type="number" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck3" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck3">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" id="desc3" placeholder="请输入描述" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles3">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file3" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（4）未公示全部食品经营人员健康证（原件，复印件或者电子版），少一人扣一分；(分值：1分)</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade4" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck4" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck4">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" id="desc4" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles4">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file4" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（5）未公示门店负责人和食品安全管理员的照片，姓名，培训证明（原件，复印件或者电子版），扣一分(分值：1分)</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade5" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck5" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck5">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" id="desc5" placeholder="请输入描述" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles5">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file5" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h3 style="margin-top:20px">1.2建立食品安全信息追溯制度（10分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（6）要求：设立食品安全信息追溯制度（制度包含但不限于上传信息核对、上传项目、上传负责人、上传期限。不能提供制度，扣2分；制度不齐全，扣1分；(分值：2分)</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade6" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck6" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck6">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc6"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles6">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file6" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（7）现场抽查4份送货单（品种从9大类20个产品中选取），核实是否将信息输入食品安全信息追溯平台（www.shfda.org）：少1个扣2分，扣完为止；不能提供现场查询的扣2分；(分值：8分)</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade7" placeholder="请输入得分">
+        </div>
+      </div>
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck7" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck7">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" id="desc7" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles7">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file7" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <h1 style="margin-top:20px">2.规范化管理（73分）</h1>
+
+    <h3 style="margin-top:20px">2.1建立食品安全管理制度（5分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（8）要求：建立食品安全管理制度：从业人员健康管理制度和培训管理制度、食品安全管理员制度、食品安全自检自查与报告制度、食品经营过程与控制制度、场所及设施设备清洗消毒和维修保养制度、进货查验和查验记录制度、主要食品和食用农产品安全信息追溯制度、食品安全信息公示制度。缺1项扣1分，扣满5分为止。；(分值：5分)</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade8" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck8" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck8">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc8"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles8">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file8" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3 style="margin-top:20px">2.2建立临近保质期食品提示制度（12分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（9）要求：建立临近保质期食品提示制度。无临近保质期食品提示制度扣2分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade9" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck9" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck9">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" id="desc9" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles9">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file9" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(10)未设置临保食品陈列区（柜）扣6分（常温2分，冷藏2分，冷冻2分）；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade10" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck10" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck10">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc10"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles10">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file10" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(11)临保食品未放入专区（柜）的，每件扣2分，扣完为止；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade11" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck11" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck11">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc11"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles11">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file11" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(12)未向消费者作出醒目的“临近保质期食品”提示，扣两分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade12" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck11" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck12">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc12"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles12">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file12" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h3 style="margin-top:20px">2.3建立过期食品销毁制度（18分）</h3>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(13)无过期食品销毁登记制度（制度包含但不限于销毁执行人，销毁方式，销毁产品信息，销毁记录方式，记录保存期限）扣2分；缺一项扣1分，扣完为止；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade13">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck13" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck13">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc13"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles13">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file13" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(14)随机抽取往期销毁记录（含影像），未保留记录（影像资料），每项扣2分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade14">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label class="weui-switch-cp">
+            <input id="notcheck14" class="weui-switch-cp__input" type="checkbox" id="notcheck14">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc14"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles14">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file14" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(15)记录显示，对超保食物的处理，未采取染色、毁形，每项扣2分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade15">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck15" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck15">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc15"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles15">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file15" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(16)销毁记录不全，或保留期限低于2年，每项扣2分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade16">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck16" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck16">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc16"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles16">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file16" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(17)退回供应商的，每项扣5分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" id="grade17" placeholder="请输入得分">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck17" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck17">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc17"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles17">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file17" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(18)要求：接监管部门通报等发现存在不安全食品的，及时落实下架停售、召回等措施。未能及时执行的扣3分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade18">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck18" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck18">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc18"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles18">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file18" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(19)执行但无记录扣2分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade19">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck19" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck19">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc19"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles19">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file19" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（20）记录保留期限低于两年的，扣1分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade20">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck20" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck20">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc20"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles20">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file20" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3 style="margin-top:20px">2.4个人卫生要求（14分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>(21)要求：食品从业人员应按照《上海市食品从业人员食品安全知识培训和考核管理办法》要求，经食品安全培训考核合格后上岗。
+        食品安全管理人员培训每年未达到60学时的，每人扣2分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade21">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label class="weui-switch-cp">
+            <input id="notcheck21" class="weui-switch-cp__input" type="checkbox" id="notcheck21">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc21"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles21">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file21" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(22)从业人员每年未达到40学时，每人扣1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade22">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck22" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck22">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc22"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles22">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file22" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(23)要求：从事接触直接入口食品工作的食品经营人员应持有有效健康检查合格证明。患有有碍食品安全的疾病的，每人扣2分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade23">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck23" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck23">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc23"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles23">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file23" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(24)未开展每日做好晨检工作，每次扣1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade24">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck24" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck24">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc24"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles24">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file24" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(25)未做到勤洗手、勤剪指甲、勤换衣服、勤理发、勤洗澡的，每人次扣1分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade25">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck25" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck25">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc25"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles25">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file25" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(26)加工食品时未穿戴清洁的工作服、工作帽，将头发梳理整齐并置于帽内的，每人次扣1分;</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade26">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck26" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck26">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc26"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles26">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file26" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(27)留长指甲、涂指甲油、戴外露饰物的，每人次扣1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade27">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck27" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck27">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc27"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="uploaderFiles">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file27" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(28)操作直接入口食品时未穿戴手套和口罩的，每人次扣1分</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade28">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck28" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck28">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc28"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles28">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file28" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3 style="margin-top:20px">2.5冷藏、冷冻和热链设备温度要求（6分）</h3>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>29)要求：冷藏、冷冻和热链设备温度应符合相应要求。冷藏不符合0℃～8℃的，每项次扣1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade29">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck29" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck29">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc29"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles29">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file29" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(30)冷冻不符合－20℃～－1℃的，每项次扣1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade30">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck30" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck30">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc30"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles30">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file30" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(31)加热保温柜不符合≥60℃的，每项次扣1分。</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade31">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck31" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck31">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc31"></textarea>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles31">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file31" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（32）无温度监控记录的，扣1分，记录不全的，扣1分</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade32">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck32" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck32">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc32"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles32">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file32" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <h3 style="margin-top:20px">2.6散装食品销售要求（10分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>(33)着地堆放的扣2分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade33">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck33" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck33">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc33"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles33">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file33" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(34)直至食品销售完毕前，原标签丢失的扣2分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade34">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck34" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck34">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc34"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles34">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file34" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(35)散装直接入口食品未设置隔离设施的，每项次扣1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade35">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck35" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck35">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc35"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles35">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file35" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(36)散装直接入口食品销售未由专人使用清洁的专用售货工具的，每项次扣1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade36">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck36" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck36">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc36"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles36">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file36" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（37）散装直接入口的热食易腐食品（熟食卤味）未放置在热食展示柜的，每项扣一分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade37">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck37" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck37">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc37"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles37">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file37" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（38）热食展示柜温度未达到≥60℃的，扣1分</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade38">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck38" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck38">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc38"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles38">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file38" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(39)无温度监控记录的，扣1分</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade39">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck39" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck39">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc39"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles39">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file39" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3 style="margin-top:20px">2.7环境卫生要求（8分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>(40)食品与非食品应尽量分开陈列，食品与有毒有害物品混合陈列，每次项1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade40">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck40" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck40">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc40"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles40">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file40" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="weui-cells weui-cells_form">
+      <h4>(41)食品销售和贮存区域地面、冷藏柜、冷冻柜、热柜、货架、天花板、照明灯、电子秤等未定期清洁保持整洁的，每项次扣1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade41">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck41" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck41">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc41"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles41">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file41" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(42)有食物残渣残留、飞虫，隔板和角落有污渍、私人物品的，每项次扣0.5分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade42">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck42" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck42">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc42"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles42">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file42" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(43)无必要的防鼠、防蝇、防蟑等措施的，扣2分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade43">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck43" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck43">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc43"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles43">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file43" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(44)消毒清洁用品敞开存放在销售直接入口食品处或者临近食品加工场所的，扣2分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade44">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck44" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck44">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc44"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles44">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file44" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 style="margin-top:20px">3.妥善处置投诉（12分）</h1>
+
+    <h3 style="margin-top:20px">3.1畅通消费投诉渠道（12分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>(45)要求：消费者食品安全投诉渠道。未设立投诉电话的扣1分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade45">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck45" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck45">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc45"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles45">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file45" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(46)未建立投诉处理机制的扣1分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade46">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck46" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck46">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc46"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles46">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file46" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(47)未设置专人接待消费者投诉的扣1分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade47">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck47" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck47">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc47"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles47">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file47" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（48）未做好消费者投诉和处置记录的，扣一分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade48">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck48" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck48">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc48"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles48">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file48" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(49)未能妥善处理消费者投诉的，扣1分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade49">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck49" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck49">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc49"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles49">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file49" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(50)存在食品安全隐患，未先行赔付的扣2分；；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade50">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck50" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck50">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc50"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles50">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file50" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(51)消费者投诉未在3天回复的，每项次扣2分；</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade51">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck51">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入描述" rows="3" id="desc51"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">图片上传:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles51">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file51" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:40px;height: 30px"></div>
+
+    <div class="footContent">
+      <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn4">上一步</a>
+      <a href="#" class="weui-btn weui-btn_primary" id="btn55">暂存</a>
+      <a href="#" class="weui-btn weui-btn_primary" id="btn5">下一步</a>
+    </div>
+  </div>
+
+
+  <div id="div4" style="display:none">
+
+    <div class="weui-cells weui-cells_form">
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">总分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="100" id="totalGrade">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="100" id="weGrade">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">不适用分值</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="" id="notcheckTotal">
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">总得分率</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="" id="totalPercent">
+        </div>
+      </div>
+
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">是否推荐“食品经营实体示范店”</div>
+        <div class="weui-cell__ft">
+          <label class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="isTuiJian">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+
+
+    </div>
+    <div style="margin-bottom:40px;height: 30px"></div>
+
+
+    <div class="footContent1">
+      <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn6">上一步</a>
+      <a href="#" class="weui-btn weui-btn_primary" id="btn7">提交</a>
+    </div>
+  </div>
+
+  <script src="Content/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+  <script src="Content/jquery-weui/dist/lib/fastclick.js"></script>
+  <script src="Content/jquery-weui/dist/js/jquery-weui.js"></script>
+  <script src="Content/layui/layui.js"></script>
+  <script>
+
+
+    //全局数组
+    var arr1 = new Array();
+    var arr2 = new Array();
+    var arr3 = new Array();
+    var arr4 = new Array();
+    var arr5 = new Array();
+    var arr6 = new Array();
+    var arr7 = new Array();
+    var arr8 = new Array();
+    var arr9 = new Array();
+    var arr10 = new Array();
+    var arr11 = new Array();
+    var arr12 = new Array();
+    var arr13 = new Array();
+    var arr14 = new Array();
+    var arr15 = new Array();
+    var arr16 = new Array();
+    var arr17 = new Array();
+    var arr18 = new Array();
+    var arr19 = new Array();
+    var arr20 = new Array();
+    var arr21 = new Array();
+    var arr22 = new Array();
+    var arr23 = new Array();
+    var arr24 = new Array();
+    var arr25 = new Array();
+    var arr26 = new Array();
+    var arr27 = new Array();
+    var arr28 = new Array();
+    var arr29 = new Array();
+    var arr30 = new Array();
+    var arr31 = new Array();
+    var arr32 = new Array();
+
+    var arr33 = new Array();
+    var arr34 = new Array();
+    var arr35 = new Array();
+    var arr36 = new Array();
+    var arr37 = new Array();
+    var arr38 = new Array();
+    var arr39 = new Array();
+    var arr40 = new Array();
+    var arr41 = new Array();
+    var arr42 = new Array();
+    var arr43 = new Array();
+    var arr44 = new Array();
+    var arr45 = new Array();
+    var arr46 = new Array();
+    var arr47 = new Array();
+    var arr48 = new Array();
+    var arr49 = new Array();
+    var arr50 = new Array();
+    var arr51 = new Array();
+
+
+    //全局变量
+    var companyName = "";
+    var dianZhaoName = "";
+    var address = "";
+    var businessPro = "";
+    var legalName = "";
+    var secutyName = "";
+    var linkTel = "";
+    var checkTime = "";
+    var code = "";
+    var buildTime = "";
+    var peopleCount = "";
+    var area = "";
+    var companyType = "";
+    var belongArea = "";
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allowTypes = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];
+    // 1024KB，也就是 1MB  
+    var maxSize = 1024 * 20;
+    // 图片最大宽度  
+    var maxWidth = 10000;
+    // 最大上传图片数量  
+    var maxCount = 6;
+
+    //第二部分
+
+
+
+
+    layui.use(['form', 'layer'], function () {
+      var form = layui.form, layer = layui.layer
+
+
+    })
+
+    ///div1 的下一步
+    $("#btn1").click(function () {
+      companyName = $("#companyName").val();
+      dianZhaoName = $("#dianZhaoName").val();;
+      address = $("#address").val();;
+      businessPro = $("#businessPro").val();;
+      legalName = $("#legalName").val();;
+      secutyName = $("#secutyName").val();;
+      linkTel = $("#linkTel").val();;
+      checkTime = $("#checkTime").val();;
+      code = $("#code").val();;
+      buildTime = $("#buildTime").val();;
+      peopleCount = $("#peopleCount").val();;
+      area = $("#area").val();;
+      companyType = $("#companyType").val();;
+      belongArea = $("#belongArea").val();;
+      // if (companyName == "") {
+      //   $.toptip('单位名称不能为空', 'error');
+      //   return;
+      // }
+
+      // if (dianZhaoName == "") {
+      //   $.toptip('店招名不能为空', 'error');
+      //   return;
+      // }
+
+      // if (address == "") {
+      //   $.toptip('单位地址不能为空', 'error');
+      //   return;
+      // }
+
+
+      // if (linkTel == "") {
+      //   $.toptip('联系电话不能为空', 'error');
+      //   return;
+      // }
+
+      // if (code == "") {
+      //   $.toptip('食品经营许可证号不能为空', 'error');
+      //   return;
+      // }
+
+      // if (companyType == "0") {
+      //   $.toptip('类型不能为空', 'error');
+      //   return;
+      // }
+      $("#div1").hide();
+      $("#div2").show();
+    })
+
+    //图片上传处理
+
+
+    function uploadFilefun(ojg) {
+
+      var num = ojg.id.charAt((ojg.id).length - 1);
+      var files = ojg.files;
+
+      for (var i = 0, len = files.length; i < len; i++) {
+        var file = files[i];
+
+        var reader = new FileReader();
+
+        // 判断图片类型 
+        if (allowTypes.indexOf(file.type) === -1) {
+          alert("该类型不允许上传！", "警告！");
+          return;
+        }
+
+        //判断文件大小
+        // if (file.size > maxSize) {
+        //   alert("图片太大，不允许上传", "警告！");
+        //   return;   
+        // }
+
+        //判断上传的图片的张数
+        if ($('#z_uploaderFiles1').length >= maxCount) {
+
+          alert("最多只能上传" + maxCount + "张图片！", "警告！");
+          return;
+        }
+
+        //在这里对图片进行压缩
+        reader.readAsDataURL(file);
+        //fileArr.push(file);
+        reader.onload = function (e) {
+          var img = new Image();
+          img.src = e.target.result;
+          img.onload = function () {
+            // 不要超出最大宽度  
+            var w = Math.min(maxWidth, img.width);
+            // 高度按比例计算  
+            var h = img.height * (w / img.width);
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            // 设置 canvas 的宽度和高度  
+            canvas.width = w;
+            canvas.height = h;
+            ctx.drawImage(img, 0, 0, w, h);
+            var base64 = canvas.toDataURL('image/jpeg', 0.8);
+
+
+
+
+            // 插入到预览区  
+            $preview = $('<li class="weui-uploader__file weui-uploader__file_status" style="background-image:url(' + img.src + ')"><div class="weui-uploader__file-content">0%</div></li>');
+            $('#z_uploaderFiles' + num + '').append($preview);
+
+            $preview.removeClass('weui-uploader__file_status');
+
+          };
+
+
+        };
+
+      }
+
+      //批量将文件上传到后台
+      //定义一个formData来传递数据
+      var formData = new FormData();
+      for (var i = 0; i < files.length; i++) {
+        formData.append('file[]', files[i]);
+      }
+
+
+      $.ajax({
+        url: "http://localhost:7071/FileUpload/UploadFile",
+        type: 'Post',
+        //开始请求
+        beforeSend: function () {
+          $(".weui-loadmore").show();
+          $("#btn_ok").text("正在上传图片");
+        },
+
+        //结束请求
+        complete: function () {
+          $(".weui-loadmore").hide();
+
+        },
+        data: formData,
+        contentType: false,
+        processData: false,
+        cache: false,
+        success: function (data) {
+
+          if (data.Code == 200) {
+            if (num == 1) { arr1.push(data.Obj.FilePath + ";"); }
+            if (num == 2) { arr2.push(data.Obj.FilePath + ";"); }
+            if (num == 3) { arr3.push(data.Obj.FilePath + ";"); }
+            if (num == 4) { arr4.push(data.Obj.FilePath + ";"); }
+            if (num == 5) { arr5.push(data.Obj.FilePath + ";"); }
+            if (num == 6) { arr6.push(data.Obj.FilePath + ";"); }
+            if (num == 7) { arr7.push(data.Obj.FilePath + ";"); }
+            if (num == 8) { arr8.push(data.Obj.FilePath + ";"); }
+            if (num == 9) { arr9.push(data.Obj.FilePath + ";"); }
+            if (num == 10) { arr10.push(data.Obj.FilePath + ";"); }
+            if (num == 11) { arr11.push(data.Obj.FilePath + ";"); }
+            if (num == 12) { arr12.push(data.Obj.FilePath + ";"); }
+            if (num == 13) { arr13.push(data.Obj.FilePath + ";"); }
+            if (num == 14) { arr14.push(data.Obj.FilePath + ";"); }
+            if (num == 15) { arr15.push(data.Obj.FilePath + ";"); }
+            if (num == 16) { arr16.push(data.Obj.FilePath + ";"); }
+            if (num == 17) { arr17.push(data.Obj.FilePath + ";"); }
+            if (num == 18) { arr18.push(data.Obj.FilePath + ";"); }
+
+            if (num == 19) { arr19.push(data.Obj.FilePath + ";"); }
+            if (num == 20) { arr20.push(data.Obj.FilePath + ";"); }
+            if (num == 21) { arr21.push(data.Obj.FilePath + ";"); }
+            if (num == 22) { arr22.push(data.Obj.FilePath + ";"); }
+            if (num == 23) { arr23.push(data.Obj.FilePath + ";"); }
+            if (num == 24) { arr24.push(data.Obj.FilePath + ";"); }
+            if (num == 25) { arr25.push(data.Obj.FilePath + ";"); }
+            if (num == 26) { arr26.push(data.Obj.FilePath + ";"); }
+            if (num == 27) { arr27.push(data.Obj.FilePath + ";"); }
+            if (num == 28) { arr28.push(data.Obj.FilePath + ";"); }
+            if (num == 29) { arr29.push(data.Obj.FilePath + ";"); }
+            if (num == 30) { arr30.push(data.Obj.FilePath + ";"); }
+            if (num == 31) { arr31.push(data.Obj.FilePath + ";"); }
+            if (num == 32) { arr32.push(data.Obj.FilePath + ";"); }
+            if (num == 33) { arr33.push(data.Obj.FilePath + ";"); }
+            if (num == 34) { arr34.push(data.Obj.FilePath + ";"); }
+
+            if (num == 35) { arr35.push(data.Obj.FilePath + ";"); }
+            if (num == 36) { arr36.push(data.Obj.FilePath + ";"); }
+            if (num == 37) { arr37.push(data.Obj.FilePath + ";"); }
+            if (num == 38) { arr38.push(data.Obj.FilePath + ";"); }
+            if (num == 39) { arr39.push(data.Obj.FilePath + ";"); }
+            if (num == 40) { arr40.push(data.Obj.FilePath + ";"); }
+
+            if (num == 41) { arr41.push(data.Obj.FilePath + ";"); }
+            if (num == 42) { arr42.push(data.Obj.FilePath + ";"); }
+            if (num == 43) { arr43.push(data.Obj.FilePath + ";"); }
+            if (num == 44) { arr44.push(data.Obj.FilePath + ";"); }
+            if (num == 45) { arr45.push(data.Obj.FilePath + ";"); }
+            if (num == 46) { arr46.push(data.Obj.FilePath + ";"); }
+            if (num == 47) { arr47.push(data.Obj.FilePath + ";"); }
+            if (num == 48) { arr48.push(data.Obj.FilePath + ";"); }
+            if (num == 49) { arr49.push(data.Obj.FilePath + ";"); }
+            if (num == 50) { arr50.push(data.Obj.FilePath + ";"); }
+            if (num == 51) { arr51.push(data.Obj.FilePath + ";"); }
+
+
+            $.toast("上传成功", "text");
+          }
+          else { $.toptip(data.Message); }
+
+
+        },
+        error: function (xhr, type) {
+          $.toptip('上传图片失败!', 'warning');
+          return;
+        }
+      });
+
+    }
+
+
+
+
+
+
+
+
+    $("#btn2").click(function () {
+
+
+      $("#div2").hide();
+      $("#div1").show();
+
+    })
+
+    $("#btn3").click(function () {
+      var foujue1 = -1;
+      var foujue2 = -1;
+      var foujue3 = -1;
+      var foujue4 = -1;
+      var foujue5 = -1;
+
+      var desc1 = "";
+      var desc2 = "";
+      var desc3 = "";
+      var desc4 = "";
+      var desc5 = "";
+
+
+      //赋值
+      foujue1 = $("input[name='radio1']:checked").val();
+      foujue2 = $("input[name='radio2']:checked").val();
+      foujue3 = $("input[name='radio3']:checked").val();
+      foujue4 = $("input[name='radio4']:checked").val();
+      foujue5 = $("input[name='radio5']:checked").val();
+
+      desc1 = $("#desc1").val();
+      desc2 = $("#desc2").val();
+      desc3 = $("#desc3").val();
+      desc4 = $("#desc4").val();
+      desc5 = $("#desc5").val();
+
+
+
+
+      return;
+      $("#div2").hide();
+
+      $("#div3").show();
+
+    })
+
+    $("#btn4").click(function () {
+      $("#div2").show();
+
+      $("#div3").hide();
+
+    })
+
+
+    $("#btn5").click(function () {
+
+      $("#div3").hide();
+      $("#div4").show();
+
+    })
+
+    $("#btn6").click(function () {
+
+      $("#div3").show();
+      $("#div4").hide();
+
+    })
+
+  </script>
+</body>
+
+</html>

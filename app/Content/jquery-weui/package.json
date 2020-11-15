@@ -1,0 +1,107 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "jquery-weui",
+        "scope": null,
+        "escapedName": "jquery-weui",
+        "name": "jquery-weui",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\工作\\项目\\2020\\MhghProject\\Code\\Demo"
+    ]
+  ],
+  "_from": "jquery-weui@latest",
+  "_id": "jquery-weui@1.2.1",
+  "_inCache": true,
+  "_location": "/jquery-weui",
+  "_nodeVersion": "8.4.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/jquery-weui_1.2.1_1532056768285_0.6551475230593766"
+  },
+  "_npmUser": {
+    "name": "lihongxun945",
+    "email": "lihongxun945@gmail.com"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "jquery-weui",
+    "scope": null,
+    "escapedName": "jquery-weui",
+    "name": "jquery-weui",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/jquery-weui/-/jquery-weui-1.2.1.tgz",
+  "_shasum": "c627ec07f1c6ef69494c15a8cdb97915cc738dee",
+  "_shrinkwrap": null,
+  "_spec": "jquery-weui",
+  "_where": "E:\\工作\\项目\\2020\\MhghProject\\Code\\Demo",
+  "author": {
+    "name": "言川"
+  },
+  "bugs": {
+    "url": "https://github.com/lihongxun945/jquery-weui/issues"
+  },
+  "dependencies": {},
+  "description": "为微信 Web 服务量身设计",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-ejs": "^2.1.1",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-header": "^1.7.1",
+    "gulp-less": "^3.0.5",
+    "gulp-uglify": "^1.5.3"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-oP+Ig4E3a2mOQz4M9E5YdfLP5gffnaf1D7BLUPV1DmaaM247U4Pou0SQLoRW65gXwyXcrttE0vdedXgBXKyC7w==",
+    "shasum": "c627ec07f1c6ef69494c15a8cdb97915cc738dee",
+    "tarball": "https://registry.npmjs.org/jquery-weui/-/jquery-weui-1.2.1.tgz",
+    "fileCount": 126,
+    "unpackedSize": 5965591,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbUVTACRA9TVsSAnZWagAAf9EP/iqJ2w16TP7YOBPGdn5s\nI3HLhXuZAQpxtoKmttQSt54RySy8rm4AaGTAQM6Pcse5K9BoEPpjXRevrTPX\nC5nv8wfLl/lujxg7EMfIRBEZ2lJ4n7czZhSRJJdXOt45fjPRHFMmjFardkrW\nrOPvc+Px0e6Tba56F6eorr9n0pbTlrBKx85gfjU/Krs/gtUXD5TWeU4KYlHy\nYhKf7xY0nldUkwgg/zOl4Z6lrFY3kXR3mjHLzszqnrgRx8wZkzN/ZdJY3wpR\netmCUtGwizymjojYK0FkTqtpWENxKq02fBM/gKZVNuj0p8CaiGNyGBmDEM+H\ngwlIKLILSI8HFn0GhsAI3oIyBGlcvqUtUq2iXrauMTB+G0RWCUMLpdc41yph\nJojbDgtAj61GsNDdcNIZeGpg7TDgm7B62tRyPzFU1MEi39qlGBG16l55hhhX\nPNE1ZDY+VfS/ZDefR2Jyg8WSbBNiL4esHRJ5ntY+0ntlTY7e0sNv6+yKSnhZ\no+k2EaVeZCdGWr4nx8BdM2sD0uG1yGySWknMQ0vk7G9snAy5kh04Hky3JSph\nbKi3QyKZjmhPA7xTD81qE881vTuR29CWra61sdKaxiqSbikFU+xb/xK4OyyP\nAclQhC/OAuIB6XZnRRAFEZ0QxJmHM2kqXCu84TGx5Eweuw1kythAOAHutpwp\nrhjJ\r\n=MebQ\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "gitHead": "8a7a8a888a3e7f70ab7bce6e218e10959b36d79f",
+  "homepage": "http://lihongxun945.github.io/jquery-weui/",
+  "keywords": [
+    "jQuery WeUI",
+    "weui",
+    "wechat",
+    "weixin",
+    "css",
+    "less",
+    "mobile",
+    "jQuery",
+    "Zepto"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "lihongxun945",
+      "email": "lihongxun945@gmail.com"
+    }
+  ],
+  "name": "jquery-weui",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lihongxun945/jquery-weui.git"
+  },
+  "scripts": {},
+  "version": "1.2.1"
+}

@@ -12,10 +12,13 @@
         /// </summary>
         public int Code { get; set; }
 
+        public object Obj { get; set; }
+
         public Response()
         {
             Code = 200;
             Message = "操作成功";
+            Obj = new object();
         }
     }
 

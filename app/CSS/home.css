@@ -1,0 +1,17 @@
+.detail{ overflow: hidden;width: 100% ;}
+.short_Name{ font-weight: bold}
+
+.detail span{float: right;padding-top: 5px}
+
+.wode_header{background:#505cdf;color: #fff }
+
+.wode_header p{text-align: center;padding: 20px;font-size: 20px}
+.wode_headerimg{width: 60px;margin:  0 auto}
+.wode_headerimg img{width: 60px;padding-bottom: 20px}
+
+.item_detail{ height: 40px;line-height: 40px;border-bottom: 1px dashed #fff;background-color: #fff;margin-bottom: 10px}
+.item_img{float: left}
+.item_text{float: left}
+.more{float: right;margin-right: 10px}
+.item_img img{height: 30px; padding: 5px}
+.item_text span{float: right;margin-right: 10px}
