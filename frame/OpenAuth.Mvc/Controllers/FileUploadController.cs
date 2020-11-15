@@ -41,7 +41,7 @@ namespace OpenAuth.Mvc.Controllers
                 var fileType = FileHelper.GetFileType(file.FileName) ;
                 var saveFileName = directoryPath + fileName+ fileType;
                 filePathList.Add(DirectoryPath+ fileName + fileType);  //返回路径
-                file.SaveAs(saveFileName);
+                file.SaveAs(saveFileName)  ;    
 
             }
 
