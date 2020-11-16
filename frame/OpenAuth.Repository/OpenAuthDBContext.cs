@@ -75,6 +75,10 @@ namespace OpenAuth.Repository
             modelBuilder.Configurations.Add(new FlowInstanceTransitionHistoryMap());
             modelBuilder.Configurations.Add(new FlowSchemeMap());
 
+            modelBuilder.Configurations.Add(new T_QsMainLogMap());
+
+            modelBuilder.Configurations.Add(new T_QsDetailLog1Map());
+
         }
     }
 }
