@@ -84,6 +84,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -150,6 +151,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ApplicationsController.cs" />
     <Compile Include="Controllers\FileUploadController.cs" />
+    <Compile Include="Controllers\QsMainLogController.cs" />
     <Compile Include="Controllers\ResourcesController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
@@ -1191,7 +1193,6 @@
     <Content Include="js\flow\fonts\iconflow.eot" />
     <Content Include="js\flow\fonts\iconflow.ttf" />
     <Content Include="js\flow\fonts\iconflow.woff" />
-    <None Include="Properties\PublishProfiles\default.pubxml" />
     <Content Include="userJs\preview.js" />
     <Content Include="userJs\forms.js" />
     <Content Include="Views\Home\git.cshtml" />
@@ -1246,6 +1247,7 @@
     <Folder Include="ueditor\net\upload1\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Views\FileUpload\" />
+    <Folder Include="Views\QsMainLog\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -1275,6 +1277,9 @@
   <ItemGroup>
     <Content Include="Views\ModuleManager\Index.cshtml" />
     <Content Include="Views\UserManager\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

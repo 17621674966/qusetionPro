@@ -200,6 +200,7 @@
     <Content Include="Areas\SSO\Scripts\modernizr-2.6.2.js" />
     <Content Include="Areas\SSO\Scripts\respond.js" />
     <Content Include="Areas\SSO\Scripts\respond.min.js" />
+    <Content Include="test.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -211,7 +212,7 @@
     </Content>
     <Content Include="Areas\SSO\Content\Site.css" />
     <Content Include="Areas\SSO\Scripts\_references.js" />
-    <None Include="Properties\PublishProfiles\webapi.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
