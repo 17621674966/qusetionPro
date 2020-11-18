@@ -28,10 +28,20 @@
         <a href="javascript:;" class="weui-btn weui-btn_primary">适用于标准超市</a>
         <a href="javascript:;" class="weui-btn weui-btn_primary">适用于大卖场</a>
       </div>
-      <div id="tab2" class="weui-tab__bd-item">
+
+      <div id="tab2" class="weui-tab__bd-item ">
+        <div class="weui-panel weui-panel_access">
+          <div class="weui-panel__hd">历史调查列表</div>
+          <div class="weui-panel__bd" id="loglist" style="margin-bottom: 50px">
+
+
+          </div>
+        </div>
+      </div>
+      <div id="tab3" class="weui-tab__bd-item">
 
         <div class="wode_header">
-          <p>调查员张三</p>
+          <p id="name"></p>
 
 
         </div>
@@ -39,7 +49,7 @@
           <ul>
 
             <li class="item_detail">
-              <a href="#">
+              <a href="#" onclick="midofyPassword()">
                 <div class="item_img">
                   <img src="Content/jquery-weui/dist/demos/images/1.png" alt="">
                 </div>
@@ -49,17 +59,7 @@
                 <div class="more"> <span>&gt;</span></div>
               </a>
             </li>
-            <li class="item_detail">
-              <a href="#">
-                <div class="item_img">
-                  <img src="Content/jquery-weui/dist/demos/images/2.png" alt="">
-                </div>
-                <div class="item_text">
-                  调查历史
-                </div>
-                <div class="more"> <span>&gt;</span></div>
-              </a>
-            </li>
+
 
 
           </ul>
@@ -77,7 +77,14 @@
         <div class="weui-tabbar__icon">
           <img src="Content/jquery-weui/dist/demos/images/icon_nav_button.png" alt="">
         </div>
-        <p class="weui-tabbar__label">调查历史</p>
+        <p class="weui-tabbar__label">历史调查</p>
+      </a>
+
+      <a href="#tab3" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+          <img src="Content/jquery-weui/dist/demos/images/icon_nav_button.png" alt="">
+        </div>
+        <p class="weui-tabbar__label">修改密码</p>
       </a>
     </div>
   </div>
@@ -88,7 +95,71 @@
   <script>
     layui.use(['form', 'layer'], function () {
       var form = layui.form, layer = layui.layer
+
+      $(function () {
+
+        $("#name").html("调查员：" + window.localStorage.getItem("userName"));
+
+        $.ajax({
+          type: "post",
+          url: "http://localhost:7071/QsMainLog/GetMainLog",
+          data: { userId: localStorage.getItem("userId") },
+          async: true,
+          dataType: "json",
+          contentType: 'application/x-www-form-urlencoded',
+          beforeSend: function () {
+            layer.load(); //上传loading
+          },
+          complete: function () {
+            layer.closeAll('loading');
+          },
+          success: function (data) {
+            if (data.Code == 200) {
+              if (data.count == 0) {
+                $("#loglist").empty();
+                $("#loglist").append("<h2 style='margin-top:30px;margin-left:20px'>暂无调查历史，去新增调查吧!</h2>");
+
+              }
+              else {
+                for (let index = 0; index < data.Obj.length; index++) {
+                  const element = data.Obj[index];
+
+                  var html = "";
+                  html += "<a class='weui-media-box weui-media-box_text'  href='Type1.html'>";
+                  html += "<h4 class='weui-media-box__title'>" + element.ComapnyName + "</h4>";
+                  html += " <p class='weui-media-box__desc' style='font-size:16px'>地址：" + element.Address + "</p>";
+                  html += " <p class='weui-media-box__desc' style='font-size:16px'>店招名：" + element.DanZhaoName + "</p>";
+                  html += " <p class='weui-media-box__desc' style='font-size:16px'>联系电话：" + element.LinkTel + "</p>";
+                  html += " <p class='weui-media-box__desc' style='font-size:16px'>调查人：" + element.AddUserName + "</p>";
+                  html += " <p class='weui-media-box__desc' style='font-size:16px'>调查时间：" + element.AddTimeStr + "</p>";
+                  html += " </a>";
+                  $("#loglist").append(html);
+
+
+                }
+
+              }
+            }
+
+            else { $.toptip(data.Message); }
+
+          },
+          error: function (jqXHR) {
+
+            layer.msg("请求服务器发生异常，请联系系统管理员或者稍后再试!");
+            return "";
+          }
+        });
+
+      })
+
+      //修改密码
+
     })
+
+    function midofyPassword() {
+      window.location.href = "modifyPassword.html";
+    }
 
   </script>
 </body>

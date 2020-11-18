@@ -89,6 +89,7 @@
                   if (data.Code == 200) {
                     $.toast("登录成功!");
                     window.localStorage.setItem("userId", data.Obj.Id);
+                    window.localStorage.setItem("userName", data.Obj.Name);
                     window.location.href = "home.html";
                   }
 

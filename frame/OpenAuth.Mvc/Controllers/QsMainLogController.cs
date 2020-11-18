@@ -99,5 +99,27 @@ namespace OpenAuth.Mvc.Controllers
 
 
         }
+
+
+        /// <summary>
+        /// 我的调查历史
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public JsonResult GetMainLog(string userId)
+        {
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+            var list = App.Repository.Find(x => x.AddUserGuid.Equals(userId)).OrderByDescending(x=>x.AddTime).ToList();
+            list.ForEach(x =>
+            {
+                x.AddTimeStr = x.AddTime.Value.ToString("yyyy-MM-dd  HH:mm:ss");
+            });
+             Response Result = new Response();
+            Result.Code = 200;
+            Result.Message = "查询成功！";
+            Result.Obj = list;
+            Result.count = list.Count;
+            return Json(Result, JsonRequestBehavior.DenyGet);
+        }
     }
 }

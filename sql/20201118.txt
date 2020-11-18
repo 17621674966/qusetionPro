@@ -1,0 +1,58 @@
+USE [OpenAuthDB]
+GO
+
+/****** Object:  Table [dbo].[T_QsMainLog]    Script Date: 2020/11/18 23:23:01 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[T_QsMainLog](
+	[Id] [nvarchar](50) NOT NULL,
+	[TemplateType] [nvarchar](50) NULL,
+	[ComapnyName] [nvarchar](50) NULL,
+	[DanZhaoName] [nvarchar](50) NULL,
+	[Address] [nvarchar](50) NULL,
+	[BusinessPro] [nvarchar](50) NULL,
+	[LegalName] [nvarchar](50) NULL,
+	[SecutyName] [nvarchar](50) NULL,
+	[LinkTel] [nvarchar](50) NULL,
+	[CheckTime] [datetime] NULL,
+	[BelongArea] [nvarchar](50) NULL,
+	[BelongTown] [nvarchar](50) NULL,
+	[Code] [nvarchar](50) NULL,
+	[BuildTime] [datetime] NULL,
+	[PeopleCount] [nvarchar](50) NULL,
+	[Area] [nvarchar](50) NULL,
+	[CompanyType] [nvarchar](50) NULL,
+	[AddUserName] [nvarchar](50) NULL,
+	[AddUserGuid] [nvarchar](50) NULL,
+	[AddTime] [datetime] NULL,
+	[UpdateTime] [datetime] NULL,
+	[RowStatus] [int] NULL,
+	[TotalCount] [int] NULL,
+	[MyCount] [int] NULL,
+	[NotCount] [int] NULL,
+	[PercentValue] [decimal](18, 2) NULL,
+	[IsTuiJian] [bit] NULL,
+	[Note] [nvarchar](500) NULL,
+	[FouJue1] [nvarchar](50) NULL,
+	[FouJueDesc1] [nvarchar](500) NULL,
+	[FouJue2] [nvarchar](50) NULL,
+	[FouJueDesc2] [nvarchar](500) NULL,
+	[FouJue3] [nvarchar](50) NULL,
+	[FouJueDesc3] [nvarchar](500) NULL,
+	[FouJue4] [nvarchar](50) NULL,
+	[FouJueDesc4] [nvarchar](500) NULL,
+	[FouJue5] [nvarchar](50) NULL,
+	[FouJueDesc5] [nvarchar](500) NULL,
+ CONSTRAINT [PK_T_QÊÇ¡¢] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+

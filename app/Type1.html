@@ -11,6 +11,9 @@
   <link href="Content/jquery-weui/dist/css/jquery-weui.css" rel="stylesheet">
   <link href="Content/layui/css/layui.css" rel="stylesheet">
   <link href="CSS/Base.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="demo/css/common.css"> -->
+  <link rel="stylesheet" href="demo/css/style.css">
+
 
   <style>
     .footContent{position:fixed;left: 0px;bottom: 0px;width: 100%;padding: 0px}
@@ -101,30 +104,28 @@ color:white;background-color:blueviolet
       </div>
 
       <div class="weui-cell">
-        <div class="weui-cell__hd"><label class="weui-label">所属区/商圈</label></div>
+        <div class="weui-cell__hd"><label class="weui-label">所属区/商圈(区)</label></div>
         <div class="weui-cell__bd">
-          <select class="weui-select" name="belongArea" id="belongArea">
+          <div class="citys mb20" id="demo3">
+            <select class="city-select" name="province" style="display:none"></select>
+            <select class="city-select" name="city" onchange="oncityChange()" id="city"></select>
 
-            <option value="0">请选择</option>
-            <option value="黄浦区">黄浦区</option>
-            <option value="徐汇区">徐汇区</option>
-            <option value="长宁区">长宁区</option>
-            <option value="静安区">静安区</option>
-            <option value="普陀区">普陀区</option>
-            <option value="虹口区">虹口区</option>
-            <option value="杨浦区">杨浦区</option>
-            <option value="浦东新区">浦东新区</option>
-            <option value="闵行区">闵行区</option>
-            <option value="宝山区">宝山区</option>
-            <option value="嘉定区">嘉定区</option>
-            <option value="金山区">金山区</option>
-            <option value="松江区">松江区</option>
-            <option value="青浦区">青浦区</option>
-            <option value="奉贤区">奉贤区</option>
-            <option value="崇明区">崇明区</option>
-          </select>
+          </div>
         </div>
       </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">所属区/商圈(镇)</label></div>
+        <div class="weui-cell__bd">
+          <div class="citys mb20" id="demo3">
+            <select class="city-select" name="town" id="town">
+              <option value="-1">请选择</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
 
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">食品经营许可证号</label></div>
@@ -143,14 +144,14 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">人数</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" id="peopleCount" type="text" placeholder="请输入人数">
+          <input class="weui-input" id="peopleCount" type="number"" placeholder=" 请输入人数">
         </div>
       </div>
 
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">面积</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" id="area" type="text" placeholder="请输入面积">
+          <input class="weui-input" id="area" type="number" placeholder="请输入面积">
         </div>
       </div>
 
@@ -158,12 +159,9 @@ color:white;background-color:blueviolet
         <div class="weui-cell__hd"><label class="weui-label">类型</label></div>
         <div class="weui-cell__bd">
           <select class="weui-select" name="companyType" id="companyType">
-            <option value="0">请选择</option>
-            <option value="便利店">便利店</option>
-            <option value="小型餐饮单位">小型餐饮单位</option>
-            <option value="中型饭店及以上">中型饭店及以上</option>
-            <option value="标准超市">标准超市</option>
-            <option value="大卖场">大卖场</option>
+
+            <option value="便利店" selected="selected">便利店</option>
+
           </select>
         </div>
       </div>
@@ -175,8 +173,8 @@ color:white;background-color:blueviolet
     </div>
     <div style="margin-bottom:40px;height: 30px"></div>
 
-    <div class="footContent1">
-      <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn22">暂存</a>
+    <div class="footContent44">
+      <!-- <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn22">暂存</a> -->
       <a href="#" class="weui-btn weui-btn_primary" id="btn1">下一步</a>
     </div>
   </div>
@@ -424,9 +422,9 @@ color:white;background-color:blueviolet
 
     <div style="margin-bottom:40px;height: 30px"></div>
 
-    <div class="footContent">
+    <div class="footContent1">
       <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn2">上一步</a>
-      <a href="#" class="weui-btn weui-btn_primary" id="btn33">暂存</a>
+      <!-- <a href="#" class="weui-btn weui-btn_primary" id="btn33">暂存</a> -->
       <a href="#" class="weui-btn weui-btn_primary" id="btn3">下一步</a>
     </div>
 
@@ -442,7 +440,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade1" placeholder="请输入得分" value="1">
+          <input class="weui-input" type="number" id="grade1" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -488,7 +486,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" id="grade2" type="number" placeholder="请输入得分" value="1">
+          <input class="weui-input" id="grade2" type="number" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -531,7 +529,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" id="grade3" type="number" placeholder="请输入得分" value="1">
+          <input class="weui-input" id="grade3" type="number" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -575,7 +573,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade4" placeholder="请输入得分" value="1">
+          <input class="weui-input" type="number" id="grade4" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -619,7 +617,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade5" placeholder="请输入得分" value="1">
+          <input class="weui-input" type="number" id="grade5" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -664,7 +662,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade6" placeholder="请输入得分" value="2">
+          <input class="weui-input" type="number" id="grade6" placeholder="请输入得分" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -708,7 +706,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade7" placeholder="请输入得分" value="8">
+          <input class="weui-input" type="number" id="grade7" placeholder="请输入得分" value="8" oninput="if(value>8||value<0)value=8 ">
         </div>
       </div>
       <div class="weui-cell weui-cell_switch">
@@ -756,7 +754,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade8" placeholder="请输入得分" value="5">
+          <input class="weui-input" type="number" id="grade8" placeholder="请输入得分" value="5" oninput="if(value>5||value<0)value=5 ">
         </div>
       </div>
 
@@ -805,7 +803,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade9" placeholder="请输入得分" value="12">
+          <input class="weui-input" type="number" id="grade9" placeholder="请输入得分" value="12" oninput="if(value>12||value<0)value=12 ">
         </div>
       </div>
 
@@ -853,7 +851,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade13" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade13" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -896,7 +894,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade14" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade14" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -940,7 +938,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade15" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade15" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -984,7 +982,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade16" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade16" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1028,7 +1026,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade17" placeholder="请输入得分" value="5">
+          <input class="weui-input" type="number" id="grade17" placeholder="请输入得分" value="5" oninput="if(value>5||value<0)value=5 ">
         </div>
       </div>
 
@@ -1074,7 +1072,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade18" value="5">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade18" value="5" oninput="if(value>5||value<0)value=5 ">
         </div>
       </div>
 
@@ -1124,7 +1122,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade21" value="5">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade21" value="5" oninput="if(value>5||value<0)value=5 ">
         </div>
       </div>
 
@@ -1171,7 +1169,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade23" value="5">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade23" value="5" oninput="if(value>5||value<0)value=5 ">
         </div>
       </div>
 
@@ -1221,7 +1219,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade25" value="4">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade25" value="4" oninput="if(value>4||value<0)value=4 ">
         </div>
       </div>
 
@@ -1271,7 +1269,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade29" value="6">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade29" value="6" oninput="if(value>6||value<0)value=6 ">
         </div>
       </div>
 
@@ -1321,7 +1319,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade33" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade33" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1365,7 +1363,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade34" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade34" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1413,7 +1411,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade35" value="6">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade35" value="6" oninput="if(value>6||value<0)value=6 ">
         </div>
       </div>
 
@@ -1461,7 +1459,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade40" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade40" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1504,7 +1502,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade41" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade41" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1512,7 +1510,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck41" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck41" value="6">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck41" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1549,7 +1547,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade43" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade43" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1593,7 +1591,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade44" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade44" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1639,7 +1637,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade45" value="1">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade45" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -1683,7 +1681,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade46" value="1">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade46" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -1726,7 +1724,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade47" value="1">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade47" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -1769,7 +1767,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade48" value="1">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade48" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -1813,7 +1811,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade49" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade49" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1857,7 +1855,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade50" value="2">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade50" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1900,7 +1898,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade51" value="4">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade51" value="4" oninput="if(value>4||value<0)value=4 ">
         </div>
       </div>
 
@@ -1955,28 +1953,28 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">总分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="100" id="totalGrade" value="100">
+          <input class="weui-input" type="number" placeholder="100" id="totalGrade" value="100" readonly="readonly">
         </div>
       </div>
 
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="weGrade">
+          <input class="weui-input" type="number" id="weGrade" readonly="readonly">
         </div>
       </div>
 
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">不适用分值</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="" id="notcheckTotal">
+          <input class="weui-input" type="number" placeholder="" id="notcheckTotal" readonly="readonly">
         </div>
       </div>
 
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">总得分率</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="text" placeholder="" id="totalPercent">
+          <input class="weui-input" type="text" placeholder="" id="totalPercent" readonly="readonly">
         </div>
       </div>
 
@@ -1985,7 +1983,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">是否推荐“食品经营实体示范店”</div>
         <div class="weui-cell__ft">
           <label class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="isTuiJian">
+            <input class="weui-switch-cp__input" type="checkbox" id="isTuiJian" readonly="readonly">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -2006,6 +2004,7 @@ color:white;background-color:blueviolet
   <script src="Content/jquery-weui/dist/lib/fastclick.js"></script>
   <script src="Content/jquery-weui/dist/js/jquery-weui.js"></script>
   <script src="Content/layui/layui.js"></script>
+  <script src="demo/js/jquery-citys.js"></script>
   <script>
 
 
@@ -2483,6 +2482,18 @@ color:white;background-color:blueviolet
 
 
 
+    //否决项
+    var foujiue1 = false;
+    var foujiue2 = false;
+    var foujiue3 = false;
+    var foujiue4 = false;
+    var foujiue5 = false;
+
+    var fouJueDesc1 = "";
+    var fouJueDesc2 = "";
+    var fouJueDesc3 = "";
+    var fouJueDesc4 = "";
+    var fouJueDesc5 = "";
 
 
 
@@ -2510,10 +2521,42 @@ color:white;background-color:blueviolet
 
     layui.use(['form', 'layer'], function () {
       var form = layui.form, layer = layui.layer
+      $(function () {
+
+        $('#demo3').citys({
+          type: 'code',
+          province: '310000',
+          city: '',
+          area: ''
+        });
+
+        var data = new Date();
+        var str = data.getFullYear() + "-" + (data.getMonth() + 1) + "-" + data.getDate();
+
+        $("#checkTime").val(str);  //设置默认时间
+
+      })
+
+
 
 
     })
+    //城市选择切换
+    function oncityChange() {
+      var cityCode = $("#city").val();
 
+      $.ajax({
+        url: 'https://passer-by.com/data_location/code/' + cityCode + '.json',
+        dataType: 'json',
+        success: function (town) {
+          $("#town").empty();//首先清空数据	
+          for (i in town) {
+            $("#town").append('<option value="' + i + '">' + town[i] + '</option>');
+          }
+        }
+      });
+
+    }
     ///div1 的下一步
     $("#btn1").click(function () {
       companyName = $("#companyName").val();
@@ -2529,37 +2572,34 @@ color:white;background-color:blueviolet
       peopleCount = $("#peopleCount").val();;
       area = $("#area").val();;
       companyType = $("#companyType").val();;
-      belongArea = $("#belongArea").val();;
-      // if (companyName == "") {
-      //   $.toptip('单位名称不能为空', 'error');
-      //   return;
-      // }
+      belongArea = $("#city").find("option:selected").text() + ";" + $("#town").find("option:selected").text();
+      if (companyName == "") {
+        $.toptip('单位名称不能为空', 'error');
+        return;
+      }
 
-      // if (dianZhaoName == "") {
-      //   $.toptip('店招名不能为空', 'error');
-      //   return;
-      // }
+      if (dianZhaoName == "") {
+        $.toptip('店招名不能为空', 'error');
+        return;
+      }
 
-      // if (address == "") {
-      //   $.toptip('单位地址不能为空', 'error');
-      //   return;
-      // }
+      if (address == "") {
+        $.toptip('单位地址不能为空', 'error');
+        return;
+      }
 
 
-      // if (linkTel == "") {
-      //   $.toptip('联系电话不能为空', 'error');
-      //   return;
-      // }
+      if (linkTel == "") {
+        $.toptip('联系电话不能为空', 'error');
+        return;
+      }
 
-      // if (code == "") {
-      //   $.toptip('食品经营许可证号不能为空', 'error');
-      //   return;
-      // }
+      if (code == "") {
+        $.toptip('食品经营许可证号不能为空', 'error');
+        return;
+      }
 
-      // if (companyType == "0") {
-      //   $.toptip('类型不能为空', 'error');
-      //   return;
-      // }
+
       $("#div1").hide();
       $("#div2").show();
     })
@@ -2746,31 +2786,21 @@ color:white;background-color:blueviolet
     })
 
     $("#btn3").click(function () {
-      var foujue1 = -1;
-      var foujue2 = -1;
-      var foujue3 = -1;
-      var foujue4 = -1;
-      var foujue5 = -1;
 
-      var desc1 = "";
-      var desc2 = "";
-      var desc3 = "";
-      var desc4 = "";
-      var desc5 = "";
 
 
       //赋值
-      foujue1 = $("input[name='radio1']:checked").val();
-      foujue2 = $("input[name='radio2']:checked").val();
-      foujue3 = $("input[name='radio3']:checked").val();
-      foujue4 = $("input[name='radio4']:checked").val();
-      foujue5 = $("input[name='radio5']:checked").val();
+      foujiue1 = $("input[name='radio1']:checked").val() == undefined ? "-1" : $("input[name='radio1']:checked").val();
+      foujiue2 = $("input[name='radio2']:checked").val() == undefined ? "-1" : $("input[name='radio2']:checked").val();
+      foujiue3 = $("input[name='radio3']:checked").val() == undefined ? "-1" : $("input[name='radio3']:checked").val();
+      foujiue4 = $("input[name='radio4']:checked").val() == undefined ? "-1" : $("input[name='radio4']:checked").val();
+      foujiue5 = $("input[name='radio5']:checked").val() == undefined ? "-1" : $("input[name='radio5']:checked").val();
 
-      desc1 = $("#desc1").val();
-      desc2 = $("#desc2").val();
-      desc3 = $("#desc3").val();
-      desc4 = $("#desc4").val();
-      desc5 = $("#desc5").val();
+      fouJueDesc1 = $("#desc1").val();
+      fouJueDesc2 = $("#desc2").val();
+      fouJueDesc3 = $("#desc3").val();
+      fouJueDesc4 = $("#desc4").val();
+      fouJueDesc5 = $("#desc5").val();
 
 
 
@@ -3649,7 +3679,7 @@ color:white;background-color:blueviolet
 
       if (res >= 0.85) {
 
-        $("#showTuiJian").show();
+        $("#showTuiJian").hide();
       }
       else {
         $("#showTuiJian").hide();
@@ -3676,6 +3706,20 @@ color:white;background-color:blueviolet
 
     //提交按钮
     $("#btn7").click(function () {
+
+
+
+      save();
+
+
+
+    })
+
+
+
+
+
+    function save() {
       var obj1 = new Object();
       obj1.TemplateType = "适用于便利店";
       obj1.ComapnyName = companyName;
@@ -3700,13 +3744,20 @@ color:white;background-color:blueviolet
 
       obj1.NotCount = notCount;
       obj1.PercentValue = per;
-      if ($('#isTuiJian').is(':checked')) {
-        obj1.IsTuiJian = true;
-      }
-      else {
+      obj1.FouJue1 = foujiue1;
+      obj1.FouJue2 = foujiue2;
+      obj1.FouJue3 = foujiue3;
+      obj1.FouJue4 = foujiue4;
+      obj1.FouJue5 = foujiue5;
 
-        obj1.IsTuiJian = false;
-      }
+      obj1.FouJueDesc1 = fouJueDesc1;
+      obj1.FouJueDesc2 = fouJueDesc2;
+      obj1.FouJueDesc3 = fouJueDesc3;
+      obj1.FouJueDesc4 = fouJueDesc4;
+      obj1.FouJueDesc5 = fouJueDesc5;
+
+
+      console.log(obj1);
 
 
       //第二部分
@@ -4148,7 +4199,10 @@ color:white;background-color:blueviolet
 
 
 
+    }
 
+    $("#btn55").click(function () {
+      save();
 
     })
 

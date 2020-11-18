@@ -12,6 +12,8 @@
         /// </summary>
         public int Code { get; set; }
 
+        public int count { get; set; }
+
         public object Obj { get; set; }
 
         public Response()

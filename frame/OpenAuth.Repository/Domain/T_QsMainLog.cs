@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,5 +43,22 @@ namespace OpenAuth.Repository.Domain
         public bool? IsTuiJian { get; set; }
 
         public string Note { get; set; }
+
+
+        public string FouJue1 { get; set; }
+        public string FouJue2 { get; set; }
+        public string FouJue3 { get; set; }
+        public string FouJue4 { get; set; }
+        public string FouJue5 { get; set; }
+
+
+        public string FouJueDesc1 { get; set; }
+        public string FouJueDesc2 { get; set; }
+        public string FouJueDesc3 { get; set; }
+        public string FouJueDesc4 { get; set; }
+        public string FouJueDesc5 { get; set; }
+
+        [NotMapped]
+        public string AddTimeStr { get; set; }
     }
 }
