@@ -145,6 +145,9 @@
     <Compile Include="SSO\LoginResult.cs" />
     <Compile Include="SSO\SSOAuthAttribute.cs" />
     <Compile Include="SSO\UserAuthSession.cs" />
+    <Compile Include="T_QsDetailLog4App.cs" />
+    <Compile Include="T_QsDetailLog3App.cs" />
+    <Compile Include="T_QsDetailLog2App.cs" />
     <Compile Include="T_QsDetailLog1App.cs" />
     <Compile Include="T_QsMainLogApp.cs" />
     <Compile Include="UserManagerApp.cs" />

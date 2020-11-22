@@ -79,6 +79,13 @@ namespace OpenAuth.Repository
 
             modelBuilder.Configurations.Add(new T_QsDetailLog1Map());
 
+            modelBuilder.Configurations.Add(new T_QsDetailLog2Map());
+
+
+            modelBuilder.Configurations.Add(new T_QsDetailLog3Map());
+
+            modelBuilder.Configurations.Add(new T_QsDetailLog4Map());
+
         }
     }
 }

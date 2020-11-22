@@ -1,5 +1,6 @@
-obj2.Test51Score = test51Score;
-      obj2.Test51 = test51;
-      obj2.IsTest51 = isTest51;
-      obj2.Test51Desc = test51Desc;
-      obj2.Test51FileList = test51FileList;
+ //83
+      obj2.Test83Score = test83Score;
+      obj2.Test83 = test83;
+      obj2.IsTest83 = isTest83;
+      obj2.Test83Desc = test83Desc;
+      obj2.Test83FileList = test83FileList;
