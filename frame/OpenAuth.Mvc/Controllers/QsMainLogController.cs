@@ -8,6 +8,7 @@ using System.Linq;
 using System.Transactions;
 using System.Web;
 using System.Web.Mvc;
+using WebGrease;
 
 namespace OpenAuth.Mvc.Controllers
 {
@@ -25,6 +26,10 @@ namespace OpenAuth.Mvc.Controllers
 
         public T_QsDetailLog4App AppDetail4 { get; set; }
 
+        public T_QsDetailLog5App AppDetail5 { get; set; }
+
+        public T_QsDetailLog6App AppDetail6 { get; set; }
+
         public LoginApp AppLog { get; set; }
 
         public ActionResult Index()
@@ -33,6 +38,8 @@ namespace OpenAuth.Mvc.Controllers
         }
 
 
+
+        #region   添加问卷信息
         /// <summary>
         /// 添加问卷主表信息1
         /// </summary>
@@ -337,6 +344,161 @@ namespace OpenAuth.Mvc.Controllers
 
         }
 
+
+
+        /// <summary>
+        /// 添加问卷主表信息
+        /// </summary>
+        /// <param name="mainLog"></param>
+        /// <returns></returns>
+        public JsonResult AddMessage5(string mainLog, string detailLog, string userId)
+        {
+
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+            var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
+            var detail = JsonConvert.DeserializeObject<T_QsDetailLog5>(detailLog);
+
+            var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
+            if (user == null)
+            {
+                Response Result = new Response();  //未授权
+                Result.Code = 401;
+                Result.Message = "请先登录！";
+                return Json(Result, JsonRequestBehavior.DenyGet);
+            }
+
+            using (var train = new TransactionScope())
+            {
+
+
+                try
+                {
+                    //主表
+                    main.Id = Guid.NewGuid().ToString();
+                    main.AddUserName = user.Name;
+                    main.AddUserGuid = user.Id;
+                    main.AddTime = DateTime.Now;
+                    main.UpdateTime = DateTime.Now;
+                    main.RowStatus = 1;
+
+                    App.Repository.Add(main);
+
+
+                    //从表
+                    detail.MainId = main.Id;
+                    detail.Id = Guid.NewGuid().ToString();
+                    detail.AddTime = DateTime.Now;
+                    detail.AddUserName = user.Name;
+                    detail.AddUserGuid = user.Id;
+                    detail.UpdateTime = DateTime.Now;
+                    detail.RowStatus = 1;
+
+                    AppDetail5.Repository.Add(detail);
+
+
+                    train.Complete();
+
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Log(ex.Message);
+                    Response Result = new Response();
+                    Result.Code = 500;
+                    Result.Message = "添加失败！";
+                    return Json(Result, JsonRequestBehavior.DenyGet);
+                }
+
+
+                Response ResultEnd = new Response();
+                ResultEnd.Code = 200;
+                ResultEnd.Message = "添加成功！";
+                return Json(ResultEnd, JsonRequestBehavior.DenyGet);
+
+
+            }
+
+
+        }
+
+
+
+        /// <summary>
+        /// 添加问卷主表信息
+        /// </summary>
+        /// <param name="mainLog"></param>
+        /// <returns></returns>
+        public JsonResult AddMessage6(string mainLog, string detailLog, string userId)
+        {
+
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+            var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
+            var detail = JsonConvert.DeserializeObject<T_QsDetailLog6>(detailLog);
+
+            var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
+            if (user == null)
+            {
+                Response Result = new Response();  //未授权
+                Result.Code = 401;
+                Result.Message = "请先登录！";
+                return Json(Result, JsonRequestBehavior.DenyGet);
+            }
+
+            using (var train = new TransactionScope())
+            {
+
+
+                try
+                {
+                    //主表
+                    main.Id = Guid.NewGuid().ToString();
+                    main.AddUserName = user.Name;
+                    main.AddUserGuid = user.Id;
+                    main.AddTime = DateTime.Now;
+                    main.UpdateTime = DateTime.Now;
+                    main.RowStatus = 1;
+
+                    App.Repository.Add(main);
+
+
+                    //从表
+                    detail.MainId = main.Id;
+                    detail.Id = Guid.NewGuid().ToString();
+                    detail.AddTime = DateTime.Now;
+                    detail.AddUserName = user.Name;
+                    detail.AddUserGuid = user.Id;
+                    detail.UpdateTime = DateTime.Now;
+                    detail.RowStatus = 1;
+
+                    AppDetail6.Repository.Add(detail);
+
+
+                    train.Complete();
+
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Log(ex.Message);
+                    Response Result = new Response();
+                    Result.Code = 500;
+                    Result.Message = "添加失败！";
+                    return Json(Result, JsonRequestBehavior.DenyGet);
+                }
+
+
+                Response ResultEnd = new Response();
+                ResultEnd.Code = 200;
+                ResultEnd.Message = "添加成功！";
+                return Json(ResultEnd, JsonRequestBehavior.DenyGet);
+
+
+            }
+
+
+        }
+
+        #endregion
+
+
         /// <summary>
         /// 我的调查历史
         /// </summary>
@@ -357,5 +519,558 @@ namespace OpenAuth.Mvc.Controllers
             Result.count = list.Count;
             return Json(Result, JsonRequestBehavior.DenyGet);
         }
+
+
+        #region   修改问卷信息
+        /// <summary>
+        /// 添加问卷主表信息1
+        /// </summary>
+        /// <param name="mainLog"></param>
+        /// <returns></returns>
+        public JsonResult EditMessage(string mainLog, string detailLog, string userId)
+        {
+
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+            var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
+            var detail = JsonConvert.DeserializeObject<T_QsDetailLog1>(detailLog);
+
+            var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
+            if (user == null)
+            {
+                Response Result = new Response();  //未授权
+                Result.Code = 401;
+                Result.Message = "请先登录！";
+                return Json(Result, JsonRequestBehavior.DenyGet);
+            }
+
+            using (var train = new TransactionScope())
+            {
+
+
+                try
+                {
+                   
+                   
+                    main.UpdateTime = DateTime.Now;
+                    main.RowStatus = 1;
+
+                    App.Repository.Update(main);
+
+
+                    //从表
+                  
+                  
+                    detail.UpdateTime = DateTime.Now;
+                  
+
+                    AppDetail.Repository.Update(detail);
+
+
+                    train.Complete();
+
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Log(ex.Message);
+                    Response Result = new Response();
+                    Result.Code = 500;
+                    Result.Message = "修改失败！";
+                    return Json(Result, JsonRequestBehavior.DenyGet);
+                }
+
+
+                Response ResultEnd = new Response();
+                ResultEnd.Code = 200;
+                ResultEnd.Message = "修改成功！";
+                return Json(ResultEnd, JsonRequestBehavior.DenyGet);
+
+
+            }
+
+
+        }
+
+
+
+
+        /// <summary>
+        /// 添加问卷主表信息
+        /// </summary>
+        /// <param name="mainLog"></param>
+        /// <returns></returns>
+        public JsonResult EditMessage2(string mainLog, string detailLog, string userId)
+        {
+
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+            var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
+            var detail = JsonConvert.DeserializeObject<T_QsDetailLog2>(detailLog);
+
+            var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
+            if (user == null)
+            {
+                Response Result = new Response();  //未授权
+                Result.Code = 401;
+                Result.Message = "请先登录！";
+                return Json(Result, JsonRequestBehavior.DenyGet);
+            }
+
+            using (var train = new TransactionScope())
+            {
+
+
+                try
+                {
+                    //主表
+                   
+                    main.UpdateTime = DateTime.Now;
+                  
+
+                    App.Repository.Update(main);
+
+
+                    //从表
+                  
+                    detail.UpdateTime = DateTime.Now;
+                  
+
+                    AppDetail2.Repository.Update(detail);
+
+
+                    train.Complete();
+
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Log(ex.Message);
+                    Response Result = new Response();
+                    Result.Code = 500;
+                    Result.Message = "修改失败！";
+                    return Json(Result, JsonRequestBehavior.DenyGet);
+                }
+
+
+                Response ResultEnd = new Response();
+                ResultEnd.Code = 200;
+                ResultEnd.Message = "修改成功！";
+                return Json(ResultEnd, JsonRequestBehavior.DenyGet);
+
+
+            }
+
+
+        }
+
+
+
+
+        /// <summary>
+        /// 添加问卷主表信息
+        /// </summary>
+        /// <param name="mainLog"></param>
+        /// <returns></returns>
+        public JsonResult EditMessage3(string mainLog, string detailLog, string userId)
+        {
+
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+            var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
+            var detail = JsonConvert.DeserializeObject<T_QsDetailLog3>(detailLog);
+
+            var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
+            if (user == null)
+            {
+                Response Result = new Response();  //未授权
+                Result.Code = 401;
+                Result.Message = "请先登录！";
+                return Json(Result, JsonRequestBehavior.DenyGet);
+            }
+
+            using (var train = new TransactionScope())
+            {
+
+
+                try
+                {
+                    //主表
+                 
+                   
+                    main.UpdateTime = DateTime.Now;
+                  
+
+                    App.Repository.Update(main);
+
+
+                    //从表
+                  
+                    detail.UpdateTime = DateTime.Now;
+                  
+
+                    AppDetail3.Repository.Update(detail);
+
+
+                    train.Complete();
+
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Log(ex.Message);
+                    Response Result = new Response();
+                    Result.Code = 500;
+                    Result.Message = "修改失败！";
+                    return Json(Result, JsonRequestBehavior.DenyGet);
+                }
+
+
+                Response ResultEnd = new Response();
+                ResultEnd.Code = 200;
+                ResultEnd.Message = "修改成功！";
+                return Json(ResultEnd, JsonRequestBehavior.DenyGet);
+
+
+            }
+
+
+        }
+
+
+
+        /// <summary>
+        /// 添加问卷主表信息
+        /// </summary>
+        /// <param name="mainLog"></param>
+        /// <returns></returns>
+        public JsonResult EditMessage4(string mainLog, string detailLog, string userId)
+        {
+
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+            var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
+            var detail = JsonConvert.DeserializeObject<T_QsDetailLog4>(detailLog);
+
+            var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
+            if (user == null)
+            {
+                Response Result = new Response();  //未授权
+                Result.Code = 401;
+                Result.Message = "请先登录！";
+                return Json(Result, JsonRequestBehavior.DenyGet);
+            }
+
+            using (var train = new TransactionScope())
+            {
+
+
+                try
+                {
+                    //主表
+                   
+                    main.UpdateTime = DateTime.Now;
+                  
+
+                    App.Repository.Update(main);
+
+
+                    //从表
+                  
+                    detail.UpdateTime = DateTime.Now;
+                    detail.RowStatus = 1;
+
+                    AppDetail4.Repository.Update(detail);
+
+
+                    train.Complete();
+
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Log(ex.Message);
+                    Response Result = new Response();
+                    Result.Code = 500;
+                    Result.Message = "修改失败！";
+                    return Json(Result, JsonRequestBehavior.DenyGet);
+                }
+
+
+                Response ResultEnd = new Response();
+                ResultEnd.Code = 200;
+                ResultEnd.Message = "修改成功！";
+                return Json(ResultEnd, JsonRequestBehavior.DenyGet);
+
+
+            }
+
+
+        }
+
+
+
+        /// <summary>
+        /// 添加问卷主表信息
+        /// </summary>
+        /// <param name="mainLog"></param>
+        /// <returns></returns>
+        public JsonResult EditMessage5(string mainLog, string detailLog, string userId)
+        {
+
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+            var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
+            var detail = JsonConvert.DeserializeObject<T_QsDetailLog5>(detailLog);
+
+            var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
+            if (user == null)
+            {
+                Response Result = new Response();  //未授权
+                Result.Code = 401;
+                Result.Message = "请先登录！";
+                return Json(Result, JsonRequestBehavior.DenyGet);
+            }
+
+            using (var train = new TransactionScope())
+            {
+
+
+                try
+                {
+                    //主表
+                  
+                    main.UpdateTime = DateTime.Now;
+                    main.RowStatus = 1;
+
+                    App.Repository.Update(main);
+
+
+                    //从表
+                   
+                    detail.UpdateTime = DateTime.Now;
+                    detail.RowStatus = 1;
+
+                    AppDetail5.Repository.Update(detail);
+
+
+                    train.Complete();
+
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Log(ex.Message);
+                    Response Result = new Response();
+                    Result.Code = 500;
+                    Result.Message = "修改失败！";
+                    return Json(Result, JsonRequestBehavior.DenyGet);
+                }
+
+
+                Response ResultEnd = new Response();
+                ResultEnd.Code = 200;
+                ResultEnd.Message = "修改成功！";
+                return Json(ResultEnd, JsonRequestBehavior.DenyGet);
+
+
+            }
+
+
+        }
+
+
+
+        /// <summary>
+        /// 添加问卷主表信息
+        /// </summary>
+        /// <param name="mainLog"></param>
+        /// <returns></returns>
+        public JsonResult EditMessage6(string mainLog, string detailLog, string userId)
+        {
+
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+            var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
+            var detail = JsonConvert.DeserializeObject<T_QsDetailLog6>(detailLog);
+
+            var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
+            if (user == null)
+            {
+                Response Result = new Response();  //未授权
+                Result.Code = 401;
+                Result.Message = "请先登录！";
+                return Json(Result, JsonRequestBehavior.DenyGet);
+            }
+
+            using (var train = new TransactionScope())
+            {
+
+
+                try
+                {
+                    //主表
+                   
+                    main.UpdateTime = DateTime.Now;
+                    main.RowStatus = 1;
+
+                    App.Repository.Update(main);
+
+
+                    //从表
+                    
+                    detail.UpdateTime = DateTime.Now;
+                    detail.RowStatus = 1;
+
+                    AppDetail6.Repository.Update(detail);
+
+
+                    train.Complete();
+
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Log(ex.Message);
+                    Response Result = new Response();
+                    Result.Code = 500;
+                    Result.Message = "修改失败！";
+                    return Json(Result, JsonRequestBehavior.DenyGet);
+                }
+
+
+                Response ResultEnd = new Response();
+                ResultEnd.Code = 200;
+                ResultEnd.Message = "修改成功！";
+                return Json(ResultEnd, JsonRequestBehavior.DenyGet);
+
+
+            }
+
+
+        }
+
+
+        #endregion
+
+
+
+        #region   获取主表明细信息
+
+        public JsonResult GetMainDetail(string guid)
+        {
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+
+            var list = App.Repository.Find(x => x.Id.Equals(guid)).OrderByDescending(x => x.AddTime).ToList();
+            list.ForEach(x =>
+            {
+                x.AddTimeStr = x.AddTime.Value.ToString("yyyy-MM-dd  HH:mm:ss");
+            });
+
+            Response Result = new Response();
+            Result.Code = 200;
+            Result.Message = "查询成功！";
+            Result.Obj = list;
+            Result.count = list.Count;
+            return Json(Result, JsonRequestBehavior.DenyGet);
+        }
+
+        #endregion
+
+
+
+        #region   获取明细信息
+
+        public JsonResult GetDetail1(string mainGuid)
+        {
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+
+            var list = AppDetail.Repository.Find(x => x.MainId.Equals(mainGuid)).OrderByDescending(x => x.AddTime).ToList();
+           
+
+            Response Result = new Response();
+            Result.Code = 200;
+            Result.Message = "查询成功！";
+            Result.Obj = list;
+            Result.count = list.Count;
+            return Json(Result, JsonRequestBehavior.DenyGet);
+        }
+
+
+        public JsonResult GetDetail2(string mainGuid)
+        {
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+
+            var list = AppDetail2.Repository.Find(x => x.MainId.Equals(mainGuid)).OrderByDescending(x => x.AddTime).ToList();
+
+
+            Response Result = new Response();
+            Result.Code = 200;
+            Result.Message = "查询成功！";
+            Result.Obj = list;
+            Result.count = list.Count;
+            return Json(Result, JsonRequestBehavior.DenyGet);
+        }
+
+
+        public JsonResult GetDetail3(string mainGuid)
+        {
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+
+            var list = AppDetail3.Repository.Find(x => x.MainId.Equals(mainGuid)).OrderByDescending(x => x.AddTime).ToList();
+
+
+            Response Result = new Response();
+            Result.Code = 200;
+            Result.Message = "查询成功！";
+            Result.Obj = list;
+            Result.count = list.Count;
+            return Json(Result, JsonRequestBehavior.DenyGet);
+        }
+
+
+
+        public JsonResult GetDetail4(string mainGuid)
+        {
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+
+            var list = AppDetail4.Repository.Find(x => x.MainId.Equals(mainGuid)).OrderByDescending(x => x.AddTime).ToList();
+
+
+            Response Result = new Response();
+            Result.Code = 200;
+            Result.Message = "查询成功！";
+            Result.Obj = list;
+            Result.count = list.Count;
+            return Json(Result, JsonRequestBehavior.DenyGet);
+        }
+
+
+        public JsonResult GetDetail5(string mainGuid)
+        {
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+
+            var list = AppDetail5.Repository.Find(x => x.MainId.Equals(mainGuid)).OrderByDescending(x => x.AddTime).ToList();
+
+
+            Response Result = new Response();
+            Result.Code = 200;
+            Result.Message = "查询成功！";
+            Result.Obj = list;
+            Result.count = list.Count;
+            return Json(Result, JsonRequestBehavior.DenyGet);
+        }
+
+
+        public JsonResult GetDetail6(string mainGuid)
+        {
+            HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
+
+            var list = AppDetail6.Repository.Find(x => x.MainId.Equals(mainGuid)).OrderByDescending(x => x.AddTime).ToList();
+
+
+            Response Result = new Response();
+            Result.Code = 200;
+            Result.Message = "查询成功！";
+            Result.Obj = list;
+            Result.count = list.Count;
+            return Json(Result, JsonRequestBehavior.DenyGet);
+        }
+
+
+
+
+
+        #endregion
+
+
     }
 }

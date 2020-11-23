@@ -76,6 +76,8 @@
     <Compile Include="Domain\Resource.cs" />
     <Compile Include="Domain\Role.cs" />
     <Compile Include="Domain\Stock.cs" />
+    <Compile Include="Domain\T_QsDetailLog6.cs" />
+    <Compile Include="Domain\T_QsDetailLog5.cs" />
     <Compile Include="Domain\T_QsDetailLog4.cs" />
     <Compile Include="Domain\T_QsDetailLog3.cs" />
     <Compile Include="Domain\T_QsDetailLog2.cs" />
@@ -92,6 +94,8 @@
     <Compile Include="Mapping\FlowInstanceTransitionHistoryMap.cs" />
     <Compile Include="Mapping\FlowSchemeMap.cs" />
     <Compile Include="Mapping\FormMap.cs" />
+    <Compile Include="Mapping\T_QsDetailLog6Map.cs" />
+    <Compile Include="Mapping\T_QsDetailLog5Map.cs" />
     <Compile Include="Mapping\T_QsDetailLog4Map.cs" />
     <Compile Include="Mapping\T_QsDetailLog3Map.cs" />
     <Compile Include="Mapping\T_QsDetailLog2Map.cs" />
