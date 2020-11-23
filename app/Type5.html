@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>适用于便利店</title>
+  <title>适用于大卖场</title>
   <link href="Content/jquery-weui/dist/lib/weui.min.css" rel="stylesheet">
   <link href="Content/jquery-weui/dist/demos/css/demos.css" rel="stylesheet">
   <link href="Content/jquery-weui/dist/css/jquery-weui.css" rel="stylesheet">
@@ -17,6 +17,7 @@
 
   <style>
     .footContent{position:fixed;left: 0px;bottom: 0px;width: 100%;padding: 0px}
+    .footContent1{position:fixed;left: 0px;bottom: 0px;width: 100%;padding: 0px}
 
 .footContent a{display: inline-block;width: 30%;margin: 0px;border: 0px;padding: 0px;}
 
@@ -38,7 +39,7 @@ color:white;background-color:blueviolet
 <body ontouchstart>
 
   <blockquote class="layui-elem-quote layui-text">
-    食品经营实体示范店认证评估评分标准（适用于便利店）
+    食品经营实体示范店认证评估评分标准（适用于大卖场）
   </blockquote>
 
   <div id="div1">
@@ -162,7 +163,8 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">
           <select class="weui-select" name="companyType" id="companyType">
 
-            <option value="便利店" selected="selected">便利店</option>
+            <option value="适用于大卖场" selected="selected">适用于大卖场</option>
+
 
           </select>
         </div>
@@ -183,10 +185,10 @@ color:white;background-color:blueviolet
 
 
   <div id="div2" style="display:none">
-    <h1 style="margin-left:10px;">否决项</h1>
+    <h1 style="margin-left:10px;">否决项1</h1>
 
     <div class="weui-cells weui-cells_radio">
-      <h3 style="margin-top: 10px">否决项1(按许可的方式及范围从事食品经营活动；)</h3>
+      <h3 style="margin-top: 10px">是否按许可的方式及范围从事食品经营活动；</h3>
       <label class="weui-cell weui-check__label" for="x11">
         <div class="weui-cell__bd">
           <p>符合</p>
@@ -213,28 +215,12 @@ color:white;background-color:blueviolet
         </div>
       </div>
 
-      <!-- <div class="weui-cell">
-        <div class="weui-cell__bd">
-          <div class="weui-uploader">
-            <div class="weui-uploader__hd">
-              <p class="weui-uploader__title">问题照片:</p>
-            </div>
-            <div class="weui-uploader__bd">
-              <ul class="weui-uploader__files" id="uploaderFiles1">
-              </ul>
-              <div class="weui-uploader__input-box">
-                <input id="file1" class="weui-uploader__input" type="file" accept="image/*" multiple="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
 
 
 
     <div class="weui-cells weui-cells_radio">
-      <h3 style="margin-top: 20px">否决项2(不存在销售过期食品的现象；)</h3>
+      <h3 style="margin-top: 20px">不存在销售过期食品的现象；</h3>
       <label class="weui-cell weui-check__label" for="x13">
         <div class="weui-cell__bd">
           <p>符合</p>
@@ -262,21 +248,21 @@ color:white;background-color:blueviolet
       </div>
 
       <!-- <div class="weui-cell">
-        <div class="weui-cell__bd">
-          <div class="weui-uploader">
-            <div class="weui-uploader__hd">
-              <p class="weui-uploader__title">问题照片:</p>
-            </div>
-            <div class="weui-uploader__bd">
-              <ul class="weui-uploader__files" id="uploaderFiles2">
-              </ul>
-              <div class="weui-uploader__input-box">
-                <input id="file2" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+          <div class="weui-cell__bd">
+            <div class="weui-uploader">
+              <div class="weui-uploader__hd">
+                <p class="weui-uploader__title">问题照片:</p>
+              </div>
+              <div class="weui-uploader__bd">
+                <ul class="weui-uploader__files" id="uploaderFiles2">
+                </ul>
+                <div class="weui-uploader__input-box">
+                  <input id="file2" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div> -->
+        </div> -->
 
     </div>
 
@@ -284,7 +270,7 @@ color:white;background-color:blueviolet
 
 
     <div class="weui-cells weui-cells_radio">
-      <h3 style="margin-top: 20px">否决项3（现场检查未发现老鼠或有明显老鼠活动现象（比如鼠粪等）；）</h3>
+      <h3 style="margin-top: 20px">不存在经营国家和本市禁止生产经营的食品以及违规使用食品添加剂的现象；</h3>
       <label class="weui-cell weui-check__label" for="x17">
         <div class="weui-cell__bd">
           <p>符合</p>
@@ -312,27 +298,27 @@ color:white;background-color:blueviolet
       </div>
 
       <!-- <div class="weui-cell">
-        <div class="weui-cell__bd">
-          <div class="weui-uploader">
-            <div class="weui-uploader__hd">
-              <p class="weui-uploader__title">问题照片:</p>
-            </div>
-            <div class="weui-uploader__bd">
-              <ul class="weui-uploader__files" id="uploaderFiles3">
-              </ul>
-              <div class="weui-uploader__input-box">
-                <input id="file3" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+          <div class="weui-cell__bd">
+            <div class="weui-uploader">
+              <div class="weui-uploader__hd">
+                <p class="weui-uploader__title">问题照片:</p>
+              </div>
+              <div class="weui-uploader__bd">
+                <ul class="weui-uploader__files" id="uploaderFiles3">
+                </ul>
+                <div class="weui-uploader__input-box">
+                  <input id="file3" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div> -->
+        </div> -->
 
     </div>
 
 
     <div class="weui-cells weui-cells_radio">
-      <h3 style="margin-top: 20px">否决项4（连续2年监督抽检不存在发现该店因管理不善造成的销售不合格食品问题；）</h3>
+      <h3 style="margin-top: 20px">现场检查未发现老鼠或有明显老鼠活动现象（比如鼠粪等）；</h3>
       <label class="weui-cell weui-check__label" for="x19">
         <div class="weui-cell__bd">
           <p>符合</p>
@@ -359,26 +345,26 @@ color:white;background-color:blueviolet
         </div>
       </div>
       <!-- <div class="weui-cell">
-        <div class="weui-cell__bd">
-          <div class="weui-uploader">
-            <div class="weui-uploader__hd">
-              <p class="weui-uploader__title">问题照片:</p>
-            </div>
-            <div class="weui-uploader__bd">
-              <ul class="weui-uploader__files" id="uploaderFiles4">
-              </ul>
-              <div class="weui-uploader__input-box">
-                <input id="file4" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+          <div class="weui-cell__bd">
+            <div class="weui-uploader">
+              <div class="weui-uploader__hd">
+                <p class="weui-uploader__title">问题照片:</p>
+              </div>
+              <div class="weui-uploader__bd">
+                <ul class="weui-uploader__files" id="uploaderFiles4">
+                </ul>
+                <div class="weui-uploader__input-box">
+                  <input id="file4" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div> -->
+        </div> -->
 
     </div>
 
     <div class="weui-cells weui-cells_radio">
-      <h3 style="margin-top: 20px">否决项5（开展“放心食品超市自我承诺活动”，向社会公开放心食品自我承诺，并在经营场所醒目位置张贴承诺内容；）</h3>
+      <h3 style="margin-top: 20px">提出正式申请创建日期以前连续2年监督抽检未发现该大卖场因管理不善造成的销售不合格食品问题。</h3>
       <label class="weui-cell weui-check__label" for="x21">
         <div class="weui-cell__bd">
           <p>符合</p>
@@ -404,23 +390,44 @@ color:white;background-color:blueviolet
           <textarea class="weui-textarea" id="desc5" placeholder="请输入问题描述" rows="3"></textarea>
         </div>
       </div>
-      <!-- <div class="weui-cell">
-        <div class="weui-cell__bd">
-          <div class="weui-uploader">
-            <div class="weui-uploader__hd">
-              <p class="weui-uploader__title">问题照片:</p>
-            </div>
-            <div class="weui-uploader__bd">
-              <ul class="weui-uploader__files" id="uploaderFiles5">
-              </ul>
-              <div class="weui-uploader__input-box">
-                <input id="file5" class="weui-uploader__input" type="file" accept="image/*" multiple="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+
     </div>
+
+
+    <div class="weui-cells weui-cells_radio">
+      <h3 style="margin-top: 20px">开展“放心食品超市自我承诺活动”，向社会公开放心食品自我承诺，并在经营场所醒目位置张贴承诺内容</h3>
+      <label class="weui-cell weui-check__label" for="x21">
+        <div class="weui-cell__bd">
+          <p>符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" class="weui-check" name="radio6" id="x21" value="1">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <label class="weui-cell weui-check__label" for="x22">
+
+        <div class="weui-cell__bd">
+          <p>不符合</p>
+        </div>
+        <div class="weui-cell__ft">
+          <input type="radio" name="radio6" class="weui-check" id="x22" value="0">
+          <span class="weui-icon-checked"></span>
+        </div>
+      </label>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" id="desc6" placeholder="请输入问题描述" rows="3"></textarea>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
 
     <div style="margin-bottom:40px;height: 30px"></div>
 
@@ -435,14 +442,18 @@ color:white;background-color:blueviolet
 
 
   <div id="div3" style="display:none">
-    <h1 style="margin-top:20px;">1.信息公开透明（15分)</h1>
-    <h3 style="margin-top:20px">1.1实施“亮证经营”制度（5分）</h3>
+    <h1 style="margin-top:20px;">信息公开透明（29分)</h1>
+    <h3 style="margin-top:20px">1.1 实施“亮证经营”制度（16分）</h3>
     <div class="weui-cells weui-cells_form">
-      <h4>（1）未在超市显著位置设置食品安全信息公示栏的扣一分(分值：1分)</h4>
+      <h4>（1）未在超市显著位置设置食品信息公布栏的扣1分
+      </h4>
+
+
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade1" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
+          <input class="weui-input" type="number" id="grade1" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1">
         </div>
       </div>
 
@@ -483,12 +494,17 @@ color:white;background-color:blueviolet
     </div>
 
 
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>（2）未公示食品经营许可证扣1分；(分值：1分)</h4>
+      <h4>（2）未公示营业执照扣1分；</h4>
+      <h4>（3）未公示食品经营许可证扣1分；</h4>
+      <h4>（4）未公示全部食品经营人员健康证（原件，复印件或者电子版），少一人扣一分</h4>
+      <h4>（5）未公示食品安全负责人及管理员照片，姓名和培训证明（原件，复印件或者电子版）扣1分；</h4>
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" id="grade2" type="number" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
+          <input class="weui-input" id="grade2" type="number" placeholder="请输入得分" value="2" oninput="if(value>2|value<0)value=2">
         </div>
       </div>
 
@@ -496,7 +512,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck2" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck2" value="1">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck2" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -526,12 +542,17 @@ color:white;background-color:blueviolet
     </div>
 
 
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>（3）未公示营业执照扣一分；(分值：1分)</h4>
+      <h4>（6）经营肉类和豆制品的，未公示有效的肉品检验检疫证扣1分；</h4>
+      <h4>（7）未在显著位置公示有效的豆制品送货单扣1分；</h4>
+      <h4>8）未在显著位置公示有效的熟食送货单扣1分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" id="grade3" type="number" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
+          <input class="weui-input" id="grade3" type="number" placeholder="请输入得分" value="3" oninput="if(value>3||value<0)value=3 ">
         </div>
       </div>
 
@@ -539,7 +560,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck3" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck3" value="1">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck3" value="3">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -571,11 +592,12 @@ color:white;background-color:blueviolet
 
 
     <div class="weui-cells weui-cells_form">
-      <h4>（4）未公示全部食品经营人员健康证（原件，复印件或者电子版），少一人扣一分；(分值：1分)</h4>
+      <h4>（9）要求：监管动态公示且消费者容易获取：未公示监管动态或监管动态标志被遮，消费者不易看见的扣2分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade4" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
+          <input class="weui-input" type="number" id="grade4" placeholder="请输入得分" value="2" oninput="if(value>2||value<0)value=2">
         </div>
       </div>
 
@@ -583,7 +605,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck4" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck4" value="1">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck4" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -614,12 +636,14 @@ color:white;background-color:blueviolet
     </div>
 
 
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>（5）未公示门店负责人和食品安全管理员的照片，姓名，培训证明（原件，复印件或者电子版），扣一分(分值：1分)</h4>
+      <h4>（10）要求：店内设置电子屏滚动公示监管信息（包括检测、过期食品销毁等），发布的内容应以食品安全信息为主：如果广告等内容在30%以上，扣2分；</h4>
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade5" placeholder="请输入得分" value="1" oninput="if(value>1||value<0)value=1 ">
+          <input class="weui-input" type="number" id="grade5" placeholder="请输入得分" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -627,7 +651,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck5" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck5" value="1">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck5" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -658,13 +682,17 @@ color:white;background-color:blueviolet
     </div>
 
 
-    <h3 style="margin-top:20px">1.2建立食品安全信息追溯制度（10分）</h3>
+
+   
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>（6）要求：设立食品安全信息追溯制度（制度包含但不限于上传信息核对、上传项目、上传负责人、上传期限。不能提供制度，扣2分；制度不齐全，扣1分；(分值：2分)</h4>
+      <h4>（11）要求：以上公示的内容需放置于且消费者容易获取的位置、且醒目如：收银台等，未能做到扣1分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade6" placeholder="请输入得分" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" id="grade6" placeholder="请输入得分" value="1" oninput="if(value>1|value<0)value=1 ">
         </div>
       </div>
 
@@ -672,7 +700,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck6" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck6" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck6" value="1">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -703,19 +731,22 @@ color:white;background-color:blueviolet
     </div>
 
 
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>（7）现场抽查4份送货单（品种从9大类20个产品中选取），核实是否将信息输入食品安全信息追溯平台（www.shfda.org）：少1个扣2分，扣完为止；不能提供现场查询的扣2分；(分值：8分)</h4>
+      <h4>（12）食品进货验收，高风险食品贮藏，食品现制现售，快速检测，过期和不合格食品销售监控视频未做到全覆盖且公示的，发现一项扣1分，扣完为止。</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade7" placeholder="请输入得分" value="8" oninput="if(value>8||value<0)value=8 ">
+          <input class="weui-input" type="number" id="grade7" placeholder="请输入得分" value="5" oninput="if(value>5||value<0)value=5 ">
         </div>
       </div>
       <div class="weui-cell weui-cell_switch">
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck7" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck7" value="8">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck7" value="5">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -748,15 +779,14 @@ color:white;background-color:blueviolet
 
 
 
-    <h1 style="margin-top:20px">2.规范化管理（73分）</h1>
+    <h3> 1.2建立食品安全信息追溯制度（10分）</h3>
 
-    <h3 style="margin-top:20px">2.1建立食品安全管理制度（5分）</h3>
     <div class="weui-cells weui-cells_form">
-      <h4>（8）要求：建立食品安全管理制度：从业人员健康管理制度和培训管理制度、食品安全管理员制度、食品安全自检自查与报告制度、食品经营过程与控制制度、场所及设施设备清洗消毒和维修保养制度、进货查验和查验记录制度、主要食品和食用农产品安全信息追溯制度、食品安全信息公示制度。缺1项扣1分，扣满5分为止。；(分值：5分)</h4>
+      <h4>传项目、上传负责人、上传期限。不能提供制度，扣2分；制度不齐全，扣1分</h4>
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade8" placeholder="请输入得分" value="5" oninput="if(value>5||value<0)value=5 ">
+          <input class="weui-input" type="number" id="grade8" placeholder="请输入得分" value="2" oninput="if(value>2||value<0)value=2">
         </div>
       </div>
 
@@ -764,7 +794,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck8" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck8" value="5">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck8" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -796,16 +826,17 @@ color:white;background-color:blueviolet
 
 
 
-    <h3 style="margin-top:20px">2.2建立临近保质期食品提示制度（12分）</h3>
+
     <div class="weui-cells weui-cells_form">
-      <h4>（9）要求：建立临近保质期食品提示制度。无临近保质期食品提示制度扣2分；</h4>
-      <h4>(10)未设置临保食品陈列区（柜）扣6分（常温2分，冷藏2分，冷冻2分）；</h4>
-      <h4>(11)临保食品未放入专区（柜）的，每件扣2分，扣完为止；</h4>
-      <h4>(12)未向消费者作出醒目的“临近保质期食品”提示，扣两分；</h4>
+      <h4>（（14）现场抽查4份送货单（品种从9大类20个产品中选取），核实是否将信息输入食品安全信息追溯平台（www.shfda.org）：少1个扣2分，扣完为止；</h4>
+
+      <h4>（15）不能提供现场查询的扣2分；</h4>
+
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade9" placeholder="请输入得分" value="12" oninput="if(value>12||value<0)value=12 ">
+          <input class="weui-input" type="number" id="grade9" placeholder="请输入得分" value="8" oninput="if(value>8||value<0)value=8 ">
         </div>
       </div>
 
@@ -813,7 +844,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck9" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck9" value="12">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck9" value="8">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -844,16 +875,17 @@ color:white;background-color:blueviolet
     </div>
 
 
+  
 
-
-    <h3 style="margin-top:20px">2.3建立过期食品销毁制度（18分）</h3>
+    <h3 style="margin-top:20px">1.3 建立食用农产品和高风险食品快速检测制度（3分）</h3>
 
     <div class="weui-cells weui-cells_form">
-      <h4>(13)无过期食品销毁登记制度（制度包含但不限于销毁执行人，销毁方式，销毁产品信息，销毁记录方式，记录保存期限）扣2分；缺一项扣1分，扣完为止；</h4>
+      <h4>（16）无食用农产品和高风险食品快速检测制度扣1分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade13" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade13" value="1" oninput="if(value>1||value<0)value=1">
         </div>
       </div>
 
@@ -861,7 +893,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck13" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck13" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck13" value="1">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -891,12 +923,19 @@ color:white;background-color:blueviolet
       </div>
     </div>
 
+
+
+  
     <div class="weui-cells weui-cells_form">
-      <h4>(14)随机抽取往期销毁记录（含影像），未保留记录（影像资料），每项扣2分；</h4>
+      <h4>17）出现以下情况扣1分
+        17.1未设立快速检测室；
+        17.2有设立但未配备专用设备和/或检测人员；
+        17.3未设立快检室，且未能提供委托有资质检测机构进行检测的协议；</h4>
+     
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade14" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade14" value="1" oninput="if(value>1||value<0)value=1">
         </div>
       </div>
 
@@ -904,7 +943,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label class="weui-switch-cp">
-            <input id="notcheck14" class="weui-switch-cp__input" type="checkbox" id="notcheck14" value="2">
+            <input id="notcheck14" class="weui-switch-cp__input" type="checkbox" id="notcheck14" value="1">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -935,12 +974,19 @@ color:white;background-color:blueviolet
     </div>
 
 
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>(15)记录显示，对超保食物的处理，未采取染色、毁形，每项扣2分；；</h4>
+      <h4>18）出现以下情况扣1分
+        18.1其中检测设备配备不全；（必须具备能覆盖所经营的农产品及高风险食品的检测项目）；
+        18.2检测人员无培训证明；
+        18.3无检测记录和/或记录保留低于2年；
+        18.4检测频率不符合规定;</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade15" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade15" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -948,7 +994,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck15" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck15" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck15" value="1">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -979,12 +1025,16 @@ color:white;background-color:blueviolet
     </div>
 
 
+    <h1>2规范化管理（102分）</h1>
+    <h3>2.1食品安全相关制度（3分）</h3>
+
     <div class="weui-cells weui-cells_form">
-      <h4>(16)销毁记录不全，或保留期限低于2年，每项扣2分；；</h4>
+      <h4>（19）要求：建立食品安全管理制度：从业人员健康管理制度和培训管理制度、食品安全管理员制度、食品安全自检自查与报告制度、食品经营过程与控制制度、场所及设施设备清洗消毒和维修保养制度、进货查验和查验记录制度、主要食品和食用农产品安全信息追溯制度、食品安全信息公示制度、主要食品和食用农产品安全、食品贮存、运输管理制度、废弃物处置制度、食品安全突发事件应急处置方案以及经营过程中销售、存储、收货、加工区域卫生管理制度。缺1项扣分，扣完为止。</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade16" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade16" value="3" oninput="if(value>3||value<0)value=3 ">
         </div>
       </div>
 
@@ -992,7 +1042,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck16" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck16" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck16" value="3">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1022,13 +1072,19 @@ color:white;background-color:blueviolet
       </div>
     </div>
 
-
+  
+    <h3>2.2建立临近保质期食品提示制度（10分）</h3>
     <div class="weui-cells weui-cells_form">
-      <h4>(17)退回供应商的，每项扣5分；；</h4>
+      <h4>（20）要求：建立临近保质期食品提示制度。无“临近保质期食品”提示扣1分；</h4>
+      <h4>
+        （21）未设置临保食品陈列区（柜）扣6分（常温2分，冷藏2分，冷冻2分）；
+      </h4>
+      <h4>（22）临保食品未放入专区（柜）的，每件扣1分，扣完为止；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" id="grade17" placeholder="请输入得分" value="5" oninput="if(value>5||value<0)value=5 ">
+          <input class="weui-input" type="number" id="grade17" placeholder="请输入得分" value="8" oninput="if(value>8||value<0)value=8 ">
         </div>
       </div>
 
@@ -1036,7 +1092,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck17" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck17" value="5">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck17" value="8">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1067,14 +1123,15 @@ color:white;background-color:blueviolet
     </div>
 
 
+
+    <h3>2.3建立过期食品销毁制度（10分）</h3>
     <div class="weui-cells weui-cells_form">
-      <h4>(18)要求：接监管部门通报等发现存在不安全食品的，及时落实下架停售、召回等措施。未能及时执行的扣3分；；</h4>
-      <h4>(19)执行但无记录扣2分；；</h4>
-      <h4>（20）记录保留期限低于两年的，扣1分；；</h4>
+      <h4>（23）未向消费者作出醒目的“临近保质期食品”提示，扣2分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade18" value="5" oninput="if(value>5||value<0)value=5 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade18" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1082,7 +1139,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck18" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck18" value="5">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck18" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1116,15 +1173,14 @@ color:white;background-color:blueviolet
 
 
 
-    <h3 style="margin-top:20px">2.4个人卫生要求（14分）</h3>
+
     <div class="weui-cells weui-cells_form">
-      <h4>(21)要求：食品从业人员应按照《上海市食品从业人员食品安全知识培训和考核管理办法》要求，经食品安全培训考核合格后上岗。
-        食品安全管理人员培训每年未达到60学时的，每人扣2分；；</h4>
-      <h4>(22)从业人员每年未达到40学时，每人扣1分；</h4>
+      <h4>（24）无过期食品销毁登记制度（制度包含但不限于销毁执行人，销毁方式，销毁产品信息，销毁记录方式，记录保存期限）扣2分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade21" value="5" oninput="if(value>5||value<0)value=5 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade21" value="2" oninput="if(value>2||value<0)value=2">
         </div>
       </div>
 
@@ -1132,7 +1188,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label class="weui-switch-cp">
-            <input id="notcheck21" class="weui-switch-cp__input" type="checkbox" id="notcheck21" value="5">
+            <input id="notcheck21" class="weui-switch-cp__input" type="checkbox" id="notcheck21" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1164,14 +1220,18 @@ color:white;background-color:blueviolet
 
 
 
-
     <div class="weui-cells weui-cells_form">
-      <h4>(23)要求：从事接触直接入口食品工作的食品经营人员应持有有效健康检查合格证明。患有有碍食品安全的疾病的，每人扣2分；；</h4>
-      <h4>(24)未开展每日做好晨检工作，每次扣1分；</h4>
+      <h4>（25）要求：按规定对超过保质期的食品进行染色、毁形等处置，随机抽取往期销毁记录（含影像），未保留记录（影像资料），每项扣1分；</h4>
+      <h4>
+        （26）记录显示，对超保食物的处理，未采取染色、毁形，每项扣1分
+      </h4>
+
+      <h4>（27）销毁记录不全，或保留期限低于2年，每项扣1分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade23" value="5" oninput="if(value>5||value<0)value=5 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade23" value="3" oninput="if(value>3||value<0)value=3 ">
         </div>
       </div>
 
@@ -1179,7 +1239,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck23" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck23" value="5">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck23" value="3">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1214,14 +1274,13 @@ color:white;background-color:blueviolet
 
 
     <div class="weui-cells weui-cells_form">
-      <h4>(25)未做到勤洗手、勤剪指甲、勤换衣服、勤理发、勤洗澡的，每人次扣1分；；</h4>
-      <h4>(26)加工食品时未穿戴清洁的工作服、工作帽，将头发梳理整齐并置于帽内的，每人次扣1分;</h4>
-      <h4>(27)留长指甲、涂指甲油、戴外露饰物的，每人次扣1分；</h4>
-      <h4>(28)操作直接入口食品时未穿戴手套和口罩的，每人次扣1分</h4>
+      <h4>（28）退回供应商的，扣2分</h4>
+
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade25" value="4" oninput="if(value>4||value<0)value=4 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade25" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1229,7 +1288,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck25" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck25" value="4">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck25" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1261,17 +1320,18 @@ color:white;background-color:blueviolet
 
 
 
-    <h3 style="margin-top:20px">2.5冷藏、冷冻和热链设备温度要求（6分）</h3>
+
 
     <div class="weui-cells weui-cells_form">
-      <h4>29)要求：冷藏、冷冻和热链设备温度应符合相应要求。冷藏不符合0℃～8℃的，每项次扣1分；</h4>
-      <h4>(30)冷冻不符合－20℃～－1℃的，每项次扣1分；</h4>
-      <h4>(31)加热保温柜不符合≥60℃的，每项次扣1分。</h4>
-      <h4>（32）无温度监控记录的，扣1分，记录不全的，扣1分</h4>
+      <h4>（28）要求：接监管部门通报等发现存在不安全食品的，及时落实下架停售、召回等措施。
+        28.1未能及时执行的扣3分；
+        28.2执行但无记录扣2分；
+        28.2记录保留期限低于2年的，扣1分</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade29" value="6" oninput="if(value>6||value<0)value=6 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade29" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1279,7 +1339,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck29" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck29" value="6">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck29" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1315,13 +1375,15 @@ color:white;background-color:blueviolet
 
 
 
-    <h3 style="margin-top:20px">2.6散装食品销售要求（10分）</h3>
+    <h3>2.4个人卫生要求（11分）</h3>
     <div class="weui-cells weui-cells_form">
-      <h4>(33)着地堆放的扣2分；</h4>
+      <h4>29）要求：企业负责人、食品安全管理人员和食品从业人员应按照《上海市食品从业人员食品安全知识培训和考核管理办法》要求，经食品安全培训考核合格后上岗。企业负责人、食品安全管理人员培训每年未达到60学时的，每人扣3分；</h4>
+      <h4>（30）从业人员每年未达到40学时，每人扣2分；</h4>
+      <h4>（31）未建立食品安全培训档案的。扣2分</h4>
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade33" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade33" value="7" oninput="if(value>7||value<0)value=7 ">
         </div>
       </div>
 
@@ -1329,7 +1391,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck33" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck33" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck33" value="7">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1360,12 +1422,20 @@ color:white;background-color:blueviolet
     </div>
 
 
+
+
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>(34)直至食品销售完毕前，原标签丢失的扣2分；</h4>
+      <h4>（32）要求：从事接触直接入口食品工作的食品经营人员应持有有效健康检查合格证明。
+        31.1患有有碍食品安全的疾病的，每人扣1分；</h4>
+      <h4>（33）未开展每日做好晨检工作，每次扣1分；</h4>
+      <h4>（34）未建立从事直接入口食品工作的食品从业人员健康档案的，扣2分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade34" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade34" value="7" oninput="if(value>7||value<0)value=7 ">
         </div>
       </div>
 
@@ -1373,7 +1443,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck34" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck34" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck34" value="7">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1404,16 +1474,22 @@ color:white;background-color:blueviolet
     </div>
 
 
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>(35)散装直接入口食品未设置隔离设施的，每项次扣1分；</h4>
-      <h4>(36)散装直接入口食品销售未由专人使用清洁的专用售货工具的，每项次扣1分；</h4>
-      <h4>（37）散装直接入口的热食易腐食品（熟食卤味）未放置在热食展示柜的，每项扣一分；</h4>
-      <h4>（38）热食展示柜温度未达到≥60℃的，扣1分</h4>
-      <h4>(39)无温度监控记录的，扣1分</h4>
+      <h4>（35）要求：食品加工从业人员应保持良好个人卫生。
+        未做到勤洗手、勤剪指甲、勤换衣服、勤理发、勤洗澡的，每人次扣1分；</h4>
+      <h4>（36）加工食品时未穿戴清洁的工作服、工作帽，将头发梳理整齐并置于帽内的，每人次扣1分；</h4>
+
+      <h4>（37）留长指甲、涂指甲油、戴外露饰物的，每人次扣1分；</h4>
+
+      <h4>（38）操作直接入口食品时未穿戴手套和口罩的，每人次扣1分。</h4>
+
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade35" value="6" oninput="if(value>6||value<0)value=6 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade35" value="4" oninput="if(value>4||value<0)value=4">
         </div>
       </div>
 
@@ -1421,7 +1497,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck35" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck35" value="6">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck35" value="4">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1453,15 +1529,21 @@ color:white;background-color:blueviolet
 
 
 
+   
+    <h3>2.5冷藏、冷冻和热链设备温度要求（6分）</h3>
 
-
-    <h3 style="margin-top:20px">2.7环境卫生要求（8分）</h3>
     <div class="weui-cells weui-cells_form">
-      <h4>(40)食品与非食品应尽量分开陈列，食品与有毒有害物品混合陈列，每次项1分；</h4>
+      <h4>（39）要求：冷藏、冷冻和热链设备温度应符合相应要求。
+        冷藏不符合0℃～8℃的，每项次扣2分； </h4>
+
+        <h4>（40）冷冻不符合－12℃的，每项次扣2分；</h4>
+        <h4>（41）加热保温柜不符合≥60℃的，每项次扣1分。</h4>
+        <h4>（42）无温度监控记录的，扣一分；记录不全的，扣1分</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade40" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade40" value="6" oninput="if(value>6||value<0)value=6">
         </div>
       </div>
 
@@ -1469,7 +1551,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck40" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck40" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck40" value="6">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1498,13 +1580,17 @@ color:white;background-color:blueviolet
         </div>
       </div>
     </div>
+
+
+
+    <h3>2.6散装食品销售要求（23分）</h3>
     <div class="weui-cells weui-cells_form">
-      <h4>(41)食品销售和贮存区域地面、冷藏柜、冷冻柜、热柜、货架、天花板、照明灯、电子秤等未定期清洁保持整洁的，每项次扣1分；</h4>
-      <h4>(42)有食物残渣残留、飞虫，隔板和角落有污渍、私人物品的，每项次扣0.5分；</h4>
+      <h4>（43）着地堆放的扣3分；</h4>
+      
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade41" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade41" value="3" oninput="if(value>3||value<0)value=3 ">
         </div>
       </div>
 
@@ -1512,7 +1598,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck41" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck41" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck41" value="3">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1545,11 +1631,12 @@ color:white;background-color:blueviolet
 
 
     <div class="weui-cells weui-cells_form">
-      <h4>(43)无必要的防鼠、防蝇、防蟑等措施的，扣2分；</h4>
+      <h4>（44）直至食品销售完毕前，原标签丢失的扣3分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade43" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade43" value="3" oninput="if(value>3||value<0)value=3 ">
         </div>
       </div>
 
@@ -1557,7 +1644,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck43" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck43" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck43" value="3">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1588,8 +1675,11 @@ color:white;background-color:blueviolet
     </div>
 
 
+
     <div class="weui-cells weui-cells_form">
-      <h4>(44)消毒清洁用品敞开存放在销售直接入口食品处或者临近食品加工场所的，扣2分；</h4>
+      <h4>（45）散装直接入口食品未设置隔离设施的，每项次扣2分；</h4>
+
+      </h4>
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
@@ -1631,15 +1721,19 @@ color:white;background-color:blueviolet
       </div>
     </div>
 
-    <h1 style="margin-top:20px">3.妥善处置投诉（12分）</h1>
 
-    <h3 style="margin-top:20px">3.1畅通消费投诉渠道（12分）</h3>
+
+
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>(45)要求：消费者食品安全投诉渠道。未设立投诉电话的扣1分；；</h4>
+      <h4>（46）散装直接入口食品销售未由专人使用清洁的专用售货工具的，每项次扣2分；</h4>
+     
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade45" value="1" oninput="if(value>1||value<0)value=1 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade45" value="2" oninput="if(value>2||value<0)value=2 ">
         </div>
       </div>
 
@@ -1647,7 +1741,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck45" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck45" value="1">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck45" value="2">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1678,12 +1772,14 @@ color:white;background-color:blueviolet
     </div>
 
 
+
     <div class="weui-cells weui-cells_form">
-      <h4>(46)未建立投诉处理机制的扣1分；；</h4>
+      <h4>（47）散装直接入口的热食易腐食品（熟食卤味）未放置在热食展示柜的，每项次扣1分</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade46" value="1" oninput="if(value>1||value<0)value=1 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade46" value="7" oninput="if(value>7||value<0)value=7 ">
         </div>
       </div>
 
@@ -1691,7 +1787,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck46" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck46" value="1">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck46" value="7">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1721,8 +1817,9 @@ color:white;background-color:blueviolet
       </div>
     </div>
 
+
     <div class="weui-cells weui-cells_form">
-      <h4>(47)未设置专人接待消费者投诉的扣1分；</h4>
+      <h4>（48）热食展示柜温度未达到≥60℃的，每项次扣1分</h4>
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
@@ -1764,8 +1861,10 @@ color:white;background-color:blueviolet
       </div>
     </div>
 
+
     <div class="weui-cells weui-cells_form">
-      <h4>（48）未做好消费者投诉和处置记录的，扣一分；；</h4>
+      <h4>（49）无温度监控记录的，扣1分；记录不全，扣1分；</h4>
+  
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
@@ -1776,7 +1875,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell weui-cell_switch">
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
-          <label for="notcheck48" class="weui-switch-cp">
+          <label for="notcheckObject" class="weui-switch-cp">
             <input class="weui-switch-cp__input" type="checkbox" id="notcheck48" value="1">
             <div class="weui-switch-cp__box"></div>
           </label>
@@ -1808,12 +1907,15 @@ color:white;background-color:blueviolet
     </div>
 
 
+
+  
     <div class="weui-cells weui-cells_form">
-      <h4>(49)未能妥善处理消费者投诉的，扣1分；；</h4>
+      <h4>（50）未设立散装食品销售专区或者专柜的扣2 分</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade49" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade49" value="2" oninput="if(value>2||value<0)value=2">
         </div>
       </div>
 
@@ -1852,8 +1954,10 @@ color:white;background-color:blueviolet
     </div>
 
 
+
     <div class="weui-cells weui-cells_form">
-      <h4>(50)存在食品安全隐患，未先行赔付的扣2分；；</h4>
+      <h4>（51）发现不同批次散装食品混装扣2分；</h4>
+
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
@@ -1895,12 +1999,15 @@ color:white;background-color:blueviolet
       </div>
     </div>
 
+
+
     <div class="weui-cells weui-cells_form">
-      <h4>(51)消费者投诉未在3天回复的，每项次扣2分；</h4>
+      <h4>（52）散装食品的销售容器或销售牌上应标明食品品名、配料、生产者名称、地址、联系方式、生产日期或批号、保质期和/或保存方法等；现场抽查2种产品，发现一个不合格扣2分，直至扣完；</h4>
+      <h4>（53）标识不全，少一项扣1分，直至扣完；</h4>
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade51" value="4" oninput="if(value>4||value<0)value=4 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade51" value="6" oninput="if(value>6||value<0)value=6 ">
         </div>
       </div>
 
@@ -1908,7 +2015,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck51" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck51" value="4">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck51" value="6">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -1937,6 +2044,1553 @@ color:white;background-color:blueviolet
         </div>
       </div>
     </div>
+
+
+    <!--新增的-->
+    <h3>2.7环境卫生要求（11分）</h3>
+
+    <div class="weui-cells weui-cells_form">
+
+      <h4>（54）食品与非食品应尽量分开陈列，食品与有毒有害物品混合陈列的，每项次扣1分</h4>
+     
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade52" value="2" oninput="if(value>2||value<0)value=2">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck52" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc52"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles52">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file52" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（55）食品销售和贮存区域地面、冷藏柜、冷冻柜、热柜、货架、天花板、照明灯、电子秤等未定期清洁保持整洁的，每项次扣1分；</h4>
+      <h4>（56）食品收货区域地面、天花板、灭蝇灯、接收的容器、运输车辆、接收工具等未定期清洁保持整洁的，每项次扣1分；</h4>
+      <h4>（57）食品加工区域地面、天花板、货架、排风口、油烟机、门窗等未定期清洁保持整洁的，每项扣1分；</h4>
+      <h4>（58）有食物残渣残留、飞虫，隔板和角落有污渍、私人物品的，每项次扣1分。</h4>
+      <h4>（59）记录检查；不能提供食品储存、收货、加工区域卫生巡检记录的扣1分；记录不全扣1分</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade53" value="5" oninput="if(value>5||value<0)value=5 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck53" value="5">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc53"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles53">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file53" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（60）无必要的防鼠、防蝇、防蟑等措施的，扣2分；</h4>
+
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade54" value="2" oninput="if(value>2||value<0)value=2 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck54" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc54"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles54">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file54" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（61）消毒清洁用品敞开存放在销售直接入口食品处或者临近食品加工场所的，扣2分；</h4>
+  
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade55" value="2" oninput="if(value>2||value<0)value=2 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck55" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc55"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles55">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file55" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <h3>2.8冷（热）链的标准化（12分）</h3>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（62）运输有特殊温度控制要求的食品和食用农产品。
+        62.1：不能提供全程温度监控记录扣1分；
+        62.2：冷藏商品脱离冷链超过20分钟、冷冻商品脱离冷链超过30分钟、热熟食脱离热链4小时后未报损的，发现1项扣2分；
+        62.3：收货过程中无产品中心温度及运输车辆温度记录，扣2分；</h4>
+   
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade56" value="4" oninput="if(value>4||value<0)value=4 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck56" value="4">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc56"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles56">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file56" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+   
+    <div class="weui-cells weui-cells_form">
+      <h4>（63）贮存有特殊温度控制要求的食品和食用农产品。现场无温度监控器，扣2分，</h4>
+      <h4>（64）无温度记录扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade57" value="3" oninput="if(value>3||value<0)value=3 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck57" value="3">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc57"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles57">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file57" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(65）陈列和销售有特殊温度控制要求的食品和食用农产品。现场无温度监控器，扣2分；</h4>
+      <h4>（66）无温度记录扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade58" value="3" oninput="if(value>3||value<0)value=3">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck58" value="3">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc58"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles58">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file58" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（67）食品储存销售的温度与食品外包装上标明储存温度不符扣2分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade59" value="2" oninput="if(value>2||value<0)value=2 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck59" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc59"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles59">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file59" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+     <h1>2.9特殊食品专柜销售（3分）</h1>
+    <div class="weui-cells weui-cells_form">
+      <h4>（68）保健食品，婴幼儿配方食品，特殊医学用途配方食品未设置专柜且无明显标志每项次扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade60" value="3" oninput="if(value>3||value<0)value=3 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck60" value="3">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc60"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles60">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file60" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3>2.10食品安全管理人员制度（6分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（69）未配备专职食品安全管理人员的扣3分；</h4>
+      <h4>（70）专职安全食品管理人员未穿戴区别于其他员工的工作服或标志扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade61" value="3" oninput="if(value>3||value<0)value=3 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck61" value="3">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc61"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles61">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file61" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（71）专职食品安全管理员未保留每日巡查记录的扣2分；</h4>
+      <h4>（72）记录不全的扣1分；</h4>
+
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade62" value="3" oninput="if(value>3||value<0)value=3">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck62" value="3">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc62"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles62">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file62" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <h1>3.规范现制现售加工行为（59分）</h1>
+    <h3>3.1食品原料应符合相应食品安全国家和地方标准，并做到可追溯，严格控制使用食品添加剂。（13分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（73）未建立供应商管理制度的扣1分；</h4>
+      <h4>（74）未建立供应商管理档案的扣1分；</h4>
+      <h4>（75）建有档案有缺失扣1分；</h4>
+      <h4>（76）未定期对供应商进行评估的扣1分，未对高风险产品供应商进行现场评估的扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade63" value="5" oninput="if(value>5||value<0)value=5 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck63" value="5">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc63"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles63">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file63" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--新增-->
+   
+    <div class="weui-cells weui-cells_form">
+      <h4>（77）不能提供所有供应商合法证件和产品合格证明文件的扣2分；</h4>
+     
+
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade64" value="2" oninput="if(value>2||value<0)value=2 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck64" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc64"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles64">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file64" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>  （78）未能提供原辅料的验收记录扣1分；</h4>
+      <h4>   (79) 未能及时更新过期文件的证件与文件的，扣1分</h4>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade65" value="2" oninput="if(value>2||value<0)value=2 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck65" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc65"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles65">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file65" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+   
+    <div class="weui-cells weui-cells_form">
+      <h4> （80）记录和凭证保存期限少于产品保质期满6个月的，扣1分，未能严格控制所使用的的食品添加剂的，扣1分</h4>
+  
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade66" value="2" oninput="if(value>2||value<0)value=2 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck66" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc66"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles66">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file66" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（81）记录和凭证保存期限少于产品保质期满后6个月的，扣2分</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade67" value="2" oninput="if(value>2||value<0)value=2 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck67" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc67"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles67">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file67" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3>3.2分区加工的要求（3分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（82）未能根据未能根据经营的品种范围设 置粗加工间、食品加工间、熟 食专间、冷加工糕点间、裱花专间，扣 3 分；</h4>
+     
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade68" value="3" oninput="if(value>3||value<0)value=3">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck68" value="3">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc68"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles68">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file68" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h3>3.3 专间设施设备与操作要求（8）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4> （83）专间应安装洗手池，洗手池 配备洗手液、干手设施、洗手 流程图，必要时配备消毒水， 不符合的扣 1 分；</h4>
+      <h4>（84）经营面积超过 150 ㎡的应设 置独立的工具清洗消毒间，不 符合的扣 1 分；</h4>
+      <h4>（85）专间应为独立隔间，墙裙铺 设到顶，有独立的空调，温度 不高于 25℃。专间面积不得少 于 5 ㎡，不符合的扣 1 分；</h4>
+      <h4>（86）专间应设有工用具清洗消毒 设施和空气消毒设施，紫外灯 离地不得超过 1.8m，应保证每 次使用前和操作结束后开启至 少 30 分钟，不符合的扣 1 分；</h4>
+      <h4>（87）专间应专人操作，操作人员 工作前应对手部清洗、消毒， 并更换专用工作服，戴口罩， 非操作人员不得擅自进入专 间，不符合的扣 1 分；</h4>
+      <h4>（88）易腐食品，包括凉菜（包括 冷菜、冷荤、熟食、卤味等）、 裱花蛋糕、寿司等，应在专间 内加工，专间内不得存放非即 食商品，食物应清洗（消毒）， 后方可带入专间，不符合的扣 1 分；</h4>
+      <h4>（89）专间入口处有预进间，预进 间应有洗手消毒设施、更衣设 施，消毒水的浓度应符合要求， 并定时更换，有更换记录，不 符合的扣 1 分；</h4>
+      <h4>（90）专间内应设有专用冷藏冷冻 设施，并且功能正常，不符合 的扣 1 分；</h4>
+      <h4>（91）专间内直接接触食品的用水 应该加装净水设施，不符合的 扣 1 分；</h4>
+      <h4> ( 92 ) 专间内的废弃物容器盖子应 当为非手动开启式，内有垃圾 袋，不符合的扣 1 分；</h4>
+      <h4>（93）专间管理：通向外界的门不 能自动关闭，扣 1 分；专间内 存放非专间使用物品的，扣 1 分；</h4>
+      <h4>（94）不符合生进熟出的单一流向，扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade69" value="8" oninput="if(value>8||value<0)value=8 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck69" value="8">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc69"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles69">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file69" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <h3>3.4 专间从业人员卫生要求（3 分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（95）专间加工人员在开始工作 前、处理食物前、如厕后、处 理生食物后、处理弄污的设备 或饮食用具后、咳嗽、打喷嚏 或擤鼻子后、处理动物或废物 后、触摸耳朵、鼻子、头发、 口腔或身体其他部位后未清洗 和消毒双手的，发现一项扣 1 分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade70" value="3" oninput="if(value>3||value<0)value=3 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck70" value="3">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc70"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles70">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file70" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!--新增-->
+   <h3>3.5 工用具与容器的要求（7 分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（96）用于原料，半成品，成品的 工器具，以及动物性食品，植 物性食品，水产品的工器具不 能明显区分，扣 1 分，</h4>
+      <h4>（97）无器具区分示意图，扣 1 分；</h4>
+      <h4>98）发现工器具有破损、裂缝， 未定位存放，扣 1 分；</h4>
+      <h4></h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade71" value="3" oninput="if(value>3||value<0)value=3 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck71" value="3">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc71"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles71">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file71" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4> （99）食品加工区域使用的清洗水 池应有功能标识，清洁盛器和 工用具应有专用的清洁水池， 清洗后的清洁工具指定区域离 地吊挂，并保持干净，不符合 的扣 2 分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade72" value="2" oninput="if(value>2||value<0)value=2 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck72" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc72"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles72">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file72" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+   
+    <div class="weui-cells weui-cells_form">
+      <h4>（100）用 ATP 快检测试接触直接入 口的工器具和容器、专间员工 手部，检测值＞100RLU，每人 次扣 2 分；</h4>
+      
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade73" value="2" oninput="if(value>2||value<0)value=2">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck73" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc73"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles73">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file73" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h3>3.6 环境卫生要求（ 4 分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>（101）食品加工区域的垃圾桶应放 置于指定位置且无破损，不符 合的扣 1 分； </h4>
+      
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade74" value="1" oninput="if(value>1||value<0)value=1 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck74" value="1">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc74"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles70">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file74" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  
+    <div class="weui-cells weui-cells_form">
+      <h4>（102）食品加工区域应使用塑料仓 板且无破损，不符合的扣 1 分；</h4>
+    
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade75" value="1" oninput="if(value>1||value<0)value=1 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck75" value="1">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc75"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles75">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file75" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+    <div class="weui-cells weui-cells_form">
+      <h4>（103）发现食品加工区域的地磅、 电子秤张贴除检定合格证外标 签的扣 1 分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade76" value="1" oninput="if(value>1||value<0)value=1 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck76" value="0.5">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc76"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles76">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file76" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
+    <div class="weui-cells weui-cells_form">
+      <h4>（104）洗涤剂、消毒剂和除害药物 应有标签，易识别，并在指定 区域存放，应与食品及食品用 盛器和工用具应分开存放，不 符合的扣 1 分；</h4>
+    
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade77" value="1" oninput="if(value>1||value<0)value=1 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck77" value="1">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc77"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles77">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file70" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  
+    <h3>3.7 食品添加剂管理要求（2 分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4> （105）专人采购，专人保管，专人 领用，专人登记，专柜保存， 现场查看或抽查记录发现缺失 一样，扣 2 分；</h4>
+      <h4>（106）无添加剂使用范围及使用量 的标准及记录，扣 2 分；</h4>
+      <h4>（107）无计量食品添加剂的电子秤 等有效检定证明，扣 2 分；</h4>
+      
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade78" value="2" oninput="if(value>2||value<0)value=2 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck78" value="2">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc78"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles78">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file78" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <h3>3.8 食品的 温度与时间 的控制（ 4 分）</h3>
+
+    <div class="weui-cells weui-cells_form">
+      <h4>（108）加工鱼肉等动物食品，块状 食品、有容器存放的液体食品 的中心温度＜70℃，扣 1 分；</h4>
+      <h4>（109）切开食品，发现中心部位有 血水，扣 2 分；</h4>
+      <h4>（110）存放时间大于 2 小时的食 品，未置于≤10℃或≥60℃存 放，扣 2 分；</h4>
+
+      <h4>（111）冷冻原料未通过冷藏、流水 解冻或未被水浸没的扣 1 分；</h4>
+
+      <h4>112）解冻水槽使用完后未进行彻 底清洁和消毒的扣 1 分；</h4>
+
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade79" value="4" oninput="if(value>4||value<0)value=4 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck79" value="4">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc79"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles79">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file79" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h3>3.9.开封食 品后的使用 期限（6 分）</h3>
+    <div class="weui-cells weui-cells_form">
+      <h4>(111) 未设置专人接待消费者投诉的扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade80" value="1" oninput="if(value>1||value<0)value=1 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck80" value="1">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc80"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles80">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file80" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(112) 未能妥善处理消费者投诉的，扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade81" value="1" oninput="if(value>1||value<0)value=1 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck81" value="1">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc81"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles81">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file81" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4> (113) 存在食品安全隐患，未先行赔付的扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade82" value="1" oninput="if(value>0.5||value<0)value=1 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck82" value="1">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc82"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles82">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file82" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="weui-cells weui-cells_form">
+      <h4>(114) 消费者投诉未在3天回复的，每项次扣1分；</h4>
+
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade83" value="1" oninput="if(value>1||value<0)value=1 ">
+        </div>
+      </div>
+
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">不适用</div>
+        <div class="weui-cell__ft">
+          <label for="notcheck51" class="weui-switch-cp">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck83" value="1">
+            <div class="weui-switch-cp__box"></div>
+          </label>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">改进问题描述</label></div>
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入改进问题描述" rows="3" id="desc83"></textarea>
+        </div>
+      </div>
+
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title">问题照片:</p>
+            </div>
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="z_uploaderFiles83">
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="z_file83" class="weui-uploader__input" type="file" accept="image/*" multiple="" onchange="uploadFilefun(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
 
     <div style="margin-bottom:40px;height: 30px"></div>
 
@@ -2159,6 +3813,44 @@ color:white;background-color:blueviolet
     var arr51 = new Array();
 
 
+    var arr52 = new Array();
+    var arr53 = new Array();
+    var arr54 = new Array();
+    var arr55 = new Array();
+    var arr56 = new Array();
+    var arr57 = new Array();
+    var arr58 = new Array();
+    var arr59 = new Array();
+    var arr60 = new Array();
+    var arr61 = new Array();
+    var arr62 = new Array();
+    var arr63 = new Array();
+
+    var arr64 = new Array();
+    var arr65 = new Array();
+    var arr66 = new Array();
+    var arr67 = new Array();
+    var arr68 = new Array();
+    var arr69 = new Array();
+    var arr70 = new Array();
+
+    var arr71 = new Array();
+    var arr72 = new Array();
+    var arr73 = new Array();
+    var arr74 = new Array();
+    var arr75 = new Array();
+    var arr76 = new Array();
+    var arr77 = new Array();
+    var arr78 = new Array();
+    var arr79 = new Array();
+    var arr80 = new Array();
+    var arr81 = new Array();
+    var arr82 = new Array();
+
+    var arr83 = new Array();
+
+
+
 
     var not1 = 0;//不适用分数
     var not2 = 0;//不适用分数
@@ -2208,11 +3900,52 @@ color:white;background-color:blueviolet
     var not45 = 0;//不适用分数
     var not46 = 0;//不适用分数
     var not47 = 0;//不适用分数
-    var not48 = 0;//不适用分数
+    var notObject = 0;//不适用分数
     var not49 = 0;//不适用分数
 
     var not50 = 0;//不适用分数
     var not51 = 0;//不适用分数
+
+
+    var not52 = 0;//不适用分数
+    var not53 = 0;//不适用分数
+    var not54 = 0;//不适用分数
+    var not55 = 0;//不适用分数
+    var not56 = 0;//不适用分数
+    var not57 = 0;//不适用分数
+    var not58 = 0;//不适用分数
+    var not59 = 0;//不适用分数
+    var not60 = 0;//不适用分数
+    var not61 = 0;//不适用分数
+    var not62 = 0;//不适用分数
+
+    var not63 = 0;//不适用分数
+
+
+    var not64 = 0;//不适用分数
+    var not65 = 0;//不适用分数
+    var not66 = 0;//不适用分数
+    var not67 = 0;//不适用分数
+    var not68 = 0;//不适用分数
+    var not69 = 0;//不适用分数
+    var not70 = 0;//不适用分数
+
+
+    var not71 = 0;//不适用分数
+    var not72 = 0;//不适用分数
+    var not73 = 0;//不适用分数
+    var not74 = 0;//不适用分数
+    var not75 = 0;//不适用分数
+    var not76 = 0;//不适用分数
+    var not77 = 0;//不适用分数
+    var not78 = 0;//不适用分数
+    var not79 = 0;//不适用分数
+    var not80 = 0;//不适用分数
+    var not81 = 0;//不适用分数
+    var not82 = 0;//不适用分数
+    var not83 = 0;//不适用分数
+
+
 
 
     //全局变量
@@ -2567,6 +4300,241 @@ color:white;background-color:blueviolet
     var test51Desc = "";
     var test51FileList = "";
 
+    //
+
+    var test52Score = -1;
+    var test52 = -1;
+    var isTest52 = false;
+    var test52Desc = "";
+    var test52FileList = "";
+
+    var test53Score = -1;
+    var test53 = -1;
+    var isTest53 = false;
+    var test53Desc = "";
+    var test53FileList = "";
+
+
+    var test54Score = -1;
+    var test54 = -1;
+    var isTest54 = false;
+    var test54Desc = "";
+    var test54FileList = "";
+
+
+
+    var test55Score = -1;
+    var test55 = -1;
+    var isTest55 = false;
+    var test55Desc = "";
+    var test55FileList = "";
+
+
+    var test56Score = -1;
+    var test56 = -1;
+    var isTest56 = false;
+    var test56Desc = "";
+    var test56FileList = "";
+
+
+    var test57Score = -1;
+    var test57 = -1;
+    var isTest57 = false;
+    var test57Desc = "";
+    var test57FileList = "";
+
+
+    var test58Score = -1;
+    var test58 = -1;
+    var isTest58 = false;
+    var test58Desc = "";
+    var test58FileList = "";
+
+
+    var test59Score = -1;
+    var test59 = -1;
+    var isTest59 = false;
+    var test59Desc = "";
+    var test59FileList = "";
+
+
+    var test60Score = -1;
+    var test60 = -1;
+    var isTest60 = false;
+    var test60Desc = "";
+    var test60FileList = "";
+
+
+    var test61Score = -1;
+    var test61 = -1;
+    var isTest61 = false;
+    var test61Desc = "";
+    var test61FileList = "";
+
+
+    var test62Score = -1;
+    var test62 = -1;
+    var isTest62 = false;
+    var test62Desc = "";
+    var test62FileList = "";
+
+
+    var test63Score = -1;
+    var test63 = -1;
+    var isTest63 = false;
+    var test63Desc = "";
+    var test63FileList = "";
+
+    //64
+    var test64Score = -1;
+    var test64 = -1;
+    var isTest64 = false;
+    var test64Desc = "";
+    var test64FileList = "";
+
+
+    var test65Score = -1;
+    var test65 = -1;
+    var isTest65 = false;
+    var test65Desc = "";
+    var test65FileList = "";
+
+    var test66Score = -1;
+    var test66 = -1;
+    var isTest66 = false;
+    var test66Desc = "";
+    var test66FileList = "";
+
+
+    var test67Score = -1;
+    var test67 = -1;
+    var isTest67 = false;
+    var test67Desc = "";
+    var test67FileList = "";
+
+
+    var test68Score = -1;
+    var test68 = -1;
+    var isTest68 = false;
+    var test68Desc = "";
+    var test68FileList = "";
+
+
+    var test69Score = -1;
+    var test69 = -1;
+    var isTest69 = false;
+    var test69Desc = "";
+    var test69FileList = "";
+
+
+
+
+    var test70Score = -1;
+    var test70 = -1;
+    var isTest70 = false;
+    var test70Desc = "";
+    var test70FileList = "";
+
+
+
+    var test71Score = -1;
+    var test71 = -1;
+    var isTest71 = false;
+    var test71Desc = "";
+    var test71FileList = "";
+
+
+    var test72Score = -1;
+    var test72 = -1;
+    var isTest72 = false;
+    var test72Desc = "";
+    var test72FileList = "";
+
+    var test73Score = -1;
+    var test73 = -1;
+    var isTest73 = false;
+    var test73Desc = "";
+    var test73FileList = "";
+
+
+    var test74Score = -1;
+    var test74 = -1;
+    var isTest74 = false;
+    var test74Desc = "";
+    var test74FileList = "";
+
+
+    var test75Score = -1;
+    var test75 = -1;
+    var isTest75 = false;
+    var test75Desc = "";
+    var test75FileList = "";
+
+
+    var test76Score = -1;
+    var test76 = -1;
+    var isTest76 = false;
+    var test76Desc = "";
+    var test76FileList = "";
+
+
+
+    var test77Score = -1;
+    var test77 = -1;
+    var isTest77 = false;
+    var test77Desc = "";
+    var test77FileList = "";
+
+
+    var test78Score = -1;
+    var test78 = -1;
+    var isTest78 = false;
+    var test78Desc = "";
+    var test78FileList = "";
+
+
+    var test79Score = -1;
+    var test79 = -1;
+    var isTest79 = false;
+    var test79Desc = "";
+    var test79FileList = "";
+
+
+
+
+    var test80Score = -1;
+    var test80 = -1;
+    var isTest80 = false;
+    var test80Desc = "";
+    var test80FileList = "";
+
+
+    var test81Score = -1;
+    var test81 = -1;
+    var isTest81 = false;
+    var test81Desc = "";
+    var test81FileList = "";
+
+
+
+
+    var test82Score = -1;
+    var test82 = -1;
+    var isTest82 = false;
+    var test82Desc = "";
+    var test82FileList = "";
+
+
+    var test83Score = -1;
+    var test83 = -1;
+    var isTest83 = false;
+    var test83Desc = "";
+    var test83FileList = "";
+
+
+
+
+
 
 
     var myCount = 0;
@@ -2584,12 +4552,15 @@ color:white;background-color:blueviolet
     var foujiue3 = false;
     var foujiue4 = false;
     var foujiue5 = false;
+    var foujiue6 = false;
+
 
     var fouJueDesc1 = "";
     var fouJueDesc2 = "";
     var fouJueDesc3 = "";
     var fouJueDesc4 = "";
     var fouJueDesc5 = "";
+    var fouJueDesc6 = "";
 
 
 
@@ -2852,6 +4823,42 @@ color:white;background-color:blueviolet
             if (num == 51) { arr51.push(data.Obj.FilePath + ";"); }
 
 
+            if (num == 52) { arr52.push(data.Obj.FilePath + ";"); }
+            if (num == 53) { arr53.push(data.Obj.FilePath + ";"); }
+            if (num == 54) { arr54.push(data.Obj.FilePath + ";"); }
+            if (num == 55) { arr55.push(data.Obj.FilePath + ";"); }
+            if (num == 56) { arr56.push(data.Obj.FilePath + ";"); }
+            if (num == 57) { arr57.push(data.Obj.FilePath + ";"); }
+            if (num == 58) { arr58.push(data.Obj.FilePath + ";"); }
+            if (num == 59) { arr59.push(data.Obj.FilePath + ";"); }
+            if (num == 60) { arr60.push(data.Obj.FilePath + ";"); }
+            if (num == 61) { arr61.push(data.Obj.FilePath + ";"); }
+            if (num == 62) { arr62.push(data.Obj.FilePath + ";"); }
+            if (num == 63) { arr63.push(data.Obj.FilePath + ";"); }
+
+
+            if (num == 64) { arr64.push(data.Obj.FilePath + ";"); }
+            if (num == 65) { arr65.push(data.Obj.FilePath + ";"); }
+            if (num == 66) { arr66.push(data.Obj.FilePath + ";"); }
+            if (num == 67) { arr67.push(data.Obj.FilePath + ";"); }
+            if (num == 68) { arr68.push(data.Obj.FilePath + ";"); }
+            if (num == 69) { arr69.push(data.Obj.FilePath + ";"); }
+            if (num == 70) { arr70.push(data.Obj.FilePath + ";"); }
+
+
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+
+
             $.toast("上传成功", "text");
           }
           else { $.toptip(data.Message); }
@@ -2891,12 +4898,16 @@ color:white;background-color:blueviolet
       foujiue3 = $("input[name='radio3']:checked").val() == undefined ? "-1" : $("input[name='radio3']:checked").val();
       foujiue4 = $("input[name='radio4']:checked").val() == undefined ? "-1" : $("input[name='radio4']:checked").val();
       foujiue5 = $("input[name='radio5']:checked").val() == undefined ? "-1" : $("input[name='radio5']:checked").val();
+      foujiue6 = $("input[name='radio6']:checked").val() == undefined ? "-1" : $("input[name='radio6']:checked").val();
+
 
       fouJueDesc1 = $("#desc1").val();
       fouJueDesc2 = $("#desc2").val();
       fouJueDesc3 = $("#desc3").val();
       fouJueDesc4 = $("#desc4").val();
       fouJueDesc5 = $("#desc5").val();
+      fouJueDesc6 = $("#desc6").val();
+
 
 
 
@@ -3181,54 +5192,96 @@ color:white;background-color:blueviolet
         gaiJin.push(wentiObj);
       }
 
-      // //10
-      // test10Score = -1;
-      // test10 = $("#grade10").val();
-
-      // if ($('#notcheck10').is(':checked')) {
-      //   notCount += parseInt(test10);
-      //   isTest10 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test10);
-      //   isTest10 = false;
-      // }
-      // test10Desc = $("#note10").val();
-      // test10FileList = arr10.join(";");
+      //10
+      test10Score = -1;
+      test10 = $("#grade10").val();
+      test10Desc = $("#note10").val();
+      test10FileList = arr10.join(";");
 
 
-
-      // //11
-      // test11Score = -1;
-      // test11 = $("#grade11").val();
-
-      // if ($('#notcheck11').is(':checked')) {
-      //   notCount += parseInt(test11);
-      //   isTest11 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test11);
-      //   isTest11 = false;
-      // }
-      // test11Desc = $("#note11").val();
-      // test11FileList = arr11.join(";");
+      if ($('#notcheck10').is(':checked')) {
+        notCount += parseInt(test10);
+        isTest10 = true;
+      }
+      else {
+        myCount += parseInt(test10);
+        isTest10 = false;
+      }
 
 
-      // //12
+      if (parseInt(test10) < 12)  //说明有扣分项
+      {
 
-      // test12Score = -1;
-      // test12 = $("#grade12").val();
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.2";
+        wentiObj.pingfenzhibiao = "9";
+        wentiObj.noteDetail = test10Desc;
+        wentiObj.imageList = test10FileList;
+        wentiObj.koufenZhi = 12 - parseInt(test10);
+        gaiJin.push(wentiObj);
+      }
 
-      // if ($('#notcheck12').is(':checked')) {
-      //   notCount += parseInt(test12);
-      //   isTest12 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test12);
-      //   isTest12 = false;
-      // }
-      // test12Desc = $("#note12").val();
-      // test12FileList = arr12.join(";");
+
+      //11
+      test11Score = -1;
+      test11 = $("#grade11").val();
+      test11Desc = $("#note11").val();
+      test11FileList = arr11.join(";");
+
+      if ($('#notcheck11').is(':checked')) {
+        notCount += parseInt(test11);
+        isTest11 = true;
+      }
+      else {
+        myCount += parseInt(test11);
+        isTest11 = false;
+      }
+
+
+      if (parseInt(test11) < 12)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.2";
+        wentiObj.pingfenzhibiao = "9";
+        wentiObj.noteDetail = test11Desc;
+        wentiObj.imageList = test11FileList;
+        wentiObj.koufenZhi = 12 - parseInt(test11);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+
+      //12
+
+      test12Score = -1;
+      test12 = $("#grade12").val();
+      test12Desc = $("#note12").val();
+      test12FileList = arr12.join(";");
+
+      if ($('#notcheck12').is(':checked')) {
+        notCount += parseInt(test12);
+        isTest12 = true;
+      }
+      else {
+        myCount += parseInt(test12);
+        isTest12 = false;
+      }
+
+
+      if (parseInt(test12) < 12)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.2";
+        wentiObj.pingfenzhibiao = "9";
+        wentiObj.noteDetail = test12Desc;
+        wentiObj.imageList = test12FileList;
+        wentiObj.koufenZhi = 12 - parseInt(test12);
+        gaiJin.push(wentiObj);
+      }
+
 
 
 
@@ -3394,37 +5447,64 @@ color:white;background-color:blueviolet
         gaiJin.push(wentiObj);
       }
 
-      // //19
+      //19
 
-      // test19Score = -1;
-      // test19 = $("#grade19").val();
+      test19Score = -1;
+      test19 = $("#grade19").val();
+      test19Desc = $("#note19").val();
+      test19FileList = arr19.join(";");
 
-      // if ($('#notcheck19').is(':checked')) {
-      //   notCount += parseInt(test19);
-      //   isTest19 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test19);
-      //   isTest19 = false;
-      // }
-      // test19Desc = $("#note19").val();
-      // test19FileList = arr19.join(";");
+      if ($('#notcheck19').is(':checked')) {
+        notCount += parseInt(test19);
+        isTest19 = true;
+      }
+      else {
+        myCount += parseInt(test19);
+        isTest19 = false;
+      }
 
 
-      // //20
-      // test20Score = -1;
-      // test20 = $("#grade20").val();
+      if (parseInt(test19) < 5)  //说明有扣分项
+      {
 
-      // if ($('#notcheck20').is(':checked')) {
-      //   notCount += parseInt(test20);
-      //   isTest20 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test20);
-      //   isTest20 = false;
-      // }
-      // test20Desc = $("#note20").val();
-      // test20FileList = arr20.join(";");
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.3";
+        wentiObj.pingfenzhibiao = "18";
+        wentiObj.noteDetail = test19Desc;
+        wentiObj.imageList = test19FileList;
+        wentiObj.koufenZhi = 5 - parseInt(test19);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+      //20
+      test20Score = -1;
+      test20 = $("#grade20").val();
+      test20Desc = $("#note20").val();
+      test20FileList = arr20.join(";");
+
+      if ($('#notcheck20').is(':checked')) {
+        notCount += parseInt(test20);
+        isTest20 = true;
+      }
+      else {
+        myCount += parseInt(test20);
+        isTest20 = false;
+      }
+
+
+      if (parseInt(test20) < 5)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.3";
+        wentiObj.pingfenzhibiao = "18";
+        wentiObj.noteDetail = test20Desc;
+        wentiObj.imageList = test20FileList;
+        wentiObj.koufenZhi = 5 - parseInt(test20);
+        gaiJin.push(wentiObj);
+      }
 
 
       //21  
@@ -3455,19 +5535,31 @@ color:white;background-color:blueviolet
       }
 
       //22
-      // test22Score = -1;
-      // test22 = $("#grade22").val();
+      test22Score = -1;
+      test22 = $("#grade22").val();
+      test22Desc = $("#note22").val();
+      test22FileList = arr22.join(";");
 
-      // if ($('#notcheck22').is(':checked')) {
-      //   notCount += parseInt(test22);
-      //   isTest22 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test22);
-      //   isTest22 = false;
-      // }
-      // test22Desc = $("#note22").val();
-      // test22FileList = arr22.join(";");
+      if ($('#notcheck22').is(':checked')) {
+        notCount += parseInt(test22);
+        isTest22 = true;
+      }
+      else {
+        myCount += parseInt(test22);
+        isTest22 = false;
+      }
+
+      if (parseInt(test22) < 5)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "21";
+        wentiObj.noteDetail = test22Desc;
+        wentiObj.imageList = test22FileList;
+        wentiObj.koufenZhi = 5 - parseInt(test22);
+        gaiJin.push(wentiObj);
+      }
 
 
       //23
@@ -3498,20 +5590,34 @@ color:white;background-color:blueviolet
         gaiJin.push(wentiObj);
       }
 
-      // //24
-      // test24Score = -1;
-      // test24 = $("#grade24").val();
+      //24
+      test24Score = -1;
+      test24 = $("#grade24").val();
+      test24Desc = $("#note24").val();
+      test24FileList = arr24.join(";");
 
-      // if ($('#notcheck24').is(':checked')) {
-      //   notCount += parseInt(test24);
-      //   isTest24 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test24);
-      //   isTest24 = false;
-      // }
-      // test24Desc = $("#note24").val();
-      // test24FileList = arr24.join(";");
+
+      if ($('#notcheck24').is(':checked')) {
+        notCount += parseInt(test24);
+        isTest24 = true;
+      }
+      else {
+        myCount += parseInt(test24);
+        isTest24 = false;
+      }
+
+
+      if (parseInt(test24) < 5)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "23";
+        wentiObj.noteDetail = test24Desc;
+        wentiObj.imageList = test24FileList;
+        wentiObj.koufenZhi = 5 - parseInt(test24);
+        gaiJin.push(wentiObj);
+      }
 
 
       //25 
@@ -3541,53 +5647,92 @@ color:white;background-color:blueviolet
         wentiObj.koufenZhi = 4 - parseInt(test25);
         gaiJin.push(wentiObj);
       }
-      // //26
+      //26
 
-      // test26Score = -1;
-      // test26 = $("#grade26").val();
+      test26Score = -1;
+      test26 = $("#grade26").val();
+      test26Desc = $("#note26").val();
+      test26FileList = arr26.join(";");
 
-      // if ($('#notcheck26').is(':checked')) {
-      //   notCount += parseInt(test26);
-      //   isTest26 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test26);
-      //   isTest26 = false;
-      // }
-      // test26Desc = $("#note26").val();
-      // test26FileList = arr26.join(";");
+      if ($('#notcheck26').is(':checked')) {
+        notCount += parseInt(test26);
+        isTest26 = true;
+      }
+      else {
+        myCount += parseInt(test26);
+        isTest26 = false;
+      }
 
+      if (parseInt(test26) < 4)  //说明有扣分项
+      {
 
-      // //27
-      // test27Score = -1;
-      // test27 = $("#grade27").val();
-
-      // if ($('#notcheck27').is(':checked')) {
-      //   notCount += parseInt(test27);
-      //   isTest27 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test27);
-      //   isTest27 = false;
-      // }
-      // test27Desc = $("#note27").val();
-      // test27FileList = arr27.join(";");
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "25";
+        wentiObj.noteDetail = test26Desc;
+        wentiObj.imageList = test26FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test26);
+        gaiJin.push(wentiObj);
+      }
 
 
-      // //28
-      // test28Score = -1;
-      // test28 = $("#grade28").val();
 
-      // if ($('#notcheck28').is(':checked')) {
-      //   notCount += parseInt(test28);
-      //   isTest28 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test28);
-      //   isTest28 = false;
-      // }
-      // test28Desc = $("#note28").val();
-      // test28FileList = arr28.join(";");
+      //27
+      test27Score = -1;
+      test27 = $("#grade27").val();
+      test27Desc = $("#note27").val();
+      test27FileList = arr27.join(";");
+
+      if ($('#notcheck27').is(':checked')) {
+        notCount += parseInt(test27);
+        isTest27 = true;
+      }
+      else {
+        myCount += parseInt(test27);
+        isTest27 = false;
+      }
+
+      if (parseInt(test27) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "25";
+        wentiObj.noteDetail = test27Desc;
+        wentiObj.imageList = test27FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test27);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+      //28
+      test28Score = -1;
+      test28 = $("#grade28").val();
+      test28Desc = $("#note28").val();
+      test28FileList = arr28.join(";");
+
+      if ($('#notcheck28').is(':checked')) {
+        notCount += parseInt(test28);
+        isTest28 = true;
+      }
+      else {
+        myCount += parseInt(test28);
+        isTest28 = false;
+      }
+
+
+      if (parseInt(test28) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "25";
+        wentiObj.noteDetail = test28Desc;
+        wentiObj.imageList = test28FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test28);
+        gaiJin.push(wentiObj);
+      }
 
 
       //29
@@ -3618,52 +5763,95 @@ color:white;background-color:blueviolet
       }
 
 
-      // //30
-      // test30Score = -1;
-      // test30 = $("#grade30").val();
+      //30
+      test30Score = -1;
+      test30 = $("#grade30").val();
+      test30Desc = $("#note30").val();
+      test30FileList = arr30.join(";");
 
-      // if ($('#notcheck30').is(':checked')) {
-      //   notCount += parseInt(test30);
-      //   isTest30 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test30);
-      //   isTest30 = false;
-      // }
-      // test30Desc = $("#note30").val();
-      // test30FileList = arr30.join(";");
-
-
-      // //31
-      // test31Score = -1;
-      // test31 = $("#grade31").val();
-
-      // if ($('#notcheck31').is(':checked')) {
-      //   notCount += parseInt(test31);
-      //   isTest31 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test31);
-      //   isTest31 = false;
-      // }
-      // test31Desc = $("#note31").val();
-      // test31FileList = arr31.join(";");
+      if ($('#notcheck30').is(':checked')) {
+        notCount += parseInt(test30);
+        isTest30 = true;
+      }
+      else {
+        myCount += parseInt(test30);
+        isTest30 = false;
+      }
 
 
-      // //32
-      // test32Score = -1;
-      // test32 = $("#grade32").val();
+      if (parseInt(test30) < 6)  //说明有扣分项
+      {
 
-      // if ($('#notcheck32').is(':checked')) {
-      //   notCount += parseInt(test32);
-      //   isTest32 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test32);
-      //   isTest32 = false;
-      // }
-      // test32Desc = $("#note32").val();
-      // test32FileList = arr32.join(";");
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.5";
+        wentiObj.pingfenzhibiao = "29";
+        wentiObj.noteDetail = test30Desc;
+        wentiObj.imageList = test30FileList;
+        wentiObj.koufenZhi = 6 - parseInt(test30);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+      //31
+      test31Score = -1;
+      test31 = $("#grade31").val();
+      test31Desc = $("#note31").val();
+      test31FileList = arr31.join(";");
+
+      if ($('#notcheck31').is(':checked')) {
+        notCount += parseInt(test31);
+        isTest31 = true;
+      }
+      else {
+        myCount += parseInt(test31);
+        isTest31 = false;
+      }
+
+      if (parseInt(test31) < 6)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.5";
+        wentiObj.pingfenzhibiao = "29";
+        wentiObj.noteDetail = test31Desc;
+        wentiObj.imageList = test31FileList;
+        wentiObj.koufenZhi = 6 - parseInt(test31);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+      //32
+      test32Score = -1;
+      test32 = $("#grade32").val();
+
+      test32Desc = $("#note32").val();
+      test32FileList = arr32.join(";");
+
+      if ($('#notcheck32').is(':checked')) {
+        notCount += parseInt(test32);
+        isTest32 = true;
+      }
+      else {
+        myCount += parseInt(test32);
+        isTest32 = false;
+      }
+
+
+      if (parseInt(test32) < 6)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.5";
+        wentiObj.pingfenzhibiao = "29";
+        wentiObj.noteDetail = test32Desc;
+        wentiObj.imageList = test32FileList;
+        wentiObj.koufenZhi = 6 - parseInt(test32);
+        gaiJin.push(wentiObj);
+      }
+
+
 
 
       //33
@@ -3747,67 +5935,120 @@ color:white;background-color:blueviolet
         gaiJin.push(wentiObj);
       }
 
-      // //36
-      // test36Score = -1;
-      // test36 = $("#grade36").val();
+      //36
+      test36Score = -1;
+      test36 = $("#grade36").val();
+      test36Desc = $("#note36").val();
+      test36FileList = arr36.join(";");
 
-      // if ($('#notcheck36').is(':checked')) {
-      //   notCount += parseInt(test36);
-      //   isTest36 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test36);
-      //   isTest36 = false;
-      // }
-      // test36Desc = $("#note36").val();
-      // test36FileList = arr36.join(";");
-
-      // //37
-      // test37Score = -1;
-      // test37 = $("#grade37").val();
-
-      // if ($('#notcheck37').is(':checked')) {
-      //   notCount += parseInt(test37);
-      //   isTest37 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test37);
-      //   isTest37 = false;
-      // }
-      // test37Desc = $("#note37").val();
-      // test37FileList = arr37.join(";");
+      if ($('#notcheck36').is(':checked')) {
+        notCount += parseInt(test36);
+        isTest36 = true;
+      }
+      else {
+        myCount += parseInt(test36);
+        isTest36 = false;
+      }
 
 
-      // //38 
-      // test38Score = -1;
-      // test38 = $("#grade38").val();
+      if (parseInt(test36) < 6)  //说明有扣分项
+      {
 
-      // if ($('#notcheck38').is(':checked')) {
-      //   notCount += parseInt(test38);
-      //   isTest38 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test38);
-      //   isTest38 = false;
-      // }
-      // test38Desc = $("#note38").val();
-      // test38FileList = arr38.join(";");
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "35";
+        wentiObj.noteDetail = test36Desc;
+        wentiObj.imageList = test36FileList;
+        wentiObj.koufenZhi = 6 - parseInt(test36);
+        gaiJin.push(wentiObj);
+      }
+
+      //37
+      test37Score = -1;
+      test37 = $("#grade37").val();
+      test37Desc = $("#note37").val();
+      test37FileList = arr37.join(";");
 
 
-      // //39
-      // test39Score = -1;
-      // test39 = $("#grade39").val();
+      if ($('#notcheck37').is(':checked')) {
+        notCount += parseInt(test37);
+        isTest37 = true;
+      }
+      else {
+        myCount += parseInt(test37);
+        isTest37 = false;
+      }
 
-      // if ($('#notcheck39').is(':checked')) {
-      //   notCount += parseInt(test39);
-      //   isTest39 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test39);
-      //   isTest39 = false;
-      // }
-      // test39Desc = $("#note39").val();
-      // test39FileList = arr39.join(";");
+      if (parseInt(test37) < 6)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "35";
+        wentiObj.noteDetail = test37Desc;
+        wentiObj.imageList = test37FileList;
+        wentiObj.koufenZhi = 6 - parseInt(test37);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //38 
+      test38Score = -1;
+      test38 = $("#grade38").val();
+      test38Desc = $("#note38").val();
+      test38FileList = arr38.join(";");
+
+
+      if ($('#notcheck38').is(':checked')) {
+        notCount += parseInt(test38);
+        isTest38 = true;
+      }
+      else {
+        myCount += parseInt(test38);
+        isTest38 = false;
+      }
+
+
+      if (parseInt(test38) < 6)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "35";
+        wentiObj.noteDetail = test38Desc;
+        wentiObj.imageList = test38FileList;
+        wentiObj.koufenZhi = 6 - parseInt(test38);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //39
+      test39Score = -1;
+      test39 = $("#grade39").val();
+      test39Desc = $("#note39").val();
+      test39FileList = arr39.join(";");
+
+      if ($('#notcheck39').is(':checked')) {
+        notCount += parseInt(test39);
+        isTest39 = true;
+      }
+      else {
+        myCount += parseInt(test39);
+        isTest39 = false;
+      }
+
+
+      if (parseInt(test39) < 6)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "35";
+        wentiObj.noteDetail = test39Desc;
+        wentiObj.imageList = test39FileList;
+        wentiObj.koufenZhi = 6 - parseInt(test39);
+        gaiJin.push(wentiObj);
+      }
 
 
       //40
@@ -3866,19 +6107,33 @@ color:white;background-color:blueviolet
       }
 
       //42
-      // test42Score = -1;
-      // test42 = $("#grade42").val();
+      test42Score = -1;
+      test42 = $("#grade42").val();
+      test42Desc = $("#note42").val();
+      test42FileList = arr42.join(";");
 
-      // if ($('#notcheck42').is(':checked')) {
-      //   notCount += parseInt(test42);
-      //   isTest42 = true;
-      // }
-      // else {
-      //   myCount += parseInt(test42);
-      //   isTest42 = false;
-      // }
-      // test42Desc = $("#note42").val();
-      // test42FileList = arr42.join(";");
+      if ($('#notcheck42').is(':checked')) {
+        notCount += parseInt(test42);
+        isTest42 = true;
+      }
+      else {
+        myCount += parseInt(test42);
+        isTest42 = false;
+      }
+
+      if (parseInt(test42) < 2)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "2.7";
+        wentiObj.pingfenzhibiao = "41";
+        wentiObj.noteDetail = test42Desc;
+        wentiObj.imageList = test42FileList;
+        wentiObj.koufenZhi = 2 - parseInt(test42);
+        gaiJin.push(wentiObj);
+      }
+
+
 
       //43
       test43Score = -1;
@@ -4030,13 +6285,12 @@ color:white;background-color:blueviolet
         myCount += parseInt(test48);
         isTest48 = false;
       }
-
       if (parseInt(test48) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "48";
+        wentiObj.pingfenzhibiao = "47";
         wentiObj.noteDetail = test48Desc;
         wentiObj.imageList = test48FileList;
         wentiObj.koufenZhi = 1 - parseInt(test48);
@@ -4124,6 +6378,919 @@ color:white;background-color:blueviolet
         wentiObj.koufenZhi = 4 - parseInt(test51);
         gaiJin.push(wentiObj);
       }
+
+
+
+      //52
+
+      test52Score = -1;
+      test52 = $("#grade52").val();
+      test52Desc = $("#note52").val();
+      test52FileList = arr52.join(";");
+
+      if ($('#notcheck52').is(':checked')) {
+        notCount += parseInt(test52);
+        isTest52 = true;
+      }
+      else {
+        myCount += parseInt(test52);
+        isTest52 = false;
+      }
+
+      if (parseInt(test52) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "52";
+        wentiObj.noteDetail = test52Desc;
+        wentiObj.imageList = test52FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test52);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+      //53
+      test53Score = -1;
+      test53 = $("#grade53").val();
+      test53Desc = $("#note53").val();
+      test53FileList = arr53.join(";");
+
+      if ($('#notcheck53').is(':checked')) {
+        notCount += parseInt(test53);
+        isTest53 = true;
+      }
+      else {
+        myCount += parseInt(test53);
+        isTest53 = false;
+      }
+
+      if (parseInt(test53) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "53";
+        wentiObj.noteDetail = test53Desc;
+        wentiObj.imageList = test53FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test53);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //54
+
+      test54Score = -1;
+      test54 = $("#grade54").val();
+      test54Desc = $("#note54").val();
+      test54FileList = arr54.join(";");
+
+      if ($('#notcheck54').is(':checked')) {
+        notCount += parseInt(test54);
+        isTest54 = true;
+      }
+      else {
+        myCount += parseInt(test54);
+        isTest54 = false;
+      }
+
+      if (parseInt(test54) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "54";
+        wentiObj.noteDetail = test54Desc;
+        wentiObj.imageList = test54FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test54);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //55 
+      test55Score = -1;
+      test55 = $("#grade55").val();
+      test55Desc = $("#note55").val();
+      test55FileList = arr55.join(";");
+
+      if ($('#notcheck55').is(':checked')) {
+        notCount += parseInt(test55);
+        isTest55 = true;
+      }
+      else {
+        myCount += parseInt(test55);
+        isTest55 = false;
+      }
+
+      if (parseInt(test55) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "55";
+        wentiObj.noteDetail = test55Desc;
+        wentiObj.imageList = test55FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test55);
+        gaiJin.push(wentiObj);
+      }
+
+      //56
+
+      test56Score = -1;
+      test56 = $("#grade56").val();
+      test56Desc = $("#note56").val();
+      test56FileList = arr56.join(";");
+
+      if ($('#notcheck56').is(':checked')) {
+        notCount += parseInt(test56);
+        isTest56 = true;
+      }
+      else {
+        myCount += parseInt(test56);
+        isTest56 = false;
+      }
+
+      if (parseInt(test56) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "56";
+        wentiObj.noteDetail = test56Desc;
+        wentiObj.imageList = test56FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test56);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //57 
+      test57Score = -1;
+      test57 = $("#grade57").val();
+      test57Desc = $("#note57").val();
+      test57FileList = arr57.join(";");
+
+      if ($('#notcheck57').is(':checked')) {
+        notCount += parseInt(test57);
+        isTest57 = true;
+      }
+      else {
+        myCount += parseInt(test57);
+        isTest57 = false;
+      }
+
+      if (parseInt(test57) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "57";
+        wentiObj.noteDetail = test57Desc;
+        wentiObj.imageList = test57FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test57);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //58
+      test58Score = -1;
+      test58 = $("#grade58").val();
+      test58Desc = $("#note58").val();
+      test58FileList = arr58.join(";");
+
+      if ($('#notcheck58').is(':checked')) {
+        notCount += parseInt(test58);
+        isTest58 = true;
+      }
+      else {
+        myCount += parseInt(test58);
+        isTest58 = false;
+      }
+
+      if (parseInt(test58) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "58";
+        wentiObj.noteDetail = test58Desc;
+        wentiObj.imageList = test58FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test58);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //59
+
+      test59Score = -1;
+      test59 = $("#grade59").val();
+      test59Desc = $("#note59").val();
+      test59FileList = arr59.join(";");
+
+      if ($('#notcheck59').is(':checked')) {
+        notCount += parseInt(test59);
+        isTest59 = true;
+      }
+      else {
+        myCount += parseInt(test59);
+        isTest59 = false;
+      }
+
+      if (parseInt(test59) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "59";
+        wentiObj.noteDetail = test59Desc;
+        wentiObj.imageList = test59FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test59);
+        gaiJin.push(wentiObj);
+      }
+
+      //60
+      test60Score = -1;
+      test60 = $("#grade60").val();
+      test60Desc = $("#note60").val();
+      test60FileList = arr60.join(";");
+
+      if ($('#notcheck60').is(':checked')) {
+        notCount += parseInt(test60);
+        isTest60 = true;
+      }
+      else {
+        myCount += parseInt(test60);
+        isTest60 = false;
+      }
+
+      if (parseInt(test60) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "60";
+        wentiObj.noteDetail = test60Desc;
+        wentiObj.imageList = test60FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test60);
+        gaiJin.push(wentiObj);
+      }
+
+      //61 
+      test61Score = -1;
+      test61 = $("#grade61").val();
+      test61Desc = $("#note61").val();
+      test61FileList = arr61.join(";");
+
+      if ($('#notcheck61').is(':checked')) {
+        notCount += parseInt(test61);
+        isTest61 = true;
+      }
+      else {
+        myCount += parseInt(test61);
+        isTest61 = false;
+      }
+
+      if (parseInt(test61) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "61";
+        wentiObj.noteDetail = test61Desc;
+        wentiObj.imageList = test61FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test61);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //62 
+      test62Score = -1;
+      test62 = $("#grade62").val();
+      test62Desc = $("#note62").val();
+      test62FileList = arr62.join(";");
+
+      if ($('#notcheck62').is(':checked')) {
+        notCount += parseInt(test62);
+        isTest62 = true;
+      }
+      else {
+        myCount += parseInt(test62);
+        isTest62 = false;
+      }
+
+      if (parseInt(test62) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "62";
+        wentiObj.noteDetail = test62Desc;
+        wentiObj.imageList = test62FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test62);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //63 
+      test63Score = -1;
+      test63 = $("#grade63").val();
+      test63Desc = $("#note63").val();
+      test63FileList = arr63.join(";");
+
+      if ($('#notcheck63').is(':checked')) {
+        notCount += parseInt(test63);
+        isTest63 = true;
+      }
+      else {
+        myCount += parseInt(test63);
+        isTest63 = false;
+      }
+
+      if (parseInt(test63) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "63";
+        wentiObj.noteDetail = test63Desc;
+        wentiObj.imageList = test63FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test63);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+      //64
+      //64 
+      test64Score = -1;
+      test64 = $("#grade64").val();
+      test64Desc = $("#note64").val();
+      test64FileList = arr64.join(";");
+
+      if ($('#notcheck64').is(':checked')) {
+        notCount += parseInt(test64);
+        isTest64 = true;
+      }
+      else {
+        myCount += parseInt(test64);
+        isTest64 = false;
+      }
+
+      if (parseInt(test64) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "64";
+        wentiObj.noteDetail = test64Desc;
+        wentiObj.imageList = test64FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test64);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //65  //65 
+      test65Score = -1;
+      test65 = $("#grade65").val();
+      test65Desc = $("#note65").val();
+      test65FileList = arr65.join(";");
+
+      if ($('#notcheck65').is(':checked')) {
+        notCount += parseInt(test65);
+        isTest65 = true;
+      }
+      else {
+        myCount += parseInt(test65);
+        isTest65 = false;
+      }
+
+      if (parseInt(test65) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "65";
+        wentiObj.noteDetail = test65Desc;
+        wentiObj.imageList = test65FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test65);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+      //66 
+      test66Score = -1;
+      test66 = $("#grade66").val();
+      test66Desc = $("#note66").val();
+      test66FileList = arr66.join(";");
+
+      if ($('#notcheck66').is(':checked')) {
+        notCount += parseInt(test66);
+        isTest66 = true;
+      }
+      else {
+        myCount += parseInt(test66);
+        isTest66 = false;
+      }
+
+      if (parseInt(test66) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "66";
+        wentiObj.noteDetail = test66Desc;
+        wentiObj.imageList = test66FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test66);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //67 
+      test67Score = -1;
+      test67 = $("#grade67").val();
+      test67Desc = $("#note67").val();
+      test67FileList = arr67.join(";");
+
+      if ($('#notcheck67').is(':checked')) {
+        notCount += parseInt(test67);
+        isTest67 = true;
+      }
+      else {
+        myCount += parseInt(test67);
+        isTest67 = false;
+      }
+
+      if (parseInt(test67) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "67";
+        wentiObj.noteDetail = test67Desc;
+        wentiObj.imageList = test67FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test67);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //68 
+      test68Score = -1;
+      test68 = $("#grade68").val();
+      test68Desc = $("#note68").val();
+      test68FileList = arr68.join(";");
+
+      if ($('#notcheck68').is(':checked')) {
+        notCount += parseInt(test68);
+        isTest68 = true;
+      }
+      else {
+        myCount += parseInt(test68);
+        isTest68 = false;
+      }
+
+      if (parseInt(test68) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "68";
+        wentiObj.noteDetail = test68Desc;
+        wentiObj.imageList = test68FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test68);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //69 
+      test69Score = -1;
+      test69 = $("#grade69").val();
+      test69Desc = $("#note69").val();
+      test69FileList = arr69.join(";");
+
+      if ($('#notcheck69').is(':checked')) {
+        notCount += parseInt(test69);
+        isTest69 = true;
+      }
+      else {
+        myCount += parseInt(test69);
+        isTest69 = false;
+      }
+
+      if (parseInt(test69) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "69";
+        wentiObj.noteDetail = test69Desc;
+        wentiObj.imageList = test69FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test69);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //70 
+      test70Score = -1;
+      test70 = $("#grade70").val();
+      test70Desc = $("#note70").val();
+      test70FileList = arr70.join(";");
+
+      if ($('#notcheck70').is(':checked')) {
+        notCount += parseInt(test70);
+        isTest70 = true;
+      }
+      else {
+        myCount += parseInt(test70);
+        isTest70 = false;
+      }
+
+      if (parseInt(test70) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "70";
+        wentiObj.noteDetail = test70Desc;
+        wentiObj.imageList = test70FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test70);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //71 
+      test71Score = -1;
+      test71 = $("#grade71").val();
+      test71Desc = $("#note71").val();
+      test71FileList = arr71.join(";");
+
+      if ($('#notcheck71').is(':checked')) {
+        notCount += parseInt(test71);
+        isTest71 = true;
+      }
+      else {
+        myCount += parseInt(test71);
+        isTest71 = false;
+      }
+
+      if (parseInt(test71) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "71";
+        wentiObj.noteDetail = test71Desc;
+        wentiObj.imageList = test71FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test71);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+      //72 
+      test72Score = -1;
+      test72 = $("#grade72").val();
+      test72Desc = $("#note72").val();
+      test72FileList = arr72.join(";");
+
+      if ($('#notcheck72').is(':checked')) {
+        notCount += parseInt(test72);
+        isTest72 = true;
+      }
+      else {
+        myCount += parseInt(test72);
+        isTest72 = false;
+      }
+
+      if (parseInt(test72) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "72";
+        wentiObj.noteDetail = test72Desc;
+        wentiObj.imageList = test72FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test72);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //73 
+      test73Score = -1;
+      test73 = $("#grade73").val();
+      test73Desc = $("#note73").val();
+      test73FileList = arr73.join(";");
+
+      if ($('#notcheck73').is(':checked')) {
+        notCount += parseInt(test73);
+        isTest73 = true;
+      }
+      else {
+        myCount += parseInt(test73);
+        isTest73 = false;
+      }
+
+      if (parseInt(test73) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "73";
+        wentiObj.noteDetail = test73Desc;
+        wentiObj.imageList = test73FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test73);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //74 
+      test74Score = -1;
+      test74 = $("#grade74").val();
+      test74Desc = $("#note74").val();
+      test74FileList = arr74.join(";");
+
+      if ($('#notcheck74').is(':checked')) {
+        notCount += parseInt(test74);
+        isTest74 = true;
+      }
+      else {
+        myCount += parseInt(test74);
+        isTest74 = false;
+      }
+
+      if (parseInt(test74) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "74";
+        wentiObj.noteDetail = test74Desc;
+        wentiObj.imageList = test74FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test74);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //75 
+      test75Score = -1;
+      test75 = $("#grade75").val();
+      test75Desc = $("#note75").val();
+      test75FileList = arr75.join(";");
+
+      if ($('#notcheck75').is(':checked')) {
+        notCount += parseInt(test75);
+        isTest75 = true;
+      }
+      else {
+        myCount += parseInt(test75);
+        isTest75 = false;
+      }
+
+      if (parseInt(test75) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "75";
+        wentiObj.noteDetail = test75Desc;
+        wentiObj.imageList = test75FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test75);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //76 
+      test76Score = -1;
+      test76 = $("#grade76").val();
+      test76Desc = $("#note76").val();
+      test76FileList = arr76.join(";");
+
+      if ($('#notcheck76').is(':checked')) {
+        notCount += parseInt(test76);
+        isTest76 = true;
+      }
+      else {
+        myCount += parseInt(test76);
+        isTest76 = false;
+      }
+
+      if (parseInt(test76) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "76";
+        wentiObj.noteDetail = test76Desc;
+        wentiObj.imageList = test76FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test76);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //77 
+      test77Score = -1;
+      test77 = $("#grade77").val();
+      test77Desc = $("#note77").val();
+      test77FileList = arr77.join(";");
+
+      if ($('#notcheck77').is(':checked')) {
+        notCount += parseInt(test77);
+        isTest77 = true;
+      }
+      else {
+        myCount += parseInt(test77);
+        isTest77 = false;
+      }
+
+      if (parseInt(test77) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "77";
+        wentiObj.noteDetail = test77Desc;
+        wentiObj.imageList = test77FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test77);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+      // //78 
+      test78Score = -1;
+      test78 = $("#grade78").val();
+      test78Desc = $("#note78").val();
+      test78FileList = arr78.join(";");
+
+      if ($('#notcheck78').is(':checked')) {
+        notCount += parseInt(test78);
+        isTest78 = true;
+      }
+      else {
+        myCount += parseInt(test78);
+        isTest78 = false;
+      }
+
+      if (parseInt(test78) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "78";
+        wentiObj.noteDetail = test78Desc;
+        wentiObj.imageList = test78FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test78);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //79 
+      test79Score = -1;
+      test79 = $("#grade79").val();
+      test79Desc = $("#note79").val();
+      test79FileList = arr79.join(";");
+
+      if ($('#notcheck79').is(':checked')) {
+        notCount += parseInt(test79);
+        isTest79 = true;
+      }
+      else {
+        myCount += parseInt(test79);
+        isTest79 = false;
+      }
+
+      if (parseInt(test79) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "79";
+        wentiObj.noteDetail = test79Desc;
+        wentiObj.imageList = test79FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test79);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //
+      //80 
+      test80Score = -1;
+      test80 = $("#grade80").val();
+      test80Desc = $("#note80").val();
+      test80FileList = arr80.join(";");
+
+      if ($('#notcheck80').is(':checked')) {
+        notCount += parseInt(test80);
+        isTest80 = true;
+      }
+      else {
+        myCount += parseInt(test80);
+        isTest80 = false;
+      }
+
+      if (parseInt(test80) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "80";
+        wentiObj.noteDetail = test80Desc;
+        wentiObj.imageList = test80FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test80);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //81 
+      test81Score = -1;
+      test81 = $("#grade81").val();
+      test81Desc = $("#note81").val();
+      test81FileList = arr81.join(";");
+
+      if ($('#notcheck81').is(':checked')) {
+        notCount += parseInt(test81);
+        isTest81 = true;
+      }
+      else {
+        myCount += parseInt(test81);
+        isTest81 = false;
+      }
+
+      if (parseInt(test81) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "81";
+        wentiObj.noteDetail = test81Desc;
+        wentiObj.imageList = test81FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test81);
+        gaiJin.push(wentiObj);
+      }
+
+
+      //82 
+      test82Score = -1;
+      test82 = $("#grade82").val();
+      test82Desc = $("#note82").val();
+      test82FileList = arr82.join(";");
+
+      if ($('#notcheck82').is(':checked')) {
+        notCount += parseInt(test82);
+        isTest82 = true;
+      }
+      else {
+        myCount += parseInt(test82);
+        isTest82 = false;
+      }
+
+      if (parseInt(test82) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "82";
+        wentiObj.noteDetail = test82Desc;
+        wentiObj.imageList = test82FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test82);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+
+      //83 
+      test83Score = -1;
+      test83 = $("#grade83").val();
+      test83Desc = $("#note83").val();
+      test83FileList = arr83.join(";");
+
+      if ($('#notcheck83').is(':checked')) {
+        notCount += parseInt(test83);
+        isTest83 = true;
+      }
+      else {
+        myCount += parseInt(test83);
+        isTest83 = false;
+      }
+
+      if (parseInt(test83) < 4)  //说明有扣分项
+      {
+
+        var wentiObj = new Object();
+        wentiObj.tiaokuanhao = "3.1";
+        wentiObj.pingfenzhibiao = "83";
+        wentiObj.noteDetail = test83Desc;
+        wentiObj.imageList = test83FileList;
+        wentiObj.koufenZhi = 4 - parseInt(test83);
+        gaiJin.push(wentiObj);
+      }
+
+
+
+
+
+
 
 
       //我的总的分数
@@ -4333,16 +7500,10 @@ color:white;background-color:blueviolet
       obj1.NotCount = notCount;
       obj1.PercentValue = per;
       obj1.FouJue1 = foujiue1;
-      obj1.FouJue2 = foujiue2;
-      obj1.FouJue3 = foujiue3;
-      obj1.FouJue4 = foujiue4;
-      obj1.FouJue5 = foujiue5;
+
 
       obj1.FouJueDesc1 = fouJueDesc1;
-      obj1.FouJueDesc2 = fouJueDesc2;
-      obj1.FouJueDesc3 = fouJueDesc3;
-      obj1.FouJueDesc4 = fouJueDesc4;
-      obj1.FouJueDesc5 = fouJueDesc5;
+
 
 
       console.log(obj1);
@@ -4725,6 +7886,7 @@ color:white;background-color:blueviolet
       obj2.Test48FileList = test48FileList;
 
 
+
       //49
       obj2.Test49Score = test49Score;
       obj2.Test49 = test49;
@@ -4750,12 +7912,278 @@ color:white;background-color:blueviolet
       obj2.Test51FileList = test51FileList;
 
 
+      //52
+
+      obj2.Test52Score = test52Score;
+      obj2.Test52 = test52;
+      obj2.IsTest52 = isTest52;
+      obj2.Test52Desc = test52Desc;
+      obj2.Test52FileList = test52FileList;
+
+
+      //53
+
+      obj2.Test53Score = test53Score;
+      obj2.Test53 = test53;
+      obj2.IsTest53 = isTest53;
+      obj2.Test53Desc = test53Desc;
+      obj2.Test53FileList = test53FileList;
+
+
+      //54
+
+      obj2.Test54Score = test54Score;
+      obj2.Test54 = test54;
+      obj2.IsTest54 = isTest54;
+      obj2.Test54Desc = test54Desc;
+      obj2.Test54FileList = test54FileList;
+
+
+      //55
+
+      obj2.Test55Score = test55Score;
+      obj2.Test55 = test55;
+      obj2.IsTest55 = isTest55;
+      obj2.Test55Desc = test55Desc;
+      obj2.Test55FileList = test55FileList;
+
+
+      //56
+
+      obj2.Test56Score = test56Score;
+      obj2.Test56 = test56;
+      obj2.IsTest56 = isTest56;
+      obj2.Test56Desc = test56Desc;
+      obj2.Test56FileList = test56FileList;
+
+      //57
+
+      obj2.Test57Score = test57Score;
+      obj2.Test57 = test57;
+      obj2.IsTest57 = isTest57;
+      obj2.Test57Desc = test57Desc;
+      obj2.Test57FileList = test57FileList;
+
+
+      //58
+
+      obj2.Test58Score = test58Score;
+      obj2.Test58 = test58;
+      obj2.IsTest58 = isTest58;
+      obj2.Test58Desc = test58Desc;
+      obj2.Test58FileList = test58FileList;
+
+      //59
+
+      obj2.Test59Score = test59Score;
+      obj2.Test59 = test59;
+      obj2.IsTest59 = isTest59;
+      obj2.Test59Desc = test59Desc;
+      obj2.Test59FileList = test59FileList;
+
+
+      //60
+
+      obj2.Test60Score = test60Score;
+      obj2.Test60 = test60;
+      obj2.IsTest60 = isTest60;
+      obj2.Test60Desc = test60Desc;
+      obj2.Test60FileList = test60FileList;
+
+      //61
+      obj2.Test61Score = test61Score;
+      obj2.Test61 = test61;
+      obj2.IsTest61 = isTest61;
+      obj2.Test61Desc = test61Desc;
+      obj2.Test61FileList = test61FileList;
+
+
+      //62
+
+
+      obj2.Test62Score = test62Score;
+      obj2.Test62 = test62;
+      obj2.IsTest62 = isTest62;
+      obj2.Test62Desc = test62Desc;
+      obj2.Test62FileList = test62FileList;
+
+      //63
+
+      obj2.Test63Score = test63Score;
+      obj2.Test63 = test63;
+      obj2.IsTest63 = isTest63;
+      obj2.Test63Desc = test63Desc;
+      obj2.Test63FileList = test63FileList;
+
+
+      //64  
+      obj2.Test64Score = test64Score;
+      obj2.Test64 = test64;
+      obj2.IsTest64 = isTest64;
+      obj2.Test64Desc = test64Desc;
+      obj2.Test64FileList = test64FileList;
+
+      //65
+      obj2.Test65Score = test65Score;
+      obj2.Test65 = test65;
+      obj2.IsTest65 = isTest65;
+      obj2.Test65Desc = test65Desc;
+      obj2.Test65FileList = test65FileList;
+
+
+      //66
+      obj2.Test66Score = test66Score;
+      obj2.Test66 = test66;
+      obj2.IsTest66 = isTest66;
+      obj2.Test66Desc = test66Desc;
+      obj2.Test66FileList = test66FileList;
+
+      //67
+      obj2.Test67Score = test67Score;
+      obj2.Test67 = test67;
+      obj2.IsTest67 = isTest67;
+      obj2.Test67Desc = test67Desc;
+      obj2.Test67FileList = test67FileList;
+
+      //68
+      obj2.Test68Score = test68Score;
+      obj2.Test68 = test68;
+      obj2.IsTest68 = isTest68;
+      obj2.Test68Desc = test68Desc;
+      obj2.Test68FileList = test68FileList;
+
+
+      //69
+      obj2.Test69Score = test69Score;
+      obj2.Test69 = test69;
+      obj2.IsTest69 = isTest69;
+      obj2.Test69Desc = test69Desc;
+      obj2.Test69FileList = test69FileList;
+
+
+      //70
+      obj2.Test70Score = test70Score;
+      obj2.Test70 = test70;
+      obj2.IsTest70 = isTest70;
+      obj2.Test70Desc = test70Desc;
+      obj2.Test70FileList = test70FileList;
+
+
+      //71
+      obj2.Test71Score = test71Score;
+      obj2.Test71 = test71;
+      obj2.IsTest71 = isTest71;
+      obj2.Test71Desc = test71Desc;
+      obj2.Test71FileList = test71FileList;
+
+
+      //72
+      obj2.Test72Score = test72Score;
+      obj2.Test72 = test72;
+      obj2.IsTest72 = isTest72;
+      obj2.Test72Desc = test72Desc;
+      obj2.Test72FileList = test72FileList;
+
+
+      //73
+      obj2.Test73Score = test73Score;
+      obj2.Test73 = test73;
+      obj2.IsTest73 = isTest73;
+      obj2.Test73Desc = test73Desc;
+      obj2.Test73FileList = test73FileList;
+
+
+      //74
+      obj2.Test74Score = test74Score;
+      obj2.Test74 = test74;
+      obj2.IsTest74 = isTest74;
+      obj2.Test74Desc = test74Desc;
+      obj2.Test74FileList = test74FileList;
+
+
+      //75
+      obj2.Test75Score = test75Score;
+      obj2.Test75 = test75;
+      obj2.IsTest75 = isTest75;
+      obj2.Test75Desc = test75Desc;
+      obj2.Test75FileList = test75FileList;
+
+
+      //
+      //76
+      obj2.Test76Score = test76Score;
+      obj2.Test76 = test76;
+      obj2.IsTest76 = isTest76;
+      obj2.Test76Desc = test76Desc;
+      obj2.Test76FileList = test76FileList;
+
+
+      //
+      //77
+      obj2.Test77Score = test77Score;
+      obj2.Test77 = test77;
+      obj2.IsTest77 = isTest77;
+      obj2.Test77Desc = test77Desc;
+      obj2.Test77FileList = test77FileList;
+
+      //78
+      obj2.Test78Score = test78Score;
+      obj2.Test78 = test78;
+      obj2.IsTest78 = isTest78;
+      obj2.Test78Desc = test78Desc;
+      obj2.Test78FileList = test78FileList;
+
+
+      //
+      //79
+      obj2.Test79Score = test79Score;
+      obj2.Test79 = test79;
+      obj2.IsTest79 = isTest79;
+      obj2.Test79Desc = test79Desc;
+      obj2.Test79FileList = test79FileList;
+
+
+      //
+      //80
+      obj2.Test80Score = test80Score;
+      obj2.Test80 = test80;
+      obj2.IsTest80 = isTest80;
+      obj2.Test80Desc = test80Desc;
+      obj2.Test80FileList = test80FileList;
+
+
+      //
+      //81
+      obj2.Test81Score = test81Score;
+      obj2.Test81 = test81;
+      obj2.IsTest81 = isTest81;
+      obj2.Test81Desc = test81Desc;
+      obj2.Test81FileList = test81FileList;
+
+      //
+      //82
+      obj2.Test82Score = test82Score;
+      obj2.Test82 = test82;
+      obj2.IsTest82 = isTest82;
+      obj2.Test82Desc = test82Desc;
+      obj2.Test82FileList = test82FileList;
+
+
+
+      //83
+      obj2.Test83Score = test83Score;
+      obj2.Test83 = test83;
+      obj2.IsTest83 = isTest83;
+      obj2.Test83Desc = test83Desc;
+      obj2.Test83FileList = test83FileList;
+
+
 
 
       //保存
       $.ajax({
         type: "post",
-        url: "http://localhost:7071/QsMainLog/AddMessage",
+        url: "http://localhost:7071/QsMainLog/AddMessage4",
         data: { mainLog: JSON.stringify(obj1), detailLog: JSON.stringify(obj2), userId: window.localStorage.getItem("userId") },
         async: true,
         dataType: "json",
