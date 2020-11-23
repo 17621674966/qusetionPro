@@ -2685,10 +2685,6 @@ color:white;background-color:blueviolet
       }
 
 
-      if (linkTel == "") {
-        $.toptip('联系电话不能为空', 'error');
-        return;
-      }
 
       if (code == "") {
         $.toptip('食品经营许可证号不能为空', 'error');
@@ -2921,7 +2917,6 @@ color:white;background-color:blueviolet
 
 
     $("#btn5").click(function () {
-
 
       //第一部分
       //1
@@ -4246,7 +4241,7 @@ color:white;background-color:blueviolet
           html += "<div class='weui-cell'>";
           html += " <div class='weui-cell__hd'><label class='weui-label'>改进问题描述</label></div>";
           html += "  <div class='weui-cell__bd'>";
-          html += " <textarea class='weui-textarea' rows=3  value='" + gaiJin[i].noteDetail + "'></textarea>";
+          html += "<div>" + gaiJin[i].noteDetail + "</div> ";
           html += "</div>";
           html += "</div>";
 

@@ -938,9 +938,9 @@ namespace OpenAuth.Repository.Domain
 
         //69
         #region    69
-        public int? Test69Score { get; set; }
+        public decimal? Test69Score { get; set; }
 
-        public int? Test69 { get; set; }
+        public decimal? Test69 { get; set; }
 
         public bool? IsTest69 { get; set; }
 
@@ -953,9 +953,9 @@ namespace OpenAuth.Repository.Domain
         //70
 
         #region    70
-        public int? Test70Score { get; set; }
+        public decimal? Test70Score { get; set; }
 
-        public int? Test70 { get; set; }
+        public decimal? Test70 { get; set; }
 
         public bool? IsTest70 { get; set; }
 
@@ -966,9 +966,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    71
-        public int? Test71Score { get; set; }
+        public decimal? Test71Score { get; set; }
 
-        public int? Test71 { get; set; }
+        public decimal? Test71 { get; set; }
 
         public bool? IsTest71 { get; set; }
 
@@ -980,9 +980,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    72
-        public int? Test72Score { get; set; }
+        public decimal? Test72Score { get; set; }
 
-        public int? Test72 { get; set; }
+        public decimal? Test72 { get; set; }
 
         public bool? IsTest72 { get; set; }
 
