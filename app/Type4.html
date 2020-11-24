@@ -2672,7 +2672,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck51" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck65" value="1">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck65" value="3">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -3201,7 +3201,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck51" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck76" value="0.5">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck76" value="1">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -3469,7 +3469,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade82" value="1" oninput="if(value>0.5||value<0)value=1 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade82" value="1" oninput="if(value>1||value<0)value=1 ">
         </div>
       </div>
 
@@ -3869,7 +3869,7 @@ color:white;background-color:blueviolet
     var not45 = 0;//不适用分数
     var not46 = 0;//不适用分数
     var not47 = 0;//不适用分数
-    var notObject = 0;//不适用分数
+    var not48 = 0;//不适用分数
     var not49 = 0;//不适用分数
 
     var not50 = 0;//不适用分数
@@ -4625,7 +4625,7 @@ color:white;background-color:blueviolet
       }
 
 
-    
+
 
       if (code == "") {
         $.toptip('食品经营许可证号不能为空', 'error');
@@ -4813,16 +4813,18 @@ color:white;background-color:blueviolet
 
 
             if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
-            if (num == 71) { arr71.push(data.Obj.FilePath + ";"); }
+            if (num == 72) { arr72.push(data.Obj.FilePath + ";"); }
+            if (num == 73) { arr73.push(data.Obj.FilePath + ";"); }
+            if (num == 74) { arr74.push(data.Obj.FilePath + ";"); }
+            if (num == 75) { arr75.push(data.Obj.FilePath + ";"); }
+            if (num == 76) { arr76.push(data.Obj.FilePath + ";"); }
+            if (num == 77) { arr77.push(data.Obj.FilePath + ";"); }
+            if (num == 78) { arr78.push(data.Obj.FilePath + ";"); }
+            if (num == 79) { arr79.push(data.Obj.FilePath + ";"); }
+            if (num == 80) { arr80.push(data.Obj.FilePath + ";"); }
+            if (num == 81) { arr81.push(data.Obj.FilePath + ";"); }
+            if (num == 82) { arr82.push(data.Obj.FilePath + ";"); }
+            if (num == 83) { arr83.push(data.Obj.FilePath + ";"); }
 
 
             $.toast("上传成功", "text");
@@ -4920,7 +4922,7 @@ color:white;background-color:blueviolet
       }
 
 
-      if (parseInt(test1) < 7)  //说明有扣分项
+      if (parseInt(test1) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
@@ -4928,7 +4930,7 @@ color:white;background-color:blueviolet
         wentiObj.pingfenzhibiao = "1";
         wentiObj.noteDetail = test1Desc;
         wentiObj.imageList = test1FileList;
-        wentiObj.koufenZhi = 7 - parseInt(test1);
+        wentiObj.koufenZhi = 1 - parseInt(test1);
         gaiJin.push(wentiObj);
       }
 
@@ -4954,15 +4956,15 @@ color:white;background-color:blueviolet
       }
 
 
-      if (parseInt(test2) < 3)  //说明有扣分项
+      if (parseInt(test2) < 4)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "1.2";
-        wentiObj.pingfenzhibiao = "2";
+        wentiObj.tiaokuanhao = "1.1";
+        wentiObj.pingfenzhibiao = "2,3,4,5";
         wentiObj.noteDetail = test2Desc;
         wentiObj.imageList = test2FileList;
-        wentiObj.koufenZhi = 3 - parseInt(test2);
+        wentiObj.koufenZhi = 4 - parseInt(test2);
         gaiJin.push(wentiObj);
       }
 
@@ -4982,15 +4984,15 @@ color:white;background-color:blueviolet
         myCount += parseInt(test3);
         isTest3 = false;
       }
-      if (parseInt(test3) < 2)  //说明有扣分项
+      if (parseInt(test3) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "1.3";
-        wentiObj.pingfenzhibiao = "3";
+        wentiObj.tiaokuanhao = "1.1";
+        wentiObj.pingfenzhibiao = "6";
         wentiObj.noteDetail = test3Desc;
         wentiObj.imageList = test3FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test3);
+        wentiObj.koufenZhi = 1 - parseInt(test3);
         gaiJin.push(wentiObj);
       }
 
@@ -5013,8 +5015,8 @@ color:white;background-color:blueviolet
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "1.3";
-        wentiObj.pingfenzhibiao = "5";
+        wentiObj.tiaokuanhao = "1.1";
+        wentiObj.pingfenzhibiao = "7";
         wentiObj.noteDetail = test4Desc;
         wentiObj.imageList = test4FileList;
         wentiObj.koufenZhi = 1 - parseInt(test4);
@@ -5037,15 +5039,15 @@ color:white;background-color:blueviolet
         myCount += parseInt(test5);
         isTest5 = false;
       }
-      if (parseInt(test5) < 5)  //说明有扣分项
+      if (parseInt(test5) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "1.1";
-        wentiObj.pingfenzhibiao = "6,7,8";
+        wentiObj.pingfenzhibiao = "8";
         wentiObj.noteDetail = test5Desc;
         wentiObj.imageList = test5FileList;
-        wentiObj.koufenZhi = 5 - parseInt(test5);
+        wentiObj.koufenZhi = 1 - parseInt(test5);
         gaiJin.push(wentiObj);
       }
 
@@ -5065,15 +5067,15 @@ color:white;background-color:blueviolet
         myCount += parseInt(test6);
         isTest6 = false;
       }
-      if (parseInt(test6) < 3)  //说明有扣分项
+      if (parseInt(test6) < 2)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "1.4";
-        wentiObj.pingfenzhibiao = "6";
+        wentiObj.tiaokuanhao = "1.2";
+        wentiObj.pingfenzhibiao = "9";
         wentiObj.noteDetail = test6Desc;
         wentiObj.imageList = test6FileList;
-        wentiObj.koufenZhi = 3 - parseInt(test6);
+        wentiObj.koufenZhi = 2 - parseInt(test6);
         gaiJin.push(wentiObj);
       }
 
@@ -5092,15 +5094,15 @@ color:white;background-color:blueviolet
         isTest7 = false;
       }
 
-      if (parseInt(test7) < 3)  //说明有扣分项
+      if (parseInt(test7) < 8)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "1.2";
-        wentiObj.pingfenzhibiao = "7";
+        wentiObj.pingfenzhibiao = "10,11";
         wentiObj.noteDetail = test8Desc;
         wentiObj.imageList = test8FileList;
-        wentiObj.koufenZhi = 3 - parseInt(test8);
+        wentiObj.koufenZhi = 8 - parseInt(test7);
         gaiJin.push(wentiObj);
       }
 
@@ -5118,15 +5120,15 @@ color:white;background-color:blueviolet
         myCount += parseInt(test8);
         isTest8 = false;
       }
-      if (parseInt(test8) < 2)  //说明有扣分项
+      if (parseInt(test8) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.1";
-        wentiObj.pingfenzhibiao = "8";
+        wentiObj.tiaokuanhao = "1.3";
+        wentiObj.pingfenzhibiao = "12";
         wentiObj.noteDetail = test8Desc;
         wentiObj.imageList = test8FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test8);
+        wentiObj.koufenZhi = 1 - parseInt(test8);
         gaiJin.push(wentiObj);
       }
 
@@ -5146,15 +5148,15 @@ color:white;background-color:blueviolet
         isTest9 = false;
       }
 
-      if (parseInt(test9) < 6)  //说明有扣分项
+      if (parseInt(test9) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.2";
-        wentiObj.pingfenzhibiao = "9";
+        wentiObj.tiaokuanhao = "1.3";
+        wentiObj.pingfenzhibiao = "13,14";
         wentiObj.noteDetail = test9Desc;
         wentiObj.imageList = test9FileList;
-        wentiObj.koufenZhi = 6 - parseInt(test9);
+        wentiObj.koufenZhi = 1 - parseInt(test9);
         gaiJin.push(wentiObj);
       }
 
@@ -5266,15 +5268,15 @@ color:white;background-color:blueviolet
         isTest13 = false;
       }
 
-      if (parseInt(test13) < 2)  //说明有扣分项
+      if (parseInt(test13) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.3";
-        wentiObj.pingfenzhibiao = "13";
+        wentiObj.tiaokuanhao = "2.1";
+        wentiObj.pingfenzhibiao = "15";
         wentiObj.noteDetail = test3Desc;
         wentiObj.imageList = test13FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test13);
+        wentiObj.koufenZhi = 3 - parseInt(test13);
         gaiJin.push(wentiObj);
       }
 
@@ -5294,15 +5296,15 @@ color:white;background-color:blueviolet
         isTest14 = false;
       }
 
-      if (parseInt(test14) < 2)  //说明有扣分项
+      if (parseInt(test14) < 4)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.3";
-        wentiObj.pingfenzhibiao = "14";
+        wentiObj.tiaokuanhao = "2.2";
+        wentiObj.pingfenzhibiao = "16,17,18";
         wentiObj.noteDetail = test14Desc;
         wentiObj.imageList = test14FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test14);
+        wentiObj.koufenZhi = 4 - parseInt(test14);
         gaiJin.push(wentiObj);
       }
 
@@ -5324,8 +5326,8 @@ color:white;background-color:blueviolet
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.3";
-        wentiObj.pingfenzhibiao = "15";
+        wentiObj.tiaokuanhao = "2.2";
+        wentiObj.pingfenzhibiao = "19";
         wentiObj.noteDetail = test15Desc;
         wentiObj.imageList = test15FileList;
         wentiObj.koufenZhi = 2 - parseInt(test15);
@@ -5352,7 +5354,7 @@ color:white;background-color:blueviolet
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "2.3";
-        wentiObj.pingfenzhibiao = "16";
+        wentiObj.pingfenzhibiao = "20";
         wentiObj.noteDetail = test16Desc;
         wentiObj.imageList = test16FileList;
         wentiObj.koufenZhi = 1 - parseInt(test16);
@@ -5374,15 +5376,15 @@ color:white;background-color:blueviolet
         isTest17 = false;
       }
 
-      if (parseInt(test17) < 5)  //说明有扣分项
+      if (parseInt(test17) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "2.3";
-        wentiObj.pingfenzhibiao = "17";
+        wentiObj.pingfenzhibiao = "31,22,23";
         wentiObj.noteDetail = test17Desc;
         wentiObj.imageList = test17FileList;
-        wentiObj.koufenZhi = 5 - parseInt(test17);
+        wentiObj.koufenZhi = 3 - parseInt(test17);
         gaiJin.push(wentiObj);
       }
 
@@ -5401,15 +5403,15 @@ color:white;background-color:blueviolet
         myCount += parseInt(test18);
         isTest18 = false;
       }
-      if (parseInt(test18) < 2)  //说明有扣分项
+      if (parseInt(test18) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "2.3";
-        wentiObj.pingfenzhibiao = "18";
+        wentiObj.pingfenzhibiao = "24";
         wentiObj.noteDetail = test18Desc;
         wentiObj.imageList = test18FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test18);
+        wentiObj.koufenZhi = 1 - parseInt(test18);
         gaiJin.push(wentiObj);
       }
 
@@ -5492,8 +5494,8 @@ color:white;background-color:blueviolet
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.4";
-        wentiObj.pingfenzhibiao = "21";
+        wentiObj.tiaokuanhao = "2.3";
+        wentiObj.pingfenzhibiao = "25";
         wentiObj.noteDetail = test21Desc;
         wentiObj.imageList = test21FileList;
         wentiObj.koufenZhi = 2 - parseInt(test21);
@@ -5544,15 +5546,15 @@ color:white;background-color:blueviolet
         isTest23 = false;
       }
 
-      if (parseInt(test23) < 2)  //说明有扣分项
+      if (parseInt(test23) < 4)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "2.4";
-        wentiObj.pingfenzhibiao = "23";
+        wentiObj.pingfenzhibiao = "26";
         wentiObj.noteDetail = test23Desc;
         wentiObj.imageList = test23FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test23);
+        wentiObj.koufenZhi = 4 - parseInt(test23);
         gaiJin.push(wentiObj);
       }
 
@@ -5607,7 +5609,7 @@ color:white;background-color:blueviolet
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "2.4";
-        wentiObj.pingfenzhibiao = "25";
+        wentiObj.pingfenzhibiao = "27";
         wentiObj.noteDetail = test25Desc;
         wentiObj.imageList = test25FileList;
         wentiObj.koufenZhi = 2 - parseInt(test25);
@@ -5716,15 +5718,15 @@ color:white;background-color:blueviolet
         myCount += parseInt(test29);
         isTest29 = false;
       }
-      if (parseInt(test29) < 3)  //说明有扣分项
+      if (parseInt(test29) < 2)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.5";
-        wentiObj.pingfenzhibiao = "29";
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "28";
         wentiObj.noteDetail = test29Desc;
         wentiObj.imageList = test29FileList;
-        wentiObj.koufenZhi = 3 - parseInt(test29);
+        wentiObj.koufenZhi = 2 - parseInt(test29);
         gaiJin.push(wentiObj);
       }
 
@@ -5835,15 +5837,15 @@ color:white;background-color:blueviolet
         isTest33 = false;
       }
 
-      if (parseInt(test33) < 2)  //说明有扣分项
+      if (parseInt(test33) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.6";
-        wentiObj.pingfenzhibiao = "33";
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "29";
         wentiObj.noteDetail = test33Desc;
         wentiObj.imageList = test33FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test33);
+        wentiObj.koufenZhi = 1 - parseInt(test33);
         gaiJin.push(wentiObj);
       }
 
@@ -5867,8 +5869,8 @@ color:white;background-color:blueviolet
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.6";
-        wentiObj.pingfenzhibiao = "34";
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "30";
         wentiObj.noteDetail = test34Desc;
         wentiObj.imageList = test34FileList;
         wentiObj.koufenZhi = 1 - parseInt(test34);
@@ -5889,15 +5891,15 @@ color:white;background-color:blueviolet
         isTest35 = false;
       }
 
-      if (parseInt(test35) < 6)  //说明有扣分项
+      if (parseInt(test35) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.6";
-        wentiObj.pingfenzhibiao = "35";
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "31";
         wentiObj.noteDetail = test35Desc;
         wentiObj.imageList = test35FileList;
-        wentiObj.koufenZhi = 6 - parseInt(test35);
+        wentiObj.koufenZhi = 1 - parseInt(test35);
         gaiJin.push(wentiObj);
       }
 
@@ -6033,15 +6035,15 @@ color:white;background-color:blueviolet
         isTest40 = false;
       }
 
-      if (parseInt(test40) < 2)  //说明有扣分项
+      if (parseInt(test40) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.7";
-        wentiObj.pingfenzhibiao = "40";
+        wentiObj.tiaokuanhao = "2.4";
+        wentiObj.pingfenzhibiao = "32";
         wentiObj.noteDetail = test40Desc;
         wentiObj.imageList = test40FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test40);
+        wentiObj.koufenZhi = 1 - parseInt(test40);
         gaiJin.push(wentiObj);
       }
 
@@ -6060,15 +6062,15 @@ color:white;background-color:blueviolet
         isTest41 = false;
       }
 
-      if (parseInt(test41) < 2)  //说明有扣分项
+      if (parseInt(test41) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.7";
-        wentiObj.pingfenzhibiao = "41";
+        wentiObj.tiaokuanhao = "2.5";
+        wentiObj.pingfenzhibiao = "33,34,35,36";
         wentiObj.noteDetail = test41Desc;
         wentiObj.imageList = test41FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test41);
+        wentiObj.koufenZhi = 3 - parseInt(test41);
         gaiJin.push(wentiObj);
       }
 
@@ -6115,15 +6117,15 @@ color:white;background-color:blueviolet
         myCount += parseInt(test43);
         isTest43 = false;
       }
-      if (parseInt(test43) < 2)  //说明有扣分项
+      if (parseInt(test43) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.7";
-        wentiObj.pingfenzhibiao = "43";
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "37";
         wentiObj.noteDetail = test43Desc;
         wentiObj.imageList = test43FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test43);
+        wentiObj.koufenZhi = 1 - parseInt(test43);
         gaiJin.push(wentiObj);
       }
 
@@ -6143,15 +6145,15 @@ color:white;background-color:blueviolet
         isTest44 = false;
       }
 
-      if (parseInt(test44) < 2)  //说明有扣分项
+      if (parseInt(test44) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "2.7";
-        wentiObj.pingfenzhibiao = "44";
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "38";
         wentiObj.noteDetail = test44Desc;
         wentiObj.imageList = test44FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test44);
+        wentiObj.koufenZhi = 1 - parseInt(test44);
         gaiJin.push(wentiObj);
       }
 
@@ -6170,15 +6172,15 @@ color:white;background-color:blueviolet
         isTest45 = false;
       }
 
-      if (parseInt(test45) < 1)  //说明有扣分项
+      if (parseInt(test45) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "45";
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "39,40,41,42,43";
         wentiObj.noteDetail = test45Desc;
         wentiObj.imageList = test45FileList;
-        wentiObj.koufenZhi = 1 - parseInt(test45);
+        wentiObj.koufenZhi = 3 - parseInt(test45);
         gaiJin.push(wentiObj);
       }
 
@@ -6197,15 +6199,15 @@ color:white;background-color:blueviolet
         myCount += parseInt(test46);
         isTest46 = false;
       }
-      if (parseInt(test46) < 1)  //说明有扣分项
+      if (parseInt(test46) < 2)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "46";
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "44";
         wentiObj.noteDetail = test46Desc;
         wentiObj.imageList = test46FileList;
-        wentiObj.koufenZhi = 1 - parseInt(test46);
+        wentiObj.koufenZhi = 2 - parseInt(test46);
         gaiJin.push(wentiObj);
       }
 
@@ -6228,8 +6230,8 @@ color:white;background-color:blueviolet
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "47";
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "45";
         wentiObj.noteDetail = test47Desc;
         wentiObj.imageList = test47FileList;
         wentiObj.koufenZhi = 1 - parseInt(test47);
@@ -6251,15 +6253,15 @@ color:white;background-color:blueviolet
         myCount += parseInt(test48);
         isTest48 = false;
       }
-      if (parseInt(test48) < 1)  //说明有扣分项
+      if (parseInt(test48) < 4)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "47";
+        wentiObj.tiaokuanhao = "2.6";
+        wentiObj.pingfenzhibiao = "46,47";
         wentiObj.noteDetail = test48Desc;
         wentiObj.imageList = test48FileList;
-        wentiObj.koufenZhi = 1 - parseInt(test48);
+        wentiObj.koufenZhi = 4 - parseInt(test48);
         gaiJin.push(wentiObj);
       }
 
@@ -6283,8 +6285,8 @@ color:white;background-color:blueviolet
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "49";
+        wentiObj.tiaokuanhao = "2.7";
+        wentiObj.pingfenzhibiao = "48";
         wentiObj.noteDetail = test49Desc;
         wentiObj.imageList = test49FileList;
         wentiObj.koufenZhi = 2 - parseInt(test49);
@@ -6307,15 +6309,15 @@ color:white;background-color:blueviolet
       }
 
 
-      if (parseInt(test50) < 2)  //说明有扣分项
+      if (parseInt(test50) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "50";
+        wentiObj.tiaokuanhao = "2.7";
+        wentiObj.pingfenzhibiao = "49";
         wentiObj.noteDetail = test50Desc;
         wentiObj.imageList = test50FileList;
-        wentiObj.koufenZhi = 2 - parseInt(test1);
+        wentiObj.koufenZhi = 1 - parseInt(test50);
         gaiJin.push(wentiObj);
       }
 
@@ -6334,15 +6336,15 @@ color:white;background-color:blueviolet
         isTest51 = false;
       }
 
-      if (parseInt(test51) < 4)  //说明有扣分项
+      if (parseInt(test51) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "51";
+        wentiObj.tiaokuanhao = "2.7";
+        wentiObj.pingfenzhibiao = "50";
         wentiObj.noteDetail = test51Desc;
         wentiObj.imageList = test51FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test51);
+        wentiObj.koufenZhi = 1 - parseInt(test51);
         gaiJin.push(wentiObj);
       }
 
@@ -6364,15 +6366,15 @@ color:white;background-color:blueviolet
         isTest52 = false;
       }
 
-      if (parseInt(test52) < 4)  //说明有扣分项
+      if (parseInt(test52) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "52";
+        wentiObj.tiaokuanhao = "2.7";
+        wentiObj.pingfenzhibiao = "51";
         wentiObj.noteDetail = test52Desc;
         wentiObj.imageList = test52FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test52);
+        wentiObj.koufenZhi = 1 - parseInt(test52);
         gaiJin.push(wentiObj);
       }
 
@@ -6393,15 +6395,15 @@ color:white;background-color:blueviolet
         isTest53 = false;
       }
 
-      if (parseInt(test53) < 4)  //说明有扣分项
+      if (parseInt(test53) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "53";
+        wentiObj.tiaokuanhao = "2.7";
+        wentiObj.pingfenzhibiao = "52";
         wentiObj.noteDetail = test53Desc;
         wentiObj.imageList = test53FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test53);
+        wentiObj.koufenZhi = 3 - parseInt(test53);
         gaiJin.push(wentiObj);
       }
 
@@ -6422,15 +6424,15 @@ color:white;background-color:blueviolet
         isTest54 = false;
       }
 
-      if (parseInt(test54) < 4)  //说明有扣分项
+      if (parseInt(test54) < 2)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "54";
+        wentiObj.tiaokuanhao = "2.7";
+        wentiObj.pingfenzhibiao = "53";
         wentiObj.noteDetail = test54Desc;
         wentiObj.imageList = test54FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test54);
+        wentiObj.koufenZhi = 2 - parseInt(test54);
         gaiJin.push(wentiObj);
       }
 
@@ -6450,15 +6452,15 @@ color:white;background-color:blueviolet
         isTest55 = false;
       }
 
-      if (parseInt(test55) < 4)  //说明有扣分项
+      if (parseInt(test55) < 2)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "55";
+        wentiObj.tiaokuanhao = "2.8";
+        wentiObj.pingfenzhibiao = "54,55";
         wentiObj.noteDetail = test55Desc;
         wentiObj.imageList = test55FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test55);
+        wentiObj.koufenZhi = 2 - parseInt(test55);
         gaiJin.push(wentiObj);
       }
 
@@ -6478,15 +6480,15 @@ color:white;background-color:blueviolet
         isTest56 = false;
       }
 
-      if (parseInt(test56) < 4)  //说明有扣分项
+      if (parseInt(test56) < 2)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "56";
+        wentiObj.tiaokuanhao = "2.8";
+        wentiObj.pingfenzhibiao = "56,57";
         wentiObj.noteDetail = test56Desc;
         wentiObj.imageList = test56FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test56);
+        wentiObj.koufenZhi = 2 - parseInt(test56);
         gaiJin.push(wentiObj);
       }
 
@@ -6506,15 +6508,15 @@ color:white;background-color:blueviolet
         isTest57 = false;
       }
 
-      if (parseInt(test57) < 4)  //说明有扣分项
+      if (parseInt(test57) < 2)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "57";
+        wentiObj.pingfenzhibiao = "58";
         wentiObj.noteDetail = test57Desc;
         wentiObj.imageList = test57FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test57);
+        wentiObj.koufenZhi = 2 - parseInt(test57);
         gaiJin.push(wentiObj);
       }
 
@@ -6534,15 +6536,15 @@ color:white;background-color:blueviolet
         isTest58 = false;
       }
 
-      if (parseInt(test58) < 4)  //说明有扣分项
+      if (parseInt(test58) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "58";
+        wentiObj.pingfenzhibiao = "59";
         wentiObj.noteDetail = test58Desc;
         wentiObj.imageList = test58FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test58);
+        wentiObj.koufenZhi = 1 - parseInt(test58);
         gaiJin.push(wentiObj);
       }
 
@@ -6563,15 +6565,15 @@ color:white;background-color:blueviolet
         isTest59 = false;
       }
 
-      if (parseInt(test59) < 4)  //说明有扣分项
+      if (parseInt(test59) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "59";
+        wentiObj.pingfenzhibiao = "60";
         wentiObj.noteDetail = test59Desc;
         wentiObj.imageList = test59FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test59);
+        wentiObj.koufenZhi = 1 - parseInt(test59);
         gaiJin.push(wentiObj);
       }
 
@@ -6590,15 +6592,15 @@ color:white;background-color:blueviolet
         isTest60 = false;
       }
 
-      if (parseInt(test60) < 4)  //说明有扣分项
+      if (parseInt(test60) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "60";
+        wentiObj.pingfenzhibiao = "61";
         wentiObj.noteDetail = test60Desc;
         wentiObj.imageList = test60FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test60);
+        wentiObj.koufenZhi = 1 - parseInt(test60);
         gaiJin.push(wentiObj);
       }
 
@@ -6617,15 +6619,15 @@ color:white;background-color:blueviolet
         isTest61 = false;
       }
 
-      if (parseInt(test61) < 4)  //说明有扣分项
+      if (parseInt(test61) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "61";
+        wentiObj.pingfenzhibiao = "62";
         wentiObj.noteDetail = test61Desc;
         wentiObj.imageList = test61FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test61);
+        wentiObj.koufenZhi = 1 - parseInt(test61);
         gaiJin.push(wentiObj);
       }
 
@@ -6645,15 +6647,15 @@ color:white;background-color:blueviolet
         isTest62 = false;
       }
 
-      if (parseInt(test62) < 4)  //说明有扣分项
+      if (parseInt(test62) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "62";
+        wentiObj.pingfenzhibiao = "63";
         wentiObj.noteDetail = test62Desc;
         wentiObj.imageList = test62FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test62);
+        wentiObj.koufenZhi = 1 - parseInt(test62);
         gaiJin.push(wentiObj);
       }
 
@@ -6673,15 +6675,15 @@ color:white;background-color:blueviolet
         isTest63 = false;
       }
 
-      if (parseInt(test63) < 4)  //说明有扣分项
+      if (parseInt(test63) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "63";
+        wentiObj.tiaokuanhao = "3.2";
+        wentiObj.pingfenzhibiao = "64";
         wentiObj.noteDetail = test63Desc;
         wentiObj.imageList = test63FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test63);
+        wentiObj.koufenZhi = 3 - parseInt(test63);
         gaiJin.push(wentiObj);
       }
 
@@ -6703,15 +6705,15 @@ color:white;background-color:blueviolet
         isTest64 = false;
       }
 
-      if (parseInt(test64) < 4)  //说明有扣分项
+      if (parseInt(test64) < 8)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "64";
+        wentiObj.tiaokuanhao = "3.3";
+        wentiObj.pingfenzhibiao = "65,66,67,68,69,70,71,72,73,74,75,76,77";
         wentiObj.noteDetail = test64Desc;
         wentiObj.imageList = test64FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test64);
+        wentiObj.koufenZhi = 8 - parseInt(test64);
         gaiJin.push(wentiObj);
       }
 
@@ -6731,15 +6733,15 @@ color:white;background-color:blueviolet
         isTest65 = false;
       }
 
-      if (parseInt(test65) < 4)  //说明有扣分项
+      if (parseInt(test65) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "65";
+        wentiObj.tiaokuanhao = "3.4";
+        wentiObj.pingfenzhibiao = "78";
         wentiObj.noteDetail = test65Desc;
         wentiObj.imageList = test65FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test65);
+        wentiObj.koufenZhi = 3 - parseInt(test65);
         gaiJin.push(wentiObj);
       }
 
@@ -6760,15 +6762,15 @@ color:white;background-color:blueviolet
         isTest66 = false;
       }
 
-      if (parseInt(test66) < 4)  //说明有扣分项
+      if (parseInt(test66) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "66";
+        wentiObj.tiaokuanhao = "3.5";
+        wentiObj.pingfenzhibiao = "79,80,81";
         wentiObj.noteDetail = test66Desc;
         wentiObj.imageList = test66FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test66);
+        wentiObj.koufenZhi = 3 - parseInt(test66);
         gaiJin.push(wentiObj);
       }
 
@@ -6788,15 +6790,15 @@ color:white;background-color:blueviolet
         isTest67 = false;
       }
 
-      if (parseInt(test67) < 4)  //说明有扣分项
+      if (parseInt(test67) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "67";
+        wentiObj.tiaokuanhao = "3.5";
+        wentiObj.pingfenzhibiao = "82";
         wentiObj.noteDetail = test67Desc;
         wentiObj.imageList = test67FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test67);
+        wentiObj.koufenZhi = 1 - parseInt(test67);
         gaiJin.push(wentiObj);
       }
 
@@ -6816,15 +6818,15 @@ color:white;background-color:blueviolet
         isTest68 = false;
       }
 
-      if (parseInt(test68) < 4)  //说明有扣分项
+      if (parseInt(test68) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "68";
+        wentiObj.tiaokuanhao = "3.5";
+        wentiObj.pingfenzhibiao = "83";
         wentiObj.noteDetail = test68Desc;
         wentiObj.imageList = test68FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test68);
+        wentiObj.koufenZhi = 1 - parseInt(test68);
         gaiJin.push(wentiObj);
       }
 
@@ -6844,15 +6846,15 @@ color:white;background-color:blueviolet
         isTest69 = false;
       }
 
-      if (parseInt(test69) < 4)  //说明有扣分项
+      if (parseInt(test69) < 0.5)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "69";
+        wentiObj.tiaokuanhao = "3.6";
+        wentiObj.pingfenzhibiao = "85";
         wentiObj.noteDetail = test69Desc;
         wentiObj.imageList = test69FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test69);
+        wentiObj.koufenZhi = 0.5 - parseInt(test69);
         gaiJin.push(wentiObj);
       }
 
@@ -6872,15 +6874,15 @@ color:white;background-color:blueviolet
         isTest70 = false;
       }
 
-      if (parseInt(test70) < 4)  //说明有扣分项
+      if (parseInt(test70) < 0.5)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "70";
+        wentiObj.tiaokuanhao = "3.6";
+        wentiObj.pingfenzhibiao = "86";
         wentiObj.noteDetail = test70Desc;
         wentiObj.imageList = test70FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test70);
+        wentiObj.koufenZhi = 0.5 - parseInt(test70);
         gaiJin.push(wentiObj);
       }
 
@@ -6900,15 +6902,15 @@ color:white;background-color:blueviolet
         isTest71 = false;
       }
 
-      if (parseInt(test71) < 4)  //说明有扣分项
+      if (parseInt(test71) < 0.5)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "71";
+        wentiObj.tiaokuanhao = "3.6";
+        wentiObj.pingfenzhibiao = "87";
         wentiObj.noteDetail = test71Desc;
         wentiObj.imageList = test71FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test71);
+        wentiObj.koufenZhi = 0.5 - parseInt(test71);
         gaiJin.push(wentiObj);
       }
 
@@ -6929,15 +6931,15 @@ color:white;background-color:blueviolet
         isTest72 = false;
       }
 
-      if (parseInt(test72) < 4)  //说明有扣分项
+      if (parseInt(test72) < 0.5)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "72";
+        wentiObj.tiaokuanhao = "3.6";
+        wentiObj.pingfenzhibiao = "88";
         wentiObj.noteDetail = test72Desc;
         wentiObj.imageList = test72FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test72);
+        wentiObj.koufenZhi = 0.5 - parseInt(test72);
         gaiJin.push(wentiObj);
       }
 
@@ -6957,15 +6959,15 @@ color:white;background-color:blueviolet
         isTest73 = false;
       }
 
-      if (parseInt(test73) < 4)  //说明有扣分项
+      if (parseInt(test73) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "73";
+        wentiObj.tiaokuanhao = "3.7";
+        wentiObj.pingfenzhibiao = "89,90,91";
         wentiObj.noteDetail = test73Desc;
         wentiObj.imageList = test73FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test73);
+        wentiObj.koufenZhi = 1 - parseInt(test73);
         gaiJin.push(wentiObj);
       }
 
@@ -6985,15 +6987,15 @@ color:white;background-color:blueviolet
         isTest74 = false;
       }
 
-      if (parseInt(test74) < 4)  //说明有扣分项
+      if (parseInt(test74) < 2)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "74";
+        wentiObj.tiaokuanhao = "3.8";
+        wentiObj.pingfenzhibiao = "92,93,94,95,96";
         wentiObj.noteDetail = test74Desc;
         wentiObj.imageList = test74FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test74);
+        wentiObj.koufenZhi = 2 - parseInt(test74);
         gaiJin.push(wentiObj);
       }
 
@@ -7013,15 +7015,15 @@ color:white;background-color:blueviolet
         isTest75 = false;
       }
 
-      if (parseInt(test75) < 4)  //说明有扣分项
+      if (parseInt(test75) < 2)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "75";
+        wentiObj.tiaokuanhao = "3.9";
+        wentiObj.pingfenzhibiao = "97,98,99,100,101,102";
         wentiObj.noteDetail = test75Desc;
         wentiObj.imageList = test75FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test75);
+        wentiObj.koufenZhi = 2 - parseInt(test75);
         gaiJin.push(wentiObj);
       }
 
@@ -7041,15 +7043,15 @@ color:white;background-color:blueviolet
         isTest76 = false;
       }
 
-      if (parseInt(test76) < 4)  //说明有扣分项
+      if (parseInt(test76) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "76";
+        wentiObj.tiaokuanhao = "3.10";
+        wentiObj.pingfenzhibiao = "103";
         wentiObj.noteDetail = test76Desc;
         wentiObj.imageList = test76FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test76);
+        wentiObj.koufenZhi = 1 - parseInt(test76);
         gaiJin.push(wentiObj);
       }
 
@@ -7069,15 +7071,15 @@ color:white;background-color:blueviolet
         isTest77 = false;
       }
 
-      if (parseInt(test77) < 4)  //说明有扣分项
+      if (parseInt(test77) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "77";
+        wentiObj.tiaokuanhao = "3.11";
+        wentiObj.pingfenzhibiao = "104,105,106,107,108";
         wentiObj.noteDetail = test77Desc;
         wentiObj.imageList = test77FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test77);
+        wentiObj.koufenZhi = 3 - parseInt(test77);
         gaiJin.push(wentiObj);
       }
 
@@ -7098,15 +7100,15 @@ color:white;background-color:blueviolet
         isTest78 = false;
       }
 
-      if (parseInt(test78) < 4)  //说明有扣分项
+      if (parseInt(test78) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "78";
+        wentiObj.tiaokuanhao = "4.1";
+        wentiObj.pingfenzhibiao = "109";
         wentiObj.noteDetail = test78Desc;
         wentiObj.imageList = test78FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test78);
+        wentiObj.koufenZhi = 1 - parseInt(test78);
         gaiJin.push(wentiObj);
       }
 
@@ -7126,15 +7128,15 @@ color:white;background-color:blueviolet
         isTest79 = false;
       }
 
-      if (parseInt(test79) < 4)  //说明有扣分项
+      if (parseInt(test79) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "79";
+        wentiObj.tiaokuanhao = "4.1";
+        wentiObj.pingfenzhibiao = "110";
         wentiObj.noteDetail = test79Desc;
         wentiObj.imageList = test79FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test79);
+        wentiObj.koufenZhi = 1 - parseInt(test79);
         gaiJin.push(wentiObj);
       }
 
@@ -7155,15 +7157,15 @@ color:white;background-color:blueviolet
         isTest80 = false;
       }
 
-      if (parseInt(test80) < 4)  //说明有扣分项
+      if (parseInt(test80) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "80";
+        wentiObj.tiaokuanhao = "4.1";
+        wentiObj.pingfenzhibiao = "111";
         wentiObj.noteDetail = test80Desc;
         wentiObj.imageList = test80FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test80);
+        wentiObj.koufenZhi = 1 - parseInt(test80);
         gaiJin.push(wentiObj);
       }
 
@@ -7183,15 +7185,15 @@ color:white;background-color:blueviolet
         isTest81 = false;
       }
 
-      if (parseInt(test81) < 4)  //说明有扣分项
+      if (parseInt(test81) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "81";
+        wentiObj.tiaokuanhao = "4.1";
+        wentiObj.pingfenzhibiao = "112";
         wentiObj.noteDetail = test81Desc;
         wentiObj.imageList = test81FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test81);
+        wentiObj.koufenZhi = 1 - parseInt(test81);
         gaiJin.push(wentiObj);
       }
 
@@ -7211,15 +7213,15 @@ color:white;background-color:blueviolet
         isTest82 = false;
       }
 
-      if (parseInt(test82) < 4)  //说明有扣分项
+      if (parseInt(test82) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "82";
+        wentiObj.tiaokuanhao = "4.1";
+        wentiObj.pingfenzhibiao = "113";
         wentiObj.noteDetail = test82Desc;
         wentiObj.imageList = test82FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test82);
+        wentiObj.koufenZhi = 1 - parseInt(test82);
         gaiJin.push(wentiObj);
       }
 
@@ -7241,15 +7243,15 @@ color:white;background-color:blueviolet
         isTest83 = false;
       }
 
-      if (parseInt(test83) < 4)  //说明有扣分项
+      if (parseInt(test83) < 1)  //说明有扣分项
       {
 
         var wentiObj = new Object();
-        wentiObj.tiaokuanhao = "3.1";
-        wentiObj.pingfenzhibiao = "83";
+        wentiObj.tiaokuanhao = "4.1";
+        wentiObj.pingfenzhibiao = "114";
         wentiObj.noteDetail = test83Desc;
         wentiObj.imageList = test83FileList;
-        wentiObj.koufenZhi = 4 - parseInt(test83);
+        wentiObj.koufenZhi = 1 - parseInt(test83);
         gaiJin.push(wentiObj);
       }
 
@@ -7380,7 +7382,7 @@ color:white;background-color:blueviolet
           html += "<div class='weui-cell'>";
           html += " <div class='weui-cell__hd'><label class='weui-label'>改进问题描述</label></div>";
           html += "  <div class='weui-cell__bd'>";
-          html += " <textarea class='weui-textarea' rows=3  value='" + gaiJin[i].noteDetail + "'></textarea>";
+          html += " <div>" + gaiJin[i].noteDetail + "</div>";
           html += "</div>";
           html += "</div>";
 
@@ -7467,9 +7469,19 @@ color:white;background-color:blueviolet
       obj1.NotCount = notCount;
       obj1.PercentValue = per;
       obj1.FouJue1 = foujiue1;
+      obj1.FouJue2 = foujiue2;
+      obj1.FouJue3 = foujiue3;
+      obj1.FouJue4 = foujiue4;
+      obj1.FouJue5 = foujiue5;
+      obj1.FouJue6 = foujiue6;
 
 
       obj1.FouJueDesc1 = fouJueDesc1;
+      obj1.FouJueDesc2 = fouJueDesc2;
+      obj1.FouJueDesc3 = fouJueDesc3;
+      obj1.FouJueDesc4 = fouJueDesc4;
+      obj1.FouJueDesc5 = fouJueDesc5;
+      obj1.FouJueDesc6 = fouJueDesc6;
 
 
 
