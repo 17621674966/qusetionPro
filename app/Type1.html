@@ -139,7 +139,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">成立日期</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" id="buildTime" type="date" placeholder="请输入成立日期">
+          <input class="weui-input" id="buildTime" type="text" placeholder="请输入成立日期">
         </div>
       </div>
 
@@ -2100,7 +2100,7 @@ color:white;background-color:blueviolet
   <script src="Content/layui/layui.js"></script>
   <script src="demo/js/jquery-citys.js"></script>
   <script>
-
+   $("#buildTime").calendar();
 
     var gaiJin = [];//改进问题清单
 
@@ -2701,7 +2701,10 @@ color:white;background-color:blueviolet
 
     function uploadFilefun(ojg) {
 
-      var num = ojg.id.charAt((ojg.id).length - 1);
+      //var num = ojg.id.charAt((ojg.id).length - 1);
+	  
+	  var num= ojg.id.replace(/[^0-9]/ig,"");
+	  alert(num)
       var files = ojg.files;
 
       for (var i = 0, len = files.length; i < len; i++) {

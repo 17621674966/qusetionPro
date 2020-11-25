@@ -12,9 +12,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   1
-        public int? Test1Score { get; set; }
+        public decimal? Test1Score { get; set; }
 
-        public int? Test1 { get; set; }
+        public decimal? Test1 { get; set; }
 
         public bool? IsTest1 { get; set; }
 
@@ -24,9 +24,9 @@ namespace OpenAuth.Repository.Domain
         #endregion
 
         #region   2
-        public int? Test2Score { get; set; }
+        public decimal? Test2Score { get; set; }
 
-        public int? Test2 { get; set; }
+        public decimal? Test2 { get; set; }
 
         public bool? IsTest2 { get; set; }
 
@@ -36,9 +36,9 @@ namespace OpenAuth.Repository.Domain
         #endregion
 
         #region   3
-        public int? Test3Score { get; set; }
+        public decimal? Test3Score { get; set; }
 
-        public int? Test3 { get; set; }
+        public decimal? Test3 { get; set; }
 
         public bool? IsTest3 { get; set; }
 
@@ -49,9 +49,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   4
-        public int? Test4Score { get; set; }
+        public decimal? Test4Score { get; set; }
 
-        public int? Test4 { get; set; }
+        public decimal? Test4 { get; set; }
 
         public bool? IsTest4 { get; set; }
 
@@ -62,9 +62,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   5
-        public int? Test5Score { get; set; }
+        public decimal? Test5Score { get; set; }
 
-        public int? Test5 { get; set; }
+        public decimal? Test5 { get; set; }
 
         public bool? IsTest5 { get; set; }
 
@@ -75,9 +75,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   6
-        public int? Test6Score { get; set; }
+        public decimal? Test6Score { get; set; }
 
-        public int? Test6 { get; set; }
+        public decimal? Test6 { get; set; }
 
         public bool? IsTest6 { get; set; }
 
@@ -90,9 +90,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   7
-        public int? Test7Score { get; set; }
+        public decimal? Test7Score { get; set; }
 
-        public int? Test7 { get; set; }
+        public decimal? Test7 { get; set; }
 
         public bool? IsTest7 { get; set; }
 
@@ -103,9 +103,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   8
-        public int? Test8Score { get; set; }
+        public decimal? Test8Score { get; set; }
 
-        public int? Test8 { get; set; }
+        public decimal? Test8 { get; set; }
 
         public bool? IsTest8 { get; set; }
 
@@ -117,9 +117,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   9
-        public int? Test9Score { get; set; }
+        public decimal? Test9Score { get; set; }
 
-        public int? Test9 { get; set; }
+        public decimal? Test9 { get; set; }
 
         public bool? IsTest9 { get; set; }
 
@@ -130,9 +130,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   10
-        public int? Test10Score { get; set; }
+        public decimal? Test10Score { get; set; }
 
-        public int? Test10 { get; set; }
+        public decimal? Test10 { get; set; }
 
         public bool? IsTest10 { get; set; }
 
@@ -143,9 +143,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   11
-        public int? Test11Score { get; set; }
+        public decimal? Test11Score { get; set; }
 
-        public int? Test11{ get; set; }
+        public decimal? Test11{ get; set; }
 
         public bool? IsTest11 { get; set; }
 
@@ -156,9 +156,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   12
-        public int? Test12Score { get; set; }
+        public decimal? Test12Score { get; set; }
 
-        public int? Test12 { get; set; }
+        public decimal? Test12 { get; set; }
 
         public bool? IsTest12 { get; set; }
 
@@ -169,9 +169,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   13
-        public int? Test13Score { get; set; }
+        public decimal? Test13Score { get; set; }
 
-        public int? Test13 { get; set; }
+        public decimal? Test13 { get; set; }
 
         public bool? IsTest13 { get; set; }
 
@@ -182,9 +182,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   14
-        public int? Test14Score { get; set; }
+        public decimal? Test14Score { get; set; }
 
-        public int? Test14 { get; set; }
+        public decimal? Test14 { get; set; }
 
         public bool? IsTest14 { get; set; }
 
@@ -195,9 +195,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   15
-        public int? Test15Score { get; set; }
+        public decimal? Test15Score { get; set; }
 
-        public int? Test15 { get; set; }
+        public decimal? Test15 { get; set; }
 
         public bool? IsTest15 { get; set; }
 
@@ -208,9 +208,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   16
-        public int? Test16Score { get; set; }
+        public decimal? Test16Score { get; set; }
 
-        public int? Test16 { get; set; }
+        public decimal? Test16 { get; set; }
 
         public bool? IsTest16 { get; set; }
 
@@ -221,9 +221,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   17
-        public int? Test17Score { get; set; }
+        public decimal? Test17Score { get; set; }
 
-        public int? Test17 { get; set; }
+        public decimal? Test17 { get; set; }
 
         public bool? IsTest17 { get; set; }
 
@@ -235,9 +235,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   18
-        public int? Test18Score { get; set; }
+        public decimal? Test18Score { get; set; }
 
-        public int? Test18 { get; set; }
+        public decimal? Test18 { get; set; }
 
         public bool? IsTest18 { get; set; }
 
@@ -249,9 +249,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   19
-        public int? Test19Score { get; set; }
+        public decimal? Test19Score { get; set; }
 
-        public int? Test19 { get; set; }
+        public decimal? Test19 { get; set; }
 
         public bool? IsTest19 { get; set; }
 
@@ -262,9 +262,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   20
-        public int? Test20Score { get; set; }
+        public decimal? Test20Score { get; set; }
 
-        public int? Test20 { get; set; }
+        public decimal? Test20 { get; set; }
 
         public bool? IsTest20 { get; set; }
 
@@ -276,9 +276,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   21
-        public int? Test21Score { get; set; }
+        public decimal? Test21Score { get; set; }
 
-        public int? Test21 { get; set; }
+        public decimal? Test21 { get; set; }
 
         public bool? IsTest21 { get; set; }
 
@@ -289,9 +289,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   22
-        public int? Test22Score { get; set; }
+        public decimal? Test22Score { get; set; }
 
-        public int? Test22 { get; set; }
+        public decimal? Test22 { get; set; }
 
         public bool? IsTest22 { get; set; }
 
@@ -302,9 +302,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   23
-        public int? Test23Score { get; set; }
+        public decimal? Test23Score { get; set; }
 
-        public int? Test23 { get; set; }
+        public decimal? Test23 { get; set; }
 
         public bool? IsTest23 { get; set; }
 
@@ -316,9 +316,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   24
-        public int? Test24Score { get; set; }
+        public decimal? Test24Score { get; set; }
 
-        public int? Test24 { get; set; }
+        public decimal? Test24 { get; set; }
 
         public bool? IsTest24 { get; set; }
 
@@ -331,9 +331,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   25
-        public int? Test25Score { get; set; }
+        public decimal? Test25Score { get; set; }
 
-        public int? Test25 { get; set; }
+        public decimal? Test25 { get; set; }
 
         public bool? IsTest25 { get; set; }
 
@@ -346,9 +346,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   26
-        public int? Test26Score { get; set; }
+        public decimal? Test26Score { get; set; }
 
-        public int? Test26 { get; set; }
+        public decimal? Test26 { get; set; }
 
         public bool? IsTest26 { get; set; }
 
@@ -361,9 +361,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   27
-        public int? Test27Score { get; set; }
+        public decimal? Test27Score { get; set; }
 
-        public int? Test27 { get; set; }
+        public decimal? Test27 { get; set; }
 
         public bool? IsTest27 { get; set; }
 
@@ -376,9 +376,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   28
-        public int? Test28Score { get; set; }
+        public decimal? Test28Score { get; set; }
 
-        public int? Test28 { get; set; }
+        public decimal? Test28 { get; set; }
 
         public bool? IsTest28 { get; set; }
 
@@ -390,9 +390,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   29
-        public int? Test29Score { get; set; }
+        public decimal? Test29Score { get; set; }
 
-        public int? Test29 { get; set; }
+        public decimal? Test29 { get; set; }
 
         public bool? IsTest29 { get; set; }
 
@@ -403,9 +403,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   30
-        public int? Test30Score { get; set; }
+        public decimal? Test30Score { get; set; }
 
-        public int? Test30 { get; set; }
+        public decimal? Test30 { get; set; }
 
         public bool? IsTest30 { get; set; }
 
@@ -417,9 +417,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   31
-        public int? Test31Score { get; set; }
+        public decimal? Test31Score { get; set; }
 
-        public int? Test31 { get; set; }
+        public decimal? Test31 { get; set; }
 
         public bool? IsTest31 { get; set; }
 
@@ -430,9 +430,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   32
-        public int? Test32Score { get; set; }
+        public decimal? Test32Score { get; set; }
 
-        public int? Test32 { get; set; }
+        public decimal? Test32 { get; set; }
 
         public bool? IsTest32 { get; set; }
 
@@ -444,9 +444,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   33
-        public int? Test33Score { get; set; }
+        public decimal? Test33Score { get; set; }
 
-        public int? Test33 { get; set; }
+        public decimal? Test33 { get; set; }
 
         public bool? IsTest33 { get; set; }
 
@@ -457,9 +457,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   34
-        public int? Test34Score { get; set; }
+        public decimal? Test34Score { get; set; }
 
-        public int? Test34 { get; set; }
+        public decimal? Test34 { get; set; }
 
         public bool? IsTest34 { get; set; }
 
@@ -471,9 +471,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   35
-        public int? Test35Score { get; set; }
+        public decimal? Test35Score { get; set; }
 
-        public int? Test35 { get; set; }
+        public decimal? Test35 { get; set; }
 
         public bool? IsTest35 { get; set; }
 
@@ -483,9 +483,9 @@ namespace OpenAuth.Repository.Domain
         #endregion
 
         #region   36
-        public int? Test36Score { get; set; }
+        public decimal? Test36Score { get; set; }
 
-        public int? Test36 { get; set; }
+        public decimal? Test36 { get; set; }
 
         public bool? IsTest36 { get; set; }
 
@@ -498,9 +498,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   37
-        public int? Test37Score { get; set; }
+        public decimal? Test37Score { get; set; }
 
-        public int? Test37 { get; set; }
+        public decimal? Test37 { get; set; }
 
         public bool? IsTest37 { get; set; }
 
@@ -513,9 +513,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   38
-        public int? Test38Score { get; set; }
+        public decimal? Test38Score { get; set; }
 
-        public int? Test38 { get; set; }
+        public decimal? Test38 { get; set; }
 
         public bool? IsTest38 { get; set; }
 
@@ -527,9 +527,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   39
-        public int? Test39Score { get; set; }
+        public decimal? Test39Score { get; set; }
 
-        public int? Test39 { get; set; }
+        public decimal? Test39 { get; set; }
 
         public bool? IsTest39 { get; set; }
 
@@ -541,9 +541,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   40
-        public int? Test40Score { get; set; }
+        public decimal? Test40Score { get; set; }
 
-        public int? Test40 { get; set; }
+        public decimal? Test40 { get; set; }
 
         public bool? IsTest40 { get; set; }
 
@@ -554,9 +554,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   41
-        public int? Test41Score { get; set; }
+        public decimal? Test41Score { get; set; }
 
-        public int? Test41 { get; set; }
+        public decimal? Test41 { get; set; }
 
         public bool? IsTest41 { get; set; }
 
@@ -568,9 +568,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   42
-        public int? Test42Score { get; set; }
+        public decimal? Test42Score { get; set; }
 
-        public int? Test42 { get; set; }
+        public decimal? Test42 { get; set; }
 
         public bool? IsTest42 { get; set; }
 
@@ -581,9 +581,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   43
-        public int? Test43Score { get; set; }
+        public decimal? Test43Score { get; set; }
 
-        public int? Test43 { get; set; }
+        public decimal? Test43 { get; set; }
 
         public bool? IsTest43 { get; set; }
 
@@ -595,9 +595,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   44
-        public int? Test44Score { get; set; }
+        public decimal? Test44Score { get; set; }
 
-        public int? Test44 { get; set; }
+        public decimal? Test44 { get; set; }
 
         public bool? IsTest44 { get; set; }
 
@@ -608,9 +608,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   45
-        public int? Test45Score { get; set; }
+        public decimal? Test45Score { get; set; }
 
-        public int? Test45 { get; set; }
+        public decimal? Test45 { get; set; }
 
         public bool? IsTest45 { get; set; }
 
@@ -621,9 +621,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   46
-        public int? Test46Score { get; set; }
+        public decimal? Test46Score { get; set; }
 
-        public int? Test46 { get; set; }
+        public decimal? Test46 { get; set; }
 
         public bool? IsTest46 { get; set; }
 
@@ -635,9 +635,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   47
-        public int? Test47Score { get; set; }
+        public decimal? Test47Score { get; set; }
 
-        public int? Test47 { get; set; }
+        public decimal? Test47 { get; set; }
 
         public bool? IsTest47 { get; set; }
 
@@ -649,9 +649,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   48
-        public int? Test48Score { get; set; }
+        public decimal? Test48Score { get; set; }
 
-        public int? Test48 { get; set; }
+        public decimal? Test48 { get; set; }
 
         public bool? IsTest48 { get; set; }
 
@@ -663,9 +663,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   49
-        public int? Test49Score { get; set; }
+        public decimal? Test49Score { get; set; }
 
-        public int? Test49 { get; set; }
+        public decimal? Test49 { get; set; }
 
         public bool? IsTest49 { get; set; }
 
@@ -677,9 +677,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region   50
-        public int? Test50Score { get; set; }
+        public decimal? Test50Score { get; set; }
 
-        public int? Test50 { get; set; }
+        public decimal? Test50 { get; set; }
 
         public bool? IsTest50 { get; set; }
 
@@ -691,9 +691,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    51
-        public int? Test51Score { get; set; }
+        public decimal? Test51Score { get; set; }
 
-        public int? Test51 { get; set; }
+        public decimal? Test51 { get; set; }
 
         public bool? IsTest51 { get; set; }
 
@@ -707,9 +707,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    52
-        public int? Test52Score { get; set; }
+        public decimal? Test52Score { get; set; }
 
-        public int? Test52 { get; set; }
+        public decimal? Test52 { get; set; }
 
         public bool? IsTest52 { get; set; }
 
@@ -721,9 +721,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    53
-        public int? Test53Score { get; set; }
+        public decimal? Test53Score { get; set; }
 
-        public int? Test53 { get; set; }
+        public decimal? Test53 { get; set; }
 
         public bool? IsTest53 { get; set; }
 
@@ -734,9 +734,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    54
-        public int? Test54Score { get; set; }
+        public decimal? Test54Score { get; set; }
 
-        public int? Test54 { get; set; }
+        public decimal? Test54 { get; set; }
 
         public bool? IsTest54 { get; set; }
 
@@ -747,9 +747,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    55
-        public int? Test55Score { get; set; }
+        public decimal? Test55Score { get; set; }
 
-        public int? Test55 { get; set; }
+        public decimal? Test55 { get; set; }
 
         public bool? IsTest55 { get; set; }
 
@@ -760,9 +760,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    56
-        public int? Test56Score { get; set; }
+        public decimal? Test56Score { get; set; }
 
-        public int? Test56 { get; set; }
+        public decimal? Test56 { get; set; }
 
         public bool? IsTest56 { get; set; }
 
@@ -773,9 +773,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    57
-        public int? Test57Score { get; set; }
+        public decimal? Test57Score { get; set; }
 
-        public int? Test57 { get; set; }
+        public decimal? Test57 { get; set; }
 
         public bool? IsTest57 { get; set; }
 
@@ -786,9 +786,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    58
-        public int? Test58Score { get; set; }
+        public decimal? Test58Score { get; set; }
 
-        public int? Test58 { get; set; }
+        public decimal? Test58 { get; set; }
 
         public bool? IsTest58 { get; set; }
 
@@ -799,9 +799,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    59
-        public int? Test59Score { get; set; }
+        public decimal? Test59Score { get; set; }
 
-        public int? Test59 { get; set; }
+        public decimal? Test59 { get; set; }
 
         public bool? IsTest59 { get; set; }
 
@@ -812,9 +812,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    60
-        public int? Test60Score { get; set; }
+        public decimal? Test60Score { get; set; }
 
-        public int? Test60 { get; set; }
+        public decimal? Test60 { get; set; }
 
         public bool? IsTest60 { get; set; }
 
@@ -825,9 +825,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    61
-        public int? Test61Score { get; set; }
+        public decimal? Test61Score { get; set; }
 
-        public int? Test61 { get; set; }
+        public decimal? Test61 { get; set; }
 
         public bool? IsTest61 { get; set; }
 
@@ -838,9 +838,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    66
-        public int? Test62Score { get; set; }
+        public decimal? Test62Score { get; set; }
 
-        public int? Test62 { get; set; }
+        public decimal? Test62 { get; set; }
 
         public bool? IsTest62 { get; set; }
 
@@ -851,9 +851,9 @@ namespace OpenAuth.Repository.Domain
 
 
         #region    63
-        public int? Test63Score { get; set; }
+        public decimal? Test63Score { get; set; }
 
-        public int? Test63 { get; set; }
+        public decimal? Test63 { get; set; }
 
         public bool? IsTest63 { get; set; }
 

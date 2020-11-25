@@ -36,9 +36,9 @@ namespace OpenAuth.Repository.Domain
 
 
         public int? RowStatus { get; set; }
-        public int? TotalCount { get; set; }
-        public int? MyCount { get; set; }
-        public int? NotCount { get; set; }
+        public decimal? TotalCount { get; set; }
+        public decimal? MyCount { get; set; }
+        public decimal? NotCount { get; set; }
         public decimal? PercentValue { get; set; }
         public bool? IsTuiJian { get; set; }
 
@@ -50,6 +50,7 @@ namespace OpenAuth.Repository.Domain
         public string FouJue3 { get; set; }
         public string FouJue4 { get; set; }
         public string FouJue5 { get; set; }
+        public string FouJue6 { get; set; }
 
 
         public string FouJueDesc1 { get; set; }
@@ -57,6 +58,8 @@ namespace OpenAuth.Repository.Domain
         public string FouJueDesc3 { get; set; }
         public string FouJueDesc4 { get; set; }
         public string FouJueDesc5 { get; set; }
+
+        public string FouJueDesc6 { get; set; }
 
         [NotMapped]
         public string AddTimeStr { get; set; }
