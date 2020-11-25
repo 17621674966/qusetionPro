@@ -110,6 +110,17 @@ color:white;background-color:blueviolet
         <div class="weui-cell__hd"><label class="weui-label">所属区/商圈(区)</label></div>
         <div class="weui-cell__bd">
           <div class="citys mb20" id="demo3">
+            <input class="weui-input" id="BelongAddress" type="text" readonly="readonly">
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="weui-cell" style="display: none">
+        <div class="weui-cell__hd"><label class="weui-label">所属区/商圈(区)</label></div>
+        <div class="weui-cell__bd">
+          <div class="citys mb20" id="demo3">
             <select class="city-select" name="province" style="display:none"></select>
             <select class="city-select" name="city" onchange="oncityChange()" id="city"></select>
 
@@ -117,7 +128,7 @@ color:white;background-color:blueviolet
         </div>
       </div>
 
-      <div class="weui-cell">
+      <div class="weui-cell" style="display: none">
         <div class="weui-cell__hd"><label class="weui-label">所属区/商圈(镇)</label></div>
         <div class="weui-cell__bd">
           <div class="citys mb20" id="demo3">
@@ -3865,8 +3876,11 @@ color:white;background-color:blueviolet
   <script src="demo/js/jquery-citys.js"></script>
   <script>
 
-     $("#buildTime").calendar();
+    $("#buildTime").calendar();
     var gaiJin = [];//改进问题清单
+    var mainGuid = "";
+    var detailId = "";
+
 
     //全局数组
     var arr1 = new Array();
@@ -4806,7 +4820,7 @@ color:white;background-color:blueviolet
 
     function uploadFilefun(ojg) {
 
-      var num= ojg.id.replace(/[^0-9]/ig,"");
+      var num = ojg.id.replace(/[^0-9]/ig, "");
       var files = ojg.files;
 
       for (var i = 0, len = files.length; i < len; i++) {
@@ -5067,8 +5081,8 @@ color:white;background-color:blueviolet
 
 
     $("#btn5").click(function () {
-       gaiJin=[];
-       $("#problem").empty();
+      gaiJin = [];
+      $("#problem").empty();
 
 
 
@@ -7525,14 +7539,14 @@ color:white;background-color:blueviolet
 
     $("#btn6").click(function () {
 
-        gaiJin=[];
+      gaiJin = [];
 
       //清空
       myCount = 0;
       notCount = 0;
       $("#div3").show();
       $("#div4").hide();
-    
+
 
     })
 
@@ -7654,8 +7668,8 @@ color:white;background-color:blueviolet
       $("#div7").hide();
       $("#div4").show();
 
- 
-       $("#problem").empty();
+
+      $("#problem").empty();
 
 
 
@@ -8406,12 +8420,16 @@ color:white;background-color:blueviolet
       obj2.Test85FileList = test85FileList;
 
 
+      obj2.Id = detailId;
+      obj1.Id = mainGuid;
+
+
 
 
       //保存
       $.ajax({
         type: "post",
-        url: "http://106.14.181.6:8086/QsMainLog/AddMessage5",
+        url: "http://106.14.181.6:8086/QsMainLog/EditMessage5",
         data: { mainLog: JSON.stringify(obj1), detailLog: JSON.stringify(obj2), userId: window.localStorage.getItem("userId") },
         async: true,
         dataType: "json",
@@ -8447,10 +8465,278 @@ color:white;background-color:blueviolet
 
     $("#btn55").click(function () {
       alert("暂存功能暂时不可用");
-	  return;
+      return;
 
 
     })
+
+    //网页一打开初始化网页
+    $(function () {
+
+      var Id = GetQueryString("Id");
+      mainGuid = Id;
+
+      $.ajax({
+        type: "post",
+        url: "http://localhost:7071/QsMainLog/GetMainDetail",
+        data: { guid: Id },
+        async: true,
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded',
+        beforeSend: function () {
+
+        },
+        complete: function () {
+
+        },
+        success: function (data) {
+          if (data.Code == 200) {
+
+
+            var obj = data.Obj[0];
+            //基本赋值
+            $("#companyName").val(obj.ComapnyName);
+            $("#dianZhaoName").val(obj.DanZhaoName);
+            $("#address").val(obj.Address);
+            $("#businessPro").val(obj.BusinessPro);
+            $("#legalName").val(obj.LegalName);
+            $("#secutyName").val(obj.SecutyName);
+            $("#linkTel").val(obj.LinkTel);
+            $("#checkTime").val(obj.CheckTimeStr);
+            $("#BelongAddress").val(obj.BelongArea);
+            $("#code").val(obj.Code);
+            $("#buildTime").val(obj.BuildTimeStr);
+            $("#peopleCount").val(obj.PeopleCount);
+            $("#area").val(obj.Area);
+            $("#companyType").val(obj.CompanyType);
+
+
+            //否决项赋值
+            //否决项赋值
+            $("#desc1").val(obj.FouJueDesc1);
+            $("#desc2").val(obj.FouJueDesc2);
+            $("#desc3").val(obj.FouJueDesc3);
+            $("#desc4").val(obj.FouJueDesc4);
+            $("#desc5").val(obj.FouJueDesc5);
+            $("#desc6").val(obj.FouJueDesc6);
+
+            $("input[name='radio1'][value=" + obj.FouJue1 + "]").attr("checked", true);
+            $("input[name='radio2'][value=" + obj.FouJue2 + "]").attr("checked", true);
+            $("input[name='radio3'][value=" + obj.FouJue3 + "]").attr("checked", true);
+            $("input[name='radio4'][value=" + obj.FouJue4 + "]").attr("checked", true);
+            $("input[name='radio5'][value=" + obj.FouJue5 + "]").attr("checked", true);
+            $("input[name='radio6'][value=" + obj.FouJue6 + "]").attr("checked", true);
+
+
+          }
+
+          else { $.toptip(data.Message); }
+
+        },
+        error: function (jqXHR) {
+
+          layer.msg("请求服务器发生异常，请联系系统管理员或者稍后再试!");
+          return "";
+        }
+      });
+
+
+
+      //给明细项赋值
+      var domain = "http://106.14.181.6:8086";
+
+      $.ajax({
+        type: "post",
+        url: "http://localhost:7071/QsMainLog/GetDetail5",
+        data: { mainGuid: Id },
+        async: true,
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded',
+        beforeSend: function () {
+
+        },
+        complete: function () {
+
+        },
+        success: function (data) {
+          if (data.Code == 200) {
+
+            var obj = data.Obj[0];
+
+            detailId = obj.Id;
+
+
+
+            var indexValue = 0;
+            for (let i in obj) {
+              indexValue++;
+
+              //循环赋值
+              $("#grade" + indexValue).val(obj["Test" + indexValue + ""]); //分数
+
+              if (obj["IsTest" + indexValue + ""] == 0) {
+                $("#notcheck" + indexValue).attr("checked", false); //是否不可用
+              }
+
+              if (obj["IsTest" + indexValue + ""] == 1) {
+                $("#notcheck" + indexValue).attr("checked", true); //是否不可用
+              }
+              $("#note" + indexValue).val(obj["Test" + indexValue + "Desc"]); //描述
+
+
+
+
+
+              //赋值图片
+              var imageListNew = obj["Test" + indexValue + "FileList"];
+
+
+
+
+              if (imageListNew != "") {
+                var imgList = imageListNew.split(';');
+
+                for (var j = 0; j < imgList.length; j++) {
+                  var srcimg = imgList[j];
+                  if (srcimg != '') {
+                    var src1 = srcimg.replace(/~/, "")
+
+                    //插入到预览区+ domain + src1 + 
+
+                    $preview = $('<li class="weui-uploader__file weui-uploader__file_status" style="background-image:url(' + domain + src1 + ')"><div class="weui-uploader__file-content">0%</div></li>');
+                    $('#z_uploaderFiles' + indexValue + '').append($preview);
+
+                    $preview.removeClass('weui-uploader__file_status');
+                  }
+
+                }
+              }
+
+            }
+
+            //给数组赋值
+            arr1.push(obj["Test1FileList"]);
+            arr2.push(obj["Test2FileList"]);
+            arr3.push(obj["Test3FileList"]);
+            arr4.push(obj["Test4FileList"]);
+            arr5.push(obj["Test5FileList"]);
+            arr6.push(obj["Test6FileList"]);
+            arr7.push(obj["Test7FileList"]);
+            arr8.push(obj["Test8FileList"]);
+            arr9.push(obj["Test9FileList"]);
+            arr10.push(obj["Test10FileList"]);
+            arr11.push(obj["Test11FileList"]);
+            arr12.push(obj["Test12FileList"]);
+            arr13.push(obj["Test13FileList"]);
+            arr14.push(obj["Test14FileList"]);
+            arr15.push(obj["Test15FileList"]);
+            arr16.push(obj["Test16FileList"]);
+            arr17.push(obj["Test17FileList"]);
+            arr18.push(obj["Test18FileList"]);
+            arr19.push(obj["Test19FileList"]);
+            arr20.push(obj["Test20FileList"]);
+            arr21.push(obj["Test21FileList"]);
+            arr22.push(obj["Test22FileList"]);
+            arr23.push(obj["Test23FileList"]);
+            arr24.push(obj["Test24FileList"]);
+            arr25.push(obj["Test25FileList"]);
+            arr26.push(obj["Test26FileList"]);
+            arr27.push(obj["Test27FileList"]);
+            arr28.push(obj["Test28FileList"]);
+            arr29.push(obj["Test29FileList"]);
+            arr30.push(obj["Test30FileList"]);
+            arr31.push(obj["Test31FileList"]);
+            arr32.push(obj["Test32FileList"]);
+            arr33.push(obj["Test33FileList"]);
+            arr34.push(obj["Test34FileList"]);
+            arr35.push(obj["Test35FileList"]);
+            arr36.push(obj["Test36FileList"]);
+            arr37.push(obj["Test37FileList"]);
+            arr38.push(obj["Test38FileList"]);
+            arr39.push(obj["Test39FileList"]);
+            arr40.push(obj["Test40FileList"]);
+            arr41.push(obj["Test41FileList"]);
+            arr42.push(obj["Test42FileList"]);
+            arr43.push(obj["Test43FileList"]);
+            arr44.push(obj["Test44FileList"]);
+            arr45.push(obj["Test45FileList"]);
+            arr46.push(obj["Test46FileList"]);
+            arr47.push(obj["Test47FileList"]);
+            arr48.push(obj["Test48FileList"]);
+            arr49.push(obj["Test49FileList"]);
+            arr50.push(obj["Test50FileList"]);
+            arr51.push(obj["Test51FileList"]);
+
+
+            arr52.push(obj["Test52FileList"]);
+            arr53.push(obj["Test53FileList"]);
+            arr54.push(obj["Test54FileList"]);
+            arr55.push(obj["Test55FileList"]);
+            arr56.push(obj["Test56FileList"]);
+            arr57.push(obj["Test57FileList"]);
+            arr58.push(obj["Test58FileList"]);
+            arr59.push(obj["Test59FileList"]);
+            arr60.push(obj["Test60FileList"]);
+            arr61.push(obj["Test61FileList"]);
+            arr62.push(obj["Test62FileList"]);
+            arr63.push(obj["Test63FileList"]);
+
+
+            arr64.push(obj["Test64FileList"]);
+            arr65.push(obj["Test65FileList"]);
+            arr66.push(obj["Test66FileList"]);
+            arr67.push(obj["Test67FileList"]);
+
+            arr68.push(obj["Test68FileList"]);
+            arr69.push(obj["Test69FileList"]);
+            arr70.push(obj["Test70FileList"]);
+
+
+
+
+            arr71.push(obj["Test71FileList"]);
+            arr72.push(obj["Test72FileList"]);
+            arr73.push(obj["Test73FileList"]);
+            arr74.push(obj["Test74FileList"]);
+            arr75.push(obj["Test75FileList"]);
+            arr76.push(obj["Test76FileList"]);
+            arr77.push(obj["Test77FileList"]);
+            arr78.push(obj["Test78FileList"]);
+            arr79.push(obj["Test79FileList"]);
+            arr80.push(obj["Test80FileList"]);
+            arr81.push(obj["Test81FileList"]);
+            arr82.push(obj["Test82FileList"]);
+
+
+            arr83.push(obj["Test83FileList"]);
+
+
+            arr84.push(obj["Test84FileList"]);
+
+            arr85.push(obj["Test85FileList"]);
+
+          }
+
+          else { $.toptip(data.Message); }
+
+        },
+        error: function (jqXHR) {
+
+          layer.msg("请求服务器发生异常，请联系系统管理员或者稍后再试!");
+          return "";
+        }
+      });
+
+    })
+
+
+
+    function GetQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]); return null;
+    }
+
 
   </script>
 </body>

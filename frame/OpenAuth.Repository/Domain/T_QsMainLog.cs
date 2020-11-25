@@ -63,5 +63,13 @@ namespace OpenAuth.Repository.Domain
 
         [NotMapped]
         public string AddTimeStr { get; set; }
+
+
+        [NotMapped]
+        public string CheckTimeStr { get; set; }
+
+
+        [NotMapped]
+        public string  BuildTimeStr { get; set; }
     }
 }

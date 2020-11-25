@@ -126,12 +126,16 @@
                   const element = data.Obj[index];
 
                   var html = "";
-                  html += "<a class='weui-media-box weui-media-box_text'  href='Type1.html'>";
+                  html += "<a class='weui-media-box weui-media-box_text'  href='" + GetUrl(element.TemplateType) + "?Id=" + element.Id + "'>";
                   html += "<h4 class='weui-media-box__title'>" + element.ComapnyName + "</h4>";
+                  html += " <p class='weui-media-box__desc' style='font-size:16px'>类型：" + element.TemplateType + "</p>";
                   html += " <p class='weui-media-box__desc' style='font-size:16px'>地址：" + element.Address + "</p>";
                   html += " <p class='weui-media-box__desc' style='font-size:16px'>店招名：" + element.DanZhaoName + "</p>";
                   html += " <p class='weui-media-box__desc' style='font-size:16px'>联系电话：" + element.LinkTel + "</p>";
                   html += " <p class='weui-media-box__desc' style='font-size:16px'>调查人：" + element.AddUserName + "</p>";
+                  html += " <p class='weui-media-box__desc' style='font-size:16px;color:red'>总分：" + element.TotalCount + "</p>";
+                  html += " <p class='weui-media-box__desc' style='font-size:16px;color:red'>得分：" + element.MyCount + "</p>";
+                  html += " <p class='weui-media-box__desc' style='font-size:16px;color:red'>不适用分数：" + element.NotCount + "</p>";
                   html += " <p class='weui-media-box__desc' style='font-size:16px'>调查时间：" + element.AddTimeStr + "</p>";
                   html += " </a>";
                   $("#loglist").append(html);
@@ -160,6 +164,42 @@
 
     function midofyPassword() {
       window.location.href = "modifyPassword.html";
+    }
+
+
+    //返回跳转的url
+    function GetUrl(type) {
+      if (type == '适用于便利店') {
+
+        return 'Type1read.html';
+      }
+
+      if (type == '适用于小型餐饮单位') {
+
+        return 'Type2read.html';
+      }
+
+      if (type == '适用于中型饭店及以上') {
+
+        return 'Type3read.html';
+      }
+
+      if (type == '适用于标准超市') {
+
+        return 'Type4read.html';
+      }
+
+
+      if (type == '适用于大卖场') {
+
+        return 'Type5read.html';
+      }
+
+      if (type == '适用于单位食堂') {
+
+        return 'Type6read.html';
+      }
+
     }
 
   </script>

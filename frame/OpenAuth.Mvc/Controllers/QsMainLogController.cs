@@ -543,6 +543,16 @@ namespace OpenAuth.Mvc.Controllers
                 return Json(Result, JsonRequestBehavior.DenyGet);
             }
 
+
+            var detailMessage = App.Repository.FindSingle(x=>x.Id.Equals(main.Id) );
+
+            if (detailMessage!=null)
+            {
+                main.BelongArea = detailMessage.BelongArea;
+                main.AddUserGuid = detailMessage.AddUserGuid;
+                main.AddUserName = detailMessage.AddUserName;
+                main.AddTime = detailMessage.AddTime;
+            }
             using (var train = new TransactionScope())
             {
 
@@ -553,6 +563,7 @@ namespace OpenAuth.Mvc.Controllers
                    
                     main.UpdateTime = DateTime.Now;
                     main.RowStatus = 1;
+                    
 
                     App.Repository.Update(main);
 
@@ -612,6 +623,16 @@ namespace OpenAuth.Mvc.Controllers
                 Result.Code = 401;
                 Result.Message = "请先登录！";
                 return Json(Result, JsonRequestBehavior.DenyGet);
+            }
+
+            var detailMessage = App.Repository.FindSingle(x => x.Id.Equals(main.Id));
+
+            if (detailMessage != null)
+            {
+                main.BelongArea = detailMessage.BelongArea;
+                main.AddUserGuid = detailMessage.AddUserGuid;
+                main.AddUserName = detailMessage.AddUserName;
+                main.AddTime = detailMessage.AddTime;
             }
 
             using (var train = new TransactionScope())
@@ -684,6 +705,16 @@ namespace OpenAuth.Mvc.Controllers
                 return Json(Result, JsonRequestBehavior.DenyGet);
             }
 
+            var detailMessage = App.Repository.FindSingle(x => x.Id.Equals(main.Id));
+
+            if (detailMessage != null)
+            {
+                main.BelongArea = detailMessage.BelongArea;
+                main.AddUserGuid = detailMessage.AddUserGuid;
+                main.AddUserName = detailMessage.AddUserName;
+                main.AddTime = detailMessage.AddTime;
+            }
+
             using (var train = new TransactionScope())
             {
 
@@ -754,6 +785,16 @@ namespace OpenAuth.Mvc.Controllers
                 return Json(Result, JsonRequestBehavior.DenyGet);
             }
 
+
+            var detailMessage = App.Repository.FindSingle(x => x.Id.Equals(main.Id));
+
+            if (detailMessage != null)
+            {
+                main.BelongArea = detailMessage.BelongArea;
+                main.AddUserGuid = detailMessage.AddUserGuid;
+                main.AddUserName = detailMessage.AddUserName;
+                main.AddTime = detailMessage.AddTime;
+            }
             using (var train = new TransactionScope())
             {
 
@@ -823,6 +864,16 @@ namespace OpenAuth.Mvc.Controllers
                 return Json(Result, JsonRequestBehavior.DenyGet);
             }
 
+
+            var detailMessage = App.Repository.FindSingle(x => x.Id.Equals(main.Id));
+
+            if (detailMessage != null)
+            {
+                main.BelongArea = detailMessage.BelongArea;
+                main.AddUserGuid = detailMessage.AddUserGuid;
+                main.AddUserName = detailMessage.AddUserName;
+                main.AddTime = detailMessage.AddTime;
+            }
             using (var train = new TransactionScope())
             {
 
@@ -892,6 +943,15 @@ namespace OpenAuth.Mvc.Controllers
                 return Json(Result, JsonRequestBehavior.DenyGet);
             }
 
+            var detailMessage = App.Repository.FindSingle(x => x.Id.Equals(main.Id));
+
+            if (detailMessage != null)
+            {
+                main.BelongArea = detailMessage.BelongArea;
+                main.AddUserGuid = detailMessage.AddUserGuid;
+                main.AddUserName = detailMessage.AddUserName;
+                main.AddTime = detailMessage.AddTime;
+            }
             using (var train = new TransactionScope())
             {
 
@@ -952,7 +1012,18 @@ namespace OpenAuth.Mvc.Controllers
             var list = App.Repository.Find(x => x.Id.Equals(guid)).OrderByDescending(x => x.AddTime).ToList();
             list.ForEach(x =>
             {
-                x.AddTimeStr = x.AddTime.Value.ToString("yyyy-MM-dd  HH:mm:ss");
+                x.AddTimeStr = x.AddTime.Value.ToString("yyyy-MM-dd");
+
+                if (x.CheckTime.HasValue)
+                {
+                    x.CheckTimeStr = x?.CheckTime.Value.ToString("yyyy-MM-dd") ?? "";
+                }
+             
+                if (x.BuildTime.HasValue)
+                {
+                    x.BuildTimeStr = x.BuildTime.Value.ToString("yyyy-MM-dd") ?? "";
+                }
+               
             });
 
             Response Result = new Response();

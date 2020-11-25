@@ -140,7 +140,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">成立日期</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" id="buildTime" type="date" placeholder="请输入成立日期">
+          <input class="weui-input" id="buildTime" type="text" placeholder="请输入成立日期">
         </div>
       </div>
 
@@ -396,22 +396,22 @@ color:white;background-color:blueviolet
 
     <div class="weui-cells weui-cells_radio">
       <h3 style="margin-top: 20px">开展“放心食品超市自我承诺活动”，向社会公开放心食品自我承诺，并在经营场所醒目位置张贴承诺内容</h3>
-      <label class="weui-cell weui-check__label" for="x21">
+      <label class="weui-cell weui-check__label" for="x23">
         <div class="weui-cell__bd">
           <p>符合</p>
         </div>
         <div class="weui-cell__ft">
-          <input type="radio" class="weui-check" name="radio6" id="x21" value="1">
+          <input type="radio" class="weui-check" name="radio6" id="x23" value="1">
           <span class="weui-icon-checked"></span>
         </div>
       </label>
-      <label class="weui-cell weui-check__label" for="x22">
+      <label class="weui-cell weui-check__label" for="x24">
 
         <div class="weui-cell__bd">
           <p>不符合</p>
         </div>
         <div class="weui-cell__ft">
-          <input type="radio" name="radio6" class="weui-check" id="x22" value="0">
+          <input type="radio" name="radio6" class="weui-check" id="x24" value="0">
           <span class="weui-icon-checked"></span>
         </div>
       </label>
@@ -3724,7 +3724,7 @@ color:white;background-color:blueviolet
   <script src="demo/js/jquery-citys.js"></script>
   <script>
 
-
+     $("#buildTime").calendar();
     var gaiJin = [];//改进问题清单
 
     //全局数组
@@ -4642,7 +4642,7 @@ color:white;background-color:blueviolet
 
     function uploadFilefun(ojg) {
 
-      var num = ojg.id.charAt((ojg.id).length - 1);
+      var num= ojg.id.replace(/[^0-9]/ig,"");
       var files = ojg.files;
 
       for (var i = 0, len = files.length; i < len; i++) {
@@ -4713,7 +4713,7 @@ color:white;background-color:blueviolet
 
 
       $.ajax({
-        url: "http://localhost:7071/FileUpload/UploadFile",
+        url: "http://106.14.181.6:8086/FileUpload/UploadFile",
         type: 'Post',
         //开始请求
         beforeSend: function () {
@@ -5101,8 +5101,8 @@ color:white;background-color:blueviolet
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "1.2";
         wentiObj.pingfenzhibiao = "10,11";
-        wentiObj.noteDetail = test8Desc;
-        wentiObj.imageList = test8FileList;
+        wentiObj.noteDetail = test7Desc;
+        wentiObj.imageList = test7FileList;
         wentiObj.koufenZhi = 8 - parseFloat(test7);
         gaiJin.push(wentiObj);
       }
@@ -5275,7 +5275,7 @@ color:white;background-color:blueviolet
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "2.1";
         wentiObj.pingfenzhibiao = "15";
-        wentiObj.noteDetail = test3Desc;
+        wentiObj.noteDetail = test13Desc;
         wentiObj.imageList = test13FileList;
         wentiObj.koufenZhi = 3 - parseFloat(test13);
         gaiJin.push(wentiObj);
@@ -7317,7 +7317,7 @@ color:white;background-color:blueviolet
 
     //问题清单（需要动态生成一个表格）
     $("#btn7").click(function () {
-      var domain = "http://localhost:7071";
+      var domain = "http://106.14.181.6:8086";
       $("#div4").hide();
       $("#div7").show();
 
@@ -8166,7 +8166,7 @@ color:white;background-color:blueviolet
       //保存
       $.ajax({
         type: "post",
-        url: "http://localhost:7071/QsMainLog/AddMessage4",
+        url: "http://106.14.181.6:8086/QsMainLog/AddMessage4",
         data: { mainLog: JSON.stringify(obj1), detailLog: JSON.stringify(obj2), userId: window.localStorage.getItem("userId") },
         async: true,
         dataType: "json",
@@ -8201,7 +8201,9 @@ color:white;background-color:blueviolet
     }
 
     $("#btn55").click(function () {
-      save();
+      alert("暂存功能暂时不可用");
+	  return;
+
 
     })
 

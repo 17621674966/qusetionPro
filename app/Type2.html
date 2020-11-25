@@ -140,7 +140,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">成立日期</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" id="buildTime" type="date" placeholder="请输入成立日期">
+          <input class="weui-input" id="buildTime" type="text" placeholder="请输入成立日期">
         </div>
       </div>
 
@@ -2465,7 +2465,7 @@ color:white;background-color:blueviolet
   <script src="Content/layui/layui.js"></script>
   <script src="demo/js/jquery-citys.js"></script>
   <script>
-
+    $("#buildTime").calendar();
 
     var gaiJin = [];//改进问题清单
 
@@ -3178,7 +3178,7 @@ color:white;background-color:blueviolet
 
     function uploadFilefun(ojg) {
 
-      var num = ojg.id.charAt((ojg.id).length - 1);
+      var num= ojg.id.replace(/[^0-9]/ig,"");
       var files = ojg.files;
 
       for (var i = 0, len = files.length; i < len; i++) {
@@ -3249,7 +3249,7 @@ color:white;background-color:blueviolet
 
 
       $.ajax({
-        url: "http://localhost:7071/FileUpload/UploadFile",
+        url: "http://106.14.181.6:8086/FileUpload/UploadFile",
         type: 'Post',
         //开始请求
         beforeSend: function () {
@@ -3603,9 +3603,9 @@ color:white;background-color:blueviolet
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "1.6";
         wentiObj.pingfenzhibiao = "12,13";
-        wentiObj.noteDetail = test8Desc;
-        wentiObj.imageList = test8FileList;
-        wentiObj.koufenZhi = 3 - parseFloat(test8);
+        wentiObj.noteDetail = test7Desc;
+        wentiObj.imageList = test7FileList;
+        wentiObj.koufenZhi = 3 - parseFloat(test7);
         gaiJin.push(wentiObj);
       }
 
@@ -3777,7 +3777,7 @@ color:white;background-color:blueviolet
         var wentiObj = new Object();
         wentiObj.tiaokuanhao = "2.2";
         wentiObj.pingfenzhibiao = "17,18,19,20";
-        wentiObj.noteDetail = test3Desc;
+        wentiObj.noteDetail = test13Desc;
         wentiObj.imageList = test13FileList;
         wentiObj.koufenZhi = 2 - parseFloat(test13);
         gaiJin.push(wentiObj);
@@ -5246,7 +5246,7 @@ color:white;background-color:blueviolet
 
     //问题清单（需要动态生成一个表格）
     $("#btn7").click(function () {
-      var domain = "http://localhost:7071";
+      var domain = "http://106.14.181.6:8086";
       $("#div4").hide();
       $("#div7").show();
 
@@ -5921,7 +5921,7 @@ color:white;background-color:blueviolet
       //保存
       $.ajax({
         type: "post",
-        url: "http://localhost:7071/QsMainLog/AddMessage2",
+        url: "http://106.14.181.6:8086/QsMainLog/AddMessage2",
         data: { mainLog: JSON.stringify(obj1), detailLog: JSON.stringify(obj2), userId: window.localStorage.getItem("userId") },
         async: true,
         dataType: "json",
@@ -5956,7 +5956,8 @@ color:white;background-color:blueviolet
     }
 
     $("#btn55").click(function () {
-      save();
+      alert("暂存功能暂时不可用");
+	  return;
 
     })
 
