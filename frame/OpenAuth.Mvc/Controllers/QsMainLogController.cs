@@ -552,6 +552,10 @@ namespace OpenAuth.Mvc.Controllers
                 main.AddUserGuid = detailMessage.AddUserGuid;
                 main.AddUserName = detailMessage.AddUserName;
                 main.AddTime = detailMessage.AddTime;
+                detail.MainId = main.Id;
+                detail.AddTime = detailMessage.AddTime;
+                detail.AddUserGuid = detailMessage.AddUserGuid;
+                detail.AddUserName = detailMessage.AddUserName;
             }
             using (var train = new TransactionScope())
             {
@@ -633,6 +637,10 @@ namespace OpenAuth.Mvc.Controllers
                 main.AddUserGuid = detailMessage.AddUserGuid;
                 main.AddUserName = detailMessage.AddUserName;
                 main.AddTime = detailMessage.AddTime;
+                detail.MainId = main.Id;
+                detail.AddTime = detailMessage.AddTime;
+                detail.AddUserGuid = detailMessage.AddUserGuid;
+                detail.AddUserName = detailMessage.AddUserName;
             }
 
             using (var train = new TransactionScope())
@@ -713,6 +721,10 @@ namespace OpenAuth.Mvc.Controllers
                 main.AddUserGuid = detailMessage.AddUserGuid;
                 main.AddUserName = detailMessage.AddUserName;
                 main.AddTime = detailMessage.AddTime;
+                detail.MainId = main.Id;
+                detail.AddTime= detailMessage.AddTime;
+                detail.AddUserGuid= detailMessage.AddUserGuid;
+                detail.AddUserName= detailMessage.AddUserName;
             }
 
             using (var train = new TransactionScope())
@@ -794,6 +806,10 @@ namespace OpenAuth.Mvc.Controllers
                 main.AddUserGuid = detailMessage.AddUserGuid;
                 main.AddUserName = detailMessage.AddUserName;
                 main.AddTime = detailMessage.AddTime;
+                detail.MainId = main.Id;
+                detail.AddTime = detailMessage.AddTime;
+                detail.AddUserGuid = detailMessage.AddUserGuid;
+                detail.AddUserName = detailMessage.AddUserName;
             }
             using (var train = new TransactionScope())
             {
@@ -873,6 +889,10 @@ namespace OpenAuth.Mvc.Controllers
                 main.AddUserGuid = detailMessage.AddUserGuid;
                 main.AddUserName = detailMessage.AddUserName;
                 main.AddTime = detailMessage.AddTime;
+                detail.MainId = main.Id;
+                detail.AddTime = detailMessage.AddTime;
+                detail.AddUserGuid = detailMessage.AddUserGuid;
+                detail.AddUserName = detailMessage.AddUserName;
             }
             using (var train = new TransactionScope())
             {
@@ -951,6 +971,10 @@ namespace OpenAuth.Mvc.Controllers
                 main.AddUserGuid = detailMessage.AddUserGuid;
                 main.AddUserName = detailMessage.AddUserName;
                 main.AddTime = detailMessage.AddTime;
+                detail.MainId = main.Id;
+                detail.AddTime = detailMessage.AddTime;
+                detail.AddUserGuid = detailMessage.AddUserGuid;
+                detail.AddUserName = detailMessage.AddUserName;
             }
             using (var train = new TransactionScope())
             {
