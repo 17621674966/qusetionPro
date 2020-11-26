@@ -978,6 +978,19 @@ namespace OpenAuth.Repository.Domain
         #endregion
 
 
+        #region    72
+        public decimal? Test72Score { get; set; }
+
+        public decimal? Test72 { get; set; }
+
+        public bool? IsTest72 { get; set; }
+
+        public string Test72Desc { get; set; }
+
+        public string Test72FileList { get; set; }
+        #endregion
+
+
 
 
 
