@@ -1325,7 +1325,7 @@ color:white;background-color:blueviolet
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">得分</label></div>
         <div class="weui-cell__bd">
-          <input class="weui-input" type="number" placeholder="请输入得分" id="grade40" value="2" oninput="if(value>2||value<0)value=2 ">
+          <input class="weui-input" type="number" placeholder="请输入得分" id="grade40" value="3" oninput="if(value>3||value<0)value=3">
         </div>
       </div>
 
@@ -1333,7 +1333,7 @@ color:white;background-color:blueviolet
         <div class="weui-cell__bd">不适用</div>
         <div class="weui-cell__ft">
           <label for="notcheck40" class="weui-switch-cp">
-            <input class="weui-switch-cp__input" type="checkbox" id="notcheck40" value="2">
+            <input class="weui-switch-cp__input" type="checkbox" id="notcheck40" value="3">
             <div class="weui-switch-cp__box"></div>
           </label>
         </div>
@@ -2855,7 +2855,7 @@ color:white;background-color:blueviolet
 
     <div class="footContent">
       <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn4">上一步</a>
-      <a href="#" class="weui-btn weui-btn_primary" id="btn55">暂存</a>
+      <a href="#" class="weui-btn weui-btn_primary" id="btn55" style='display: none'>暂存</a>
       <a href="#" class="weui-btn weui-btn_primary" id="btn5">下一步</a>
     </div>
   </div>
@@ -3889,7 +3889,7 @@ color:white;background-color:blueviolet
 
 
       $.ajax({
-        url: "http://localhost:7071/FileUpload/UploadFile",
+        url: "http://106.14.181.6:8086/FileUpload/UploadFile",
         type: 'Post',
         //开始请求
         beforeSend: function () {
@@ -5189,7 +5189,7 @@ color:white;background-color:blueviolet
         isTest40 = false;
       }
 
-      if (parseFloat(test40) < 2)  //说明有扣分项
+      if (parseFloat(test40) < 3)  //说明有扣分项
       {
 
         var wentiObj = new Object();
@@ -5197,7 +5197,7 @@ color:white;background-color:blueviolet
         wentiObj.pingfenzhibiao = "42";
         wentiObj.noteDetail = test40Desc;
         wentiObj.imageList = test40FileList;
-        wentiObj.koufenZhi = 2 - parseFloat(test40);
+        wentiObj.koufenZhi = 3 - parseFloat(test40);
         gaiJin.push(wentiObj);
       }
 
@@ -6155,7 +6155,7 @@ color:white;background-color:blueviolet
 
     //问题清单（需要动态生成一个表格）
     $("#btn7").click(function () {
-      var domain = "http://localhost:7071";
+      var domain = "http://106.14.181.6:8086";
       $("#div4").hide();
       $("#div7").show();
 
@@ -6901,7 +6901,7 @@ color:white;background-color:blueviolet
       //保存
       $.ajax({
         type: "post",
-        url: "http://localhost:7071/QsMainLog/AddMessage6",
+        url: "http://106.14.181.6:8086/QsMainLog/AddMessage6",
         data: { mainLog: JSON.stringify(obj1), detailLog: JSON.stringify(obj2), userId: window.localStorage.getItem("userId") },
         async: true,
         dataType: "json",

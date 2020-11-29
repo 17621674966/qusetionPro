@@ -1953,7 +1953,7 @@ color:white;background-color:blueviolet
 
     <div class="footContent">
       <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn4">上一步</a>
-      <a href="#" class="weui-btn weui-btn_primary" id="btn55">暂存</a>
+      <a href="#" class="weui-btn weui-btn_primary" id="btn55" style='display: none'>暂存</a>
       <a href="#" class="weui-btn weui-btn_primary" id="btn5">下一步</a>
     </div>
   </div>
@@ -4198,7 +4198,7 @@ color:white;background-color:blueviolet
       $("#name2").val(checkTime);
       $("#name3").val(address);
       $("#name4").val(dianZhaoName);
-      $("#name5").val(belongArea);
+      $("#name5").val($("#BelongAddress").val());
       $("#name6").val(businessPro);
       $("#name7").val(companyType);
       $("#name8").val(notCount);
@@ -4823,7 +4823,7 @@ color:white;background-color:blueviolet
 
       $.ajax({
         type: "post",
-        url: "http://localhost:7071/QsMainLog/GetMainDetail",
+        url: "http://106.14.181.6:8086/QsMainLog/GetMainDetail",
         data: { guid: Id },
         async: true,
         dataType: "json",
@@ -4889,7 +4889,7 @@ color:white;background-color:blueviolet
 
       $.ajax({
         type: "post",
-        url: "http://localhost:7071/QsMainLog/GetDetail1",
+        url: "http://106.14.181.6:8086/QsMainLog/GetDetail1",
         data: { mainGuid: Id },
         async: true,
         dataType: "json",
@@ -4932,10 +4932,15 @@ color:white;background-color:blueviolet
               //赋值图片
               var imageListNew = obj["Test" + indexValue + "FileList"];
 
-
+              if (imageListNew == undefined) {
+                imageListNew = "";
+                obj["Test" + indexValue + "FileList"] = "";
+              }
 
 
               if (imageListNew != "") {
+
+
                 var imgList = imageListNew.split(';');
 
                 for (var j = 0; j < imgList.length; j++) {
@@ -4958,7 +4963,12 @@ color:white;background-color:blueviolet
 
             //给数组赋值
             arr1.push(obj["Test1FileList"]);
+            console.log(123456);
+            console.log(arr1);
+            console.log(obj["Test1FileList"]);
+            console.log(obj["Test2FileList"]);
             arr2.push(obj["Test2FileList"]);
+            console.log(arr2);
             arr3.push(obj["Test3FileList"]);
             arr4.push(obj["Test4FileList"]);
             arr5.push(obj["Test5FileList"]);

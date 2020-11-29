@@ -1942,7 +1942,7 @@ color:white;background-color:blueviolet
 
     <div class="footContent">
       <a href="javascript:history.go(-1)" class="weui-btn  weui-btn_default" id="btn4">上一步</a>
-      <a href="#" class="weui-btn weui-btn_primary" id="btn55">暂存</a>
+      <a href="#" class="weui-btn weui-btn_primary" id="btn55" style='display: none'>暂存</a>
       <a href="#" class="weui-btn weui-btn_primary" id="btn5">下一步</a>
     </div>
   </div>
@@ -2101,7 +2101,7 @@ color:white;background-color:blueviolet
   <script src="demo/js/jquery-citys.js"></script>
   <script>
 
-     $("#buildTime").calendar();
+    $("#buildTime").calendar();
     var gaiJin = [];//改进问题清单
 
     //全局数组
@@ -2701,7 +2701,7 @@ color:white;background-color:blueviolet
 
     function uploadFilefun(ojg) {
 
-      var num= ojg.id.replace(/[^0-9]/ig,"");
+      var num = ojg.id.replace(/[^0-9]/ig, "");
       var files = ojg.files;
 
       for (var i = 0, len = files.length; i < len; i++) {
@@ -2917,9 +2917,20 @@ color:white;background-color:blueviolet
 
 
     $("#btn5").click(function () {
-      
-       gaiJin=[];
-       $("#problem").empty();
+
+
+      //判断非空
+      for (var i = 1; i <= 51; i++) {
+        if ($("#grade" + i).val() != undefined && $("#grade" + i).val() == "") {
+
+          alert("第" + i + "题分数不能填空!");
+          return;
+        }
+
+      }
+
+      gaiJin = [];
+      $("#problem").empty();
       //第一部分
       //1
       test1Score = -1;
@@ -4167,7 +4178,7 @@ color:white;background-color:blueviolet
       notCount = 0;
       $("#div3").show();
       $("#div4").hide();
-    
+
     })
 
 
@@ -4287,8 +4298,8 @@ color:white;background-color:blueviolet
 
       $("#div7").hide();
       $("#div4").show();
-     
-       $("#problem").empty();
+
+      $("#problem").empty();
 
 
 
@@ -4789,8 +4800,8 @@ color:white;background-color:blueviolet
     }
 
     $("#btn55").click(function () {
-      alert("暂存功能暂时不可用");
-	  return;
+      alert("可以直接提交后修改");
+      return;
 
 
     })
