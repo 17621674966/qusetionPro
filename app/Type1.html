@@ -4222,7 +4222,7 @@ color:white;background-color:blueviolet
           html += "<div class='weui-cell' style='background-color:blue'> ";
           html += " <div class='weui-cell__hd' ><label class='weui-label' >序号</label></div>";
           html += "  <div class='weui-cell__bd'>";
-          html += " <input class='weui-input' type='text' readonly=readonly value='" + (i + 1) + "' >";
+          html += " <input class='weui-input' type='text'  id='xuhao" + i + "' readonly=readonly value='" + (i + 1) + "' >";
           html += "</div>";
           html += "</div>";
 
@@ -4230,7 +4230,7 @@ color:white;background-color:blueviolet
           html += "<div class='weui-cell'>";
           html += " <div class='weui-cell__hd'><label class='weui-label'>条款号</label></div>";
           html += "  <div class='weui-cell__bd'>";
-          html += " <input class='weui-input' type='text' readonly=readonly value='" + gaiJin[i].tiaokuanhao + "' >";
+          html += " <input class='weui-input' type='text'  id='tiaokuan" + i + "'  readonly=readonly value='" + gaiJin[i].tiaokuanhao + "' >";
           html += "</div>";
           html += "</div>";
 
@@ -4239,14 +4239,14 @@ color:white;background-color:blueviolet
           html += "<div class='weui-cell'>";
           html += " <div class='weui-cell__hd'><label class='weui-label'>评分指标</label></div>";
           html += "  <div class='weui-cell__bd'>";
-          html += " <input class='weui-input' type='text' readonly=readonly value='" + gaiJin[i].pingfenzhibiao + "' >";
+          html += " <input class='weui-input' type='text'  id='zhibiao" + i + "' readonly=readonly value='" + gaiJin[i].pingfenzhibiao + "' >";
           html += "</div>";
           html += "</div>";
 
           html += "<div class='weui-cell'>";
           html += " <div class='weui-cell__hd'><label class='weui-label'>扣分值</label></div>";
           html += "  <div class='weui-cell__bd'>";
-          html += " <input class='weui-input' type='text' readonly=readonly value='" + gaiJin[i].koufenZhi + "' >";
+          html += " <input class='weui-input' type='text' id='koufen" + i + "' readonly=readonly value='" + gaiJin[i].koufenZhi + "' >";
           html += "</div>";
           html += "</div>";
 
@@ -4254,9 +4254,20 @@ color:white;background-color:blueviolet
           html += "<div class='weui-cell'>";
           html += " <div class='weui-cell__hd'><label class='weui-label'>改进问题描述</label></div>";
           html += "  <div class='weui-cell__bd'>";
-          html += "<div>" + gaiJin[i].noteDetail + "</div> ";
+          html += "<div id='gaijinDesc" + i + "'>" + gaiJin[i].noteDetail + "</div> ";
           html += "</div>";
           html += "</div>";
+
+
+          html += '<div class="weui-cell">'
+          html += '<div class="weui-cell__hd"><label class="weui-label">改进建议</label></div>'
+          html += ' <div class="weui-cell__bd">'
+          html += "<textarea class='weui-textarea' id='jianyi" + i + "' placeholder='请输入改进建议' rows='3'></textarea>"
+          html += '</div>'
+          html += '</div >'
+
+
+          html += "<input type='hidden' value='" + gaiJin[i].imageList + "' id='imglist" + i + "' >";
 
           html += "<div class='weui-cell'>";
           html += " <div class='weui-cell__hd'><label class='weui-label'>问题照片</label></div>";
@@ -4761,12 +4772,41 @@ color:white;background-color:blueviolet
 
 
 
+      //构造第三个描述项
+
+      var jianyiArr = [];
+      if (gaiJin.length > 0) {
+        for (var i = 0; i < gaiJin.length; i++) {
+          var obj3 = new Object();
+          var xuhao = $("#xuhao" + i).val();
+          var tiaokuan = $("#tiaokuan" + i).val();
+          var zhibiao = $("#zhibiao" + i).val();
+          var koufen = $("#koufen" + i).val();
+          var gaijinDesc = $("#gaijinDesc" + i).text();
+          var jianyi = $("#jianyi" + i).val();
+          var imglist = $("#imglist" + i).val();
+
+          obj3.SortNumber = xuhao;
+          obj3.TiaoKuan = tiaokuan;
+          obj3.ZhiBiao = zhibiao;
+          obj3.KouFen = koufen;
+          obj3.ImgList = imglist;
+          obj3.Suggest = jianyi;
+          obj3.MiaoShu = gaijinDesc;
+
+          jianyiArr.push(obj3);
+
+        }
+      }
+
+
+      console.log(jianyiArr);
 
       //保存
       $.ajax({
         type: "post",
-        url: "http://106.14.181.6:8086/QsMainLog/AddMessage",
-        data: { mainLog: JSON.stringify(obj1), detailLog: JSON.stringify(obj2), userId: window.localStorage.getItem("userId") },
+        url: "http://localhost:7071/QsMainLog/AddMessage",
+        data: { mainLog: JSON.stringify(obj1), detailLog: JSON.stringify(obj2), userId: window.localStorage.getItem("userId"), qsSuggest: JSON.stringify(jianyiArr) },
         async: true,
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded',

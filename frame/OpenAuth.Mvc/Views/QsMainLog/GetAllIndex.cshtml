@@ -1,0 +1,268 @@
+﻿
+@{
+    ViewBag.Title = "调查列表";
+}
+<!--上面的查询按钮-->
+<blockquote class="layui-elem-quote layui-text">
+
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">店招名:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="txt_dianZhaoName" id="txt_dianZhaoName" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">单位名</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="txt_companyName" id="txt_companyName" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">类型</label>
+                <div class="layui-input-inline">
+                    <select id="ddl_type" name="ddl_type">
+                        <option value="">所有类型</option>
+                        <option value="便利店">便利店</option>
+                        <option value="小型餐饮单位">小型餐饮单位</option>
+                        <option value="中型饭店及以上">中型饭店及以上</option>
+					    <option value="标准超市">标准超市</option>
+                        <option value="大卖场">大卖场</option>
+                        <option value="单位食堂">单位食堂</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">添加时间:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="txt_addTimeBegin" id="txt_addTimeBegin" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">至</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="txt_addTimeEnd" id="txt_addTimeEnd" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+               
+			    <label class="layui-form-label">添加人</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="txt_addUserName" id="txt_addUserName" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+               
+            </div>
+
+			 <div class="layui-inline">
+               
+			    <label class="layui-form-label">区</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="txt_belongQu" id="txt_belongQu" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+               
+            </div>
+
+
+			<div class="layui-inline">
+               
+			    <label class="layui-form-label">推荐</label>
+                <div class="layui-input-inline">
+                   <select id="ddl_tuijian" name="ddl_tuijian">
+                        <option value="">所有</option>
+                        <option value="推荐">推荐</option>
+                        <option value="不推荐">不推荐</option>
+                  
+                    </select>
+                </div>
+               
+            </div>
+           
+        </div>
+
+		   <div class="layui-form-item">
+		    <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn" id="btn_ok">查询</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+		   </div>
+    </form>
+</blockquote>
+
+<table class="layui-hide" id="grid" lay-filter="grid"></table>
+<script type="text/html" id="toolBarDemo">
+    <div class="layui-btn-container">
+
+      
+    </div>
+</script>
+
+
+
+
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail">查看</a>  
+	 <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="down">改进清单</a>   
+</script>
+
+
+<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.config({
+        base: "/js/"
+    }).use(['form', 'layer', 'jquery', 'table', 'laydate'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.jquery;
+        var table = layui.table;
+        var laydate = layui.laydate;
+
+        laydate.render({
+            elem: '#txt_addTimeBegin'
+        });
+        laydate.render({
+            elem: '#txt_addTimeEnd'
+        });
+
+        table.render({
+            elem: '#grid'
+            , url: '/QsMainLog/GetAll'
+            , page: true
+            , toolbar: "#toolBarDemo"
+            , method: 'POST'
+            , limit: 10
+            , limits: [10, 20, 30]
+            , event: true
+            , loading: true
+            , id: 'grid'
+            , cols: [[
+                { checkbox: true, title: '序号' }
+			    , { width: 180, title: '查看',toolbar: '#barDemo' }
+                , { field: 'TemplateType', width: 150, title: '类型'}
+			    , { field: 'TotalCount', width: 80, title: '总分' }
+                , { field: 'MyCount', width:80, title: '得分' }
+				, { field: 'NotCount', width:120, title: '不适用分数' }
+			
+				, { field: 'PercentValue', width:80, title: '得分率' }
+				, { field: 'IsTuiJianStr', width:120, title: '是否推荐' }
+                , { field: 'ComapnyName', width: 300, title: '单位名称' }
+                , { field: 'DanZhaoName', width:180, title:'店招名'}
+             
+                , { field: 'BelongArea', width: 120, title: '所属商圈' }
+              
+                , { field: 'AddUserName', width: 110, title: '添加人' }
+                , { field: 'AddTimeStr', width: 180, title: '添加时间' }
+			    , { field: 'Address', width: 300, title: '地址' }
+
+            ]]
+            , where: {
+                type: $("#ddl_type").val(),
+                companyName: $("#txt_companyName").val(),
+                dianZhaoName: $("#txt_dianZhaoName").val(),
+                addUserName: $("#txt_addUserName").val(),
+                belongQu: $("#txt_belongQu").val(),
+                addTimeBegin: $("#txt_addTimeBegin").val(),
+			   addTimeEnd: $("#txt_addTimeEnd").val(),
+			      tuijian:$("#ddl_tuijian").val()
+            }
+
+        });
+
+
+        table.on('tool(grid)', function (obj) {
+            var data = obj.data;
+			var id=data.Id;
+			var  temp=data.TemplateType;
+			var url=GetUrl(temp)+"?Id="+id;
+
+			 if(obj.event === 'detail'){
+     window.open(url);
+    }
+	else if(obj.event === 'down')
+	{
+	    window.open("http://106.14.181.6/file.html?Id="+id);
+	}
+			
+          
+              
+            
+        })
+        //点击查询
+        $("#btn_ok").click(function () {
+
+            table.reload('grid', {
+                page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+                , where: {
+                   type: $("#ddl_type").val(),
+                companyName: $("#txt_companyName").val(),
+                dianZhaoName: $("#txt_dianZhaoName").val(),
+                addUserName: $("#txt_addUserName").val(),
+                belongQu: $("#txt_belongQu").val(),
+                addTimeBegin: $("#txt_addTimeBegin").val(),
+			   addTimeEnd: $("#txt_addTimeEnd").val(),
+			   tuijian:$("#ddl_tuijian").val()
+
+                }
+            })
+        });
+
+
+    })
+
+
+	 //返回跳转的url
+    function GetUrl(type) {
+      if (type == '适用于便利店') {
+
+        return 'http://106.14.181.6/Type1read.html';
+      }
+
+      if (type == '适用于小型餐饮单位') {
+
+        return 'http://106.14.181.6/Type2read.html';
+      }
+
+      if (type == '适用于中型饭店及以上') {
+
+        return 'http://106.14.181.6/Type3read.html';
+      }
+
+      if (type == '适用于标准超市') {
+
+        return 'http://106.14.181.6/Type4read.html';
+      }
+
+
+      if (type == '适用于大卖场') {
+
+        return 'http://106.14.181.6/Type5read.html';
+      }
+
+      if (type == '适用于单位食堂') {
+
+        return 'http://106.14.181.6/Type6read.html';
+      }
+
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+

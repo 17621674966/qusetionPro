@@ -137,7 +137,13 @@
                   html += " <p class='weui-media-box__desc' style='font-size:16px;color:red'>得分：" + element.MyCount + "</p>";
                   html += " <p class='weui-media-box__desc' style='font-size:16px;color:red'>不适用分数：" + element.NotCount + "</p>";
                   html += " <p class='weui-media-box__desc' style='font-size:16px'>调查时间：" + element.AddTimeStr + "</p>";
+
                   html += " </a>";
+
+                  html += " </br>";
+                  html += " <a  style='font-size:20px;color:blue;margin-top:10px;margin-bottom:10px' href='file.html?Id=" + element.Id + "'>生成改进建议</a>";
+                  html += " </br>";
+                  html += " </br>";
                   $("#loglist").append(html);
 
 
@@ -165,6 +171,8 @@
     function midofyPassword() {
       window.location.href = "modifyPassword.html";
     }
+
+
 
 
     //返回跳转的url

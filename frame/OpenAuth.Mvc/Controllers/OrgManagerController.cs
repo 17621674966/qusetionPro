@@ -3,7 +3,6 @@ using OpenAuth.App;
 using OpenAuth.Mvc.Models;
 using System;
 using System.Web.Mvc;
-using OpenAuth.Repository.Domain;
 
 namespace OpenAuth.Mvc.Controllers
 {
@@ -34,7 +33,7 @@ namespace OpenAuth.Mvc.Controllers
 
         //添加组织提交
         [HttpPost]
-        public string Add(Org org)
+        public string Add(OpenAuth.Repository.Domain.Org org)
         {
             try
             {
@@ -50,7 +49,7 @@ namespace OpenAuth.Mvc.Controllers
 
         //编辑
         [HttpPost]
-        public string Update(Org org)
+        public string Update(OpenAuth.Repository.Domain.Org org)
         {
             try
             {

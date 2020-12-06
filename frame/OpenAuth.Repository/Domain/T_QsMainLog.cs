@@ -71,5 +71,11 @@ namespace OpenAuth.Repository.Domain
 
         [NotMapped]
         public string  BuildTimeStr { get; set; }
+
+        [NotMapped]
+        public string IsTuiJianStr { get; set; }
+
+        [NotMapped]
+        public string Percent { get; set; }
     }
 }

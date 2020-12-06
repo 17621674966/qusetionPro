@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>生成改进清单</title>
+  <link href="Content/jquery-weui/dist/lib/weui.min.css" rel="stylesheet">
+  <link href="Content/jquery-weui/dist/demos/css/demos.css" rel="stylesheet">
+  <link href="Content/jquery-weui/dist/css/jquery-weui.css" rel="stylesheet">
+  <link href="Content/layui/css/layui.css" rel="stylesheet">
+  <link href="CSS/Base.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="demo/css/common.css"> -->
+  <link rel="stylesheet" href="demo/css/style.css">
+
+
+</head>
+<script src="Content/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="Content/jquery-weui/dist/lib/fastclick.js"></script>
+<script src="Content/jquery-weui/dist/js/jquery-weui.js"></script>
+<script src="Content/layui/layui.js"></script>
+<script>
+  layui.use(['form', 'layer'], function () {
+    var form = layui.form, layer = layui.layer
+    $(function () {
+
+      var Id = GetQueryString("Id");
+      $.ajax({
+        type: "post",
+        url: "http://localhost:7071/QsMainLog/DownLoad",
+        data: { mainGuid: Id },
+        async: true,
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded',
+        beforeSend: function () {
+          layer.load(); //上传loading
+        },
+        complete: function () {
+          layer.closeAll('loading');
+        },
+        success: function (data) {
+          if (data.success == true) {
+            $.toast("生成成功!");
+
+            window.location.href = data.path;
+          }
+
+          else { $.toptip("生成失败!"); }
+          document.appendChild("<h1>生成失败!</h1>");
+
+        },
+        error: function (jqXHR) {
+
+          layer.msg("请求服务器发生异常，请联系系统管理员或者稍后再试!");
+          return "";
+        }
+      });
+
+
+    })
+
+  })
+  function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+  }
+
+</script>
+
+</html>

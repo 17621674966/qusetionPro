@@ -2117,6 +2117,7 @@ color:white;background-color:blueviolet
 
     var mainGuid = "";
     var detailId = "";
+    var suggestList = new Object();
 
     //全局数组
     var arr1 = new Array();
@@ -4222,6 +4223,16 @@ color:white;background-color:blueviolet
       if (gaiJin.length > 0) {
         var html = "";
         for (var i = 0; i < gaiJin.length; i++) {
+
+          var miaoshuresult = "";
+          if (suggestList.data != null && suggestList.data != undefined && suggestList.data.length > 0) {
+            var tiao = gaiJin[i].tiaokuanhao;
+            var zhi = gaiJin[i].pingfenzhibiao;
+            miaoshuresult = suggestList.data.filter(x => x.TiaoKuan == tiao && x.ZhiBiao == zhi)[0].Suggest;
+
+
+
+          }
           html += "<div class='weui-cell' style='background-color:blue'> ";
           html += " <div class='weui-cell__hd' ><label class='weui-label' >序号</label></div>";
           html += "  <div class='weui-cell__bd'>";
@@ -5023,6 +5034,36 @@ color:white;background-color:blueviolet
 
           else { $.toptip(data.Message); }
 
+        },
+        error: function (jqXHR) {
+
+          layer.msg("请求服务器发生异常，请联系系统管理员或者稍后再试!");
+          return "";
+        }
+      });
+
+
+
+      //给建议赋值
+      $.ajax({
+        type: "post",
+        url: "http://localhost:7071/QsMainLog/GetSuggestList",
+        data: { mainGuid: mainGuid },
+        async: true,
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded',
+        beforeSend: function () {
+
+        },
+        complete: function () {
+
+        },
+        success: function (data) {
+          if (data.success = true) {
+            suggestList = data;
+          }
+          console.log(1234567);
+          console.log(suggestList);
         },
         error: function (jqXHR) {
 

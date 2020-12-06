@@ -103,6 +103,7 @@ layui.config({
         $.getJSON("/Login/Login"
             , data.field
             , function (data) {
+                console.log(data);
                 window.location.href = "/Home/Index";
                 if (data.Code == 200) {
                   

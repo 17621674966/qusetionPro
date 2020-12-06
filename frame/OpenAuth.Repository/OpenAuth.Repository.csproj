@@ -83,6 +83,7 @@
     <Compile Include="Domain\T_QsDetailLog2.cs" />
     <Compile Include="Domain\T_QsDetailLog1.cs" />
     <Compile Include="Domain\T_QsMainLog.cs" />
+    <Compile Include="Domain\T_QsSuggest.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Domain\UserExt.cs" />
     <Compile Include="Interface\IRepository.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Mapping\T_QsDetailLog2Map.cs" />
     <Compile Include="Mapping\T_QsDetailLog1Map.cs" />
     <Compile Include="Mapping\T_QsMainLogMap.cs" />
+    <Compile Include="Mapping\T_QsSuggestMap.cs" />
     <Compile Include="UnitWork.cs" />
     <Compile Include="BaseRepository.cs" />
     <Compile Include="Mapping\CategoryMap.cs" />

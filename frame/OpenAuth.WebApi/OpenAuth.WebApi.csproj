@@ -200,7 +200,7 @@
     <Content Include="Areas\SSO\Scripts\modernizr-2.6.2.js" />
     <Content Include="Areas\SSO\Scripts\respond.js" />
     <Content Include="Areas\SSO\Scripts\respond.min.js" />
-    <Content Include="test.txt" />
+    <Content Include="test.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
