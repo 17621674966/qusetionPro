@@ -1299,6 +1299,7 @@
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Template\改进建议.xlsx" />
     <Content Include="Views\QsMainLog\GetAllIndex.cshtml" />
+    <Content Include="Views\QsMainLog\GetTongJi.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

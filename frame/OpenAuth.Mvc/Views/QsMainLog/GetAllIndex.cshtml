@@ -25,12 +25,12 @@
                 <div class="layui-input-inline">
                     <select id="ddl_type" name="ddl_type">
                         <option value="">所有类型</option>
-                        <option value="便利店">便利店</option>
-                        <option value="小型餐饮单位">小型餐饮单位</option>
-                        <option value="中型饭店及以上">中型饭店及以上</option>
-					    <option value="标准超市">标准超市</option>
-                        <option value="大卖场">大卖场</option>
-                        <option value="单位食堂">单位食堂</option>
+                        <option value="适用于便利店">适用于便利店</option>
+                        <option value="适用于标准超市">适用于标准超市</option>
+                        <option value="适用于大卖场">适用于大卖场</option>
+					    <option value="适用于单位食堂">适用于单位食堂</option>
+                        <option value="适用于小型餐饮单位">适用于小型餐饮单位</option>
+                        <option value="适用于中型饭店及以上">适用于中型饭店及以上</option>
                     </select>
                 </div>
             </div>
@@ -53,7 +53,17 @@
                
 			    <label class="layui-form-label">添加人</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="txt_addUserName" id="txt_addUserName" autocomplete="off" placeholder="" class="layui-input">
+				 <select id="txt_addUserName" name="txt_addUserName">
+                        <option value="">所有</option>
+                        <option value="鲍俊竹">鲍俊竹</option>
+                        <option value="陈敖">陈敖</option>
+                        <option value="陈鸣">陈鸣</option>
+					    <option value="李晓宏">李晓宏</option>
+                        <option value="张建奇">张建奇</option>
+                        <option value="周静茹">周静茹</option>
+                    </select>
+
+                   
                 </div>
                
             </div>
@@ -62,7 +72,29 @@
                
 			    <label class="layui-form-label">区</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="txt_belongQu" id="txt_belongQu" autocomplete="off" placeholder="" class="layui-input">
+				  <select id="txt_belongQu" name="txt_belongQu">
+                        <option value="">所有类型</option>
+                        <option value="黄浦区">黄浦区</option>
+                        <option value="徐汇区">徐汇区</option>
+                        <option value="长宁区">长宁区</option>
+					    <option value="静安区">静安区</option>
+                        <option value="普陀区">普陀区</option>
+                        <option value="虹口区">虹口区</option>
+
+
+						<option value="杨浦区">杨浦区</option>
+                        <option value="闵行区">闵行区</option>
+                        <option value="宝山区">宝山区</option>
+                        <option value="嘉定区">嘉定区</option>
+					    <option value="浦东新区">浦东新区</option>
+                        <option value="金山区">金山区</option>
+                        <option value="松江区">松江区</option>
+
+						 <option value="青浦区">青浦区</option>
+						 <option value="奉贤区">奉贤区</option>
+						 <option value="崇明区">崇明区</option>
+                    </select>
+                   
                 </div>
                
             </div>

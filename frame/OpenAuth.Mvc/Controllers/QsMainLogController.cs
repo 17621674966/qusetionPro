@@ -5,6 +5,7 @@ using NPOI.SS.UserModel;
 using NPOI.SS.Util;
 using NPOI.XSSF.UserModel;
 using OpenAuth.App;
+using OpenAuth.Repository;
 using OpenAuth.Repository.Domain;
 using System;
 using System.Collections.Generic;
@@ -67,7 +68,7 @@ namespace OpenAuth.Mvc.Controllers
                 suggest = JsonConvert.DeserializeObject<List<T_QsSuggest>>(qsSuggest);
             }
             else {
-                suggest.Add(new T_QsSuggest() { AddTime=DateTime.Now});
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
             }
 
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
@@ -178,7 +179,7 @@ namespace OpenAuth.Mvc.Controllers
             }
             else
             {
-                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now });
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
             }
 
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
@@ -289,7 +290,7 @@ namespace OpenAuth.Mvc.Controllers
             }
             else
             {
-                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now });
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
             }
 
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
@@ -399,7 +400,7 @@ namespace OpenAuth.Mvc.Controllers
             }
             else
             {
-                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now });
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
             }
 
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
@@ -509,7 +510,7 @@ namespace OpenAuth.Mvc.Controllers
             }
             else
             {
-                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now });
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
             }
 
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
@@ -619,7 +620,7 @@ namespace OpenAuth.Mvc.Controllers
             }
             else
             {
-                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now });
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
             }
 
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
@@ -737,13 +738,22 @@ namespace OpenAuth.Mvc.Controllers
         /// </summary>
         /// <param name="mainLog"></param>
         /// <returns></returns>
-        public JsonResult EditMessage(string mainLog, string detailLog, string userId)
+        public JsonResult EditMessage(string mainLog, string detailLog, string userId, string qsSuggest)
         {
 
             HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
             var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
             var detail = JsonConvert.DeserializeObject<T_QsDetailLog1>(detailLog);
-
+            //描述项
+            var suggest = new List<T_QsSuggest>();
+            if (!string.IsNullOrEmpty(qsSuggest))
+            {
+                suggest = JsonConvert.DeserializeObject<List<T_QsSuggest>>(qsSuggest);
+            }
+            else
+            {
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
+            }
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
             if (user == null)
             {
@@ -791,6 +801,35 @@ namespace OpenAuth.Mvc.Controllers
                     AppDetail.Repository.Update(detail);
 
 
+                  
+                     QsSuggestApp.Repository.ExecuteSql("delete from  T_QsSuggest  where   MainId='"+ main .Id+ "'");
+                      
+                    
+
+
+                    //描述
+                    foreach (var item in suggest)
+                    {
+                        item.MainId = main.Id;
+                        item.Id = Guid.NewGuid().ToString();
+                        item.AddTime = DateTime.Now;
+                        item.AddUserName = user.Name;
+                        item.AddUserGuid = user.Id;
+                        item.TemplateType = main.TemplateType;
+                        item.ComapnyName = main.ComapnyName;
+                        item.DanZhaoName = main.DanZhaoName;
+                        item.Address = main.Address;
+                        item.BusinessPro = main.BusinessPro;
+                        item.LegalName = main.LegalName;
+                        item.SecutyName = main.SecutyName;
+                        item.LinkTel = main.LinkTel;
+                        item.BelongArea = main.BelongArea;
+                        item.CompanyType = main.CompanyType;
+
+                    }
+
+                    QsSuggestApp.Repository.BatchAdd(suggest.ToArray());
+
                     train.Complete();
 
                 }
@@ -823,13 +862,22 @@ namespace OpenAuth.Mvc.Controllers
         /// </summary>
         /// <param name="mainLog"></param>
         /// <returns></returns>
-        public JsonResult EditMessage2(string mainLog, string detailLog, string userId)
+        public JsonResult EditMessage2(string mainLog, string detailLog, string userId, string qsSuggest)
         {
 
             HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
             var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
             var detail = JsonConvert.DeserializeObject<T_QsDetailLog2>(detailLog);
-
+            //描述项
+            var suggest = new List<T_QsSuggest>();
+            if (!string.IsNullOrEmpty(qsSuggest))
+            {
+                suggest = JsonConvert.DeserializeObject<List<T_QsSuggest>>(qsSuggest);
+            }
+            else
+            {
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
+            }
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
             if (user == null)
             {
@@ -875,6 +923,34 @@ namespace OpenAuth.Mvc.Controllers
                     AppDetail2.Repository.Update(detail);
 
 
+                    //建议
+                    QsSuggestApp.Repository.ExecuteSql("delete from  T_QsSuggest  where   MainId='" + main.Id + "'");
+
+
+                    //描述
+                    foreach (var item in suggest)
+                    {
+                        item.MainId = main.Id;
+                        item.Id = Guid.NewGuid().ToString();
+                        item.AddTime = DateTime.Now;
+                        item.AddUserName = user.Name;
+                        item.AddUserGuid = user.Id;
+                        item.TemplateType = main.TemplateType;
+                        item.ComapnyName = main.ComapnyName;
+                        item.DanZhaoName = main.DanZhaoName;
+                        item.Address = main.Address;
+                        item.BusinessPro = main.BusinessPro;
+                        item.LegalName = main.LegalName;
+                        item.SecutyName = main.SecutyName;
+                        item.LinkTel = main.LinkTel;
+                        item.BelongArea = main.BelongArea;
+                        item.CompanyType = main.CompanyType;
+
+                    }
+
+                    QsSuggestApp.Repository.BatchAdd(suggest.ToArray());
+
+
                     train.Complete();
 
                 }
@@ -907,13 +983,22 @@ namespace OpenAuth.Mvc.Controllers
         /// </summary>
         /// <param name="mainLog"></param>
         /// <returns></returns>
-        public JsonResult EditMessage3(string mainLog, string detailLog, string userId)
+        public JsonResult EditMessage3(string mainLog, string detailLog, string userId, string qsSuggest)
         {
 
             HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
             var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
             var detail = JsonConvert.DeserializeObject<T_QsDetailLog3>(detailLog);
-
+            //描述项
+            var suggest = new List<T_QsSuggest>();
+            if (!string.IsNullOrEmpty(qsSuggest))
+            {
+                suggest = JsonConvert.DeserializeObject<List<T_QsSuggest>>(qsSuggest);
+            }
+            else
+            {
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
+            }
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
             if (user == null)
             {
@@ -960,6 +1045,34 @@ namespace OpenAuth.Mvc.Controllers
                     AppDetail3.Repository.Update(detail);
 
 
+                    //建议
+                    QsSuggestApp.Repository.ExecuteSql("delete from  T_QsSuggest  where   MainId='" + main.Id + "'");
+
+
+                    //描述
+                    foreach (var item in suggest)
+                    {
+                        item.MainId = main.Id;
+                        item.Id = Guid.NewGuid().ToString();
+                        item.AddTime = DateTime.Now;
+                        item.AddUserName = user.Name;
+                        item.AddUserGuid = user.Id;
+                        item.TemplateType = main.TemplateType;
+                        item.ComapnyName = main.ComapnyName;
+                        item.DanZhaoName = main.DanZhaoName;
+                        item.Address = main.Address;
+                        item.BusinessPro = main.BusinessPro;
+                        item.LegalName = main.LegalName;
+                        item.SecutyName = main.SecutyName;
+                        item.LinkTel = main.LinkTel;
+                        item.BelongArea = main.BelongArea;
+                        item.CompanyType = main.CompanyType;
+
+                    }
+
+                    QsSuggestApp.Repository.BatchAdd(suggest.ToArray());
+
+
                     train.Complete();
 
                 }
@@ -991,13 +1104,22 @@ namespace OpenAuth.Mvc.Controllers
         /// </summary>
         /// <param name="mainLog"></param>
         /// <returns></returns>
-        public JsonResult EditMessage4(string mainLog, string detailLog, string userId)
+        public JsonResult EditMessage4(string mainLog, string detailLog, string userId, string qsSuggest)
         {
 
             HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
             var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
             var detail = JsonConvert.DeserializeObject<T_QsDetailLog4>(detailLog);
-
+            //描述项
+            var suggest = new List<T_QsSuggest>();
+            if (!string.IsNullOrEmpty(qsSuggest))
+            {
+                suggest = JsonConvert.DeserializeObject<List<T_QsSuggest>>(qsSuggest);
+            }
+            else
+            {
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
+            }
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
             if (user == null)
             {
@@ -1043,6 +1165,33 @@ namespace OpenAuth.Mvc.Controllers
                     AppDetail4.Repository.Update(detail);
 
 
+                    //建议
+                    QsSuggestApp.Repository.ExecuteSql("delete from  T_QsSuggest  where   MainId='" + main.Id + "'");
+
+
+                    //描述
+                    foreach (var item in suggest)
+                    {
+                        item.MainId = main.Id;
+                        item.Id = Guid.NewGuid().ToString();
+                        item.AddTime = DateTime.Now;
+                        item.AddUserName = user.Name;
+                        item.AddUserGuid = user.Id;
+                        item.TemplateType = main.TemplateType;
+                        item.ComapnyName = main.ComapnyName;
+                        item.DanZhaoName = main.DanZhaoName;
+                        item.Address = main.Address;
+                        item.BusinessPro = main.BusinessPro;
+                        item.LegalName = main.LegalName;
+                        item.SecutyName = main.SecutyName;
+                        item.LinkTel = main.LinkTel;
+                        item.BelongArea = main.BelongArea;
+                        item.CompanyType = main.CompanyType;
+
+                    }
+
+                    QsSuggestApp.Repository.BatchAdd(suggest.ToArray());
+
                     train.Complete();
 
                 }
@@ -1074,13 +1223,22 @@ namespace OpenAuth.Mvc.Controllers
         /// </summary>
         /// <param name="mainLog"></param>
         /// <returns></returns>
-        public JsonResult EditMessage5(string mainLog, string detailLog, string userId)
+        public JsonResult EditMessage5(string mainLog, string detailLog, string userId, string qsSuggest)
         {
 
             HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
             var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
             var detail = JsonConvert.DeserializeObject<T_QsDetailLog5>(detailLog);
-
+            //描述项
+            var suggest = new List<T_QsSuggest>();
+            if (!string.IsNullOrEmpty(qsSuggest))
+            {
+                suggest = JsonConvert.DeserializeObject<List<T_QsSuggest>>(qsSuggest);
+            }
+            else
+            {
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
+            }
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
             if (user == null)
             {
@@ -1126,6 +1284,33 @@ namespace OpenAuth.Mvc.Controllers
                     AppDetail5.Repository.Update(detail);
 
 
+                    //建议
+                    QsSuggestApp.Repository.ExecuteSql("delete from  T_QsSuggest  where   MainId='" + main.Id + "'");
+
+
+                    //描述
+                    foreach (var item in suggest)
+                    {
+                        item.MainId = main.Id;
+                        item.Id = Guid.NewGuid().ToString();
+                        item.AddTime = DateTime.Now;
+                        item.AddUserName = user.Name;
+                        item.AddUserGuid = user.Id;
+                        item.TemplateType = main.TemplateType;
+                        item.ComapnyName = main.ComapnyName;
+                        item.DanZhaoName = main.DanZhaoName;
+                        item.Address = main.Address;
+                        item.BusinessPro = main.BusinessPro;
+                        item.LegalName = main.LegalName;
+                        item.SecutyName = main.SecutyName;
+                        item.LinkTel = main.LinkTel;
+                        item.BelongArea = main.BelongArea;
+                        item.CompanyType = main.CompanyType;
+
+                    }
+
+                    QsSuggestApp.Repository.BatchAdd(suggest.ToArray());
+
                     train.Complete();
 
                 }
@@ -1157,13 +1342,22 @@ namespace OpenAuth.Mvc.Controllers
         /// </summary>
         /// <param name="mainLog"></param>
         /// <returns></returns>
-        public JsonResult EditMessage6(string mainLog, string detailLog, string userId)
+        public JsonResult EditMessage6(string mainLog, string detailLog, string userId, string qsSuggest)
         {
 
             HttpContext.Response.AppendHeader("Access-Control-Allow-Origin", "*");
             var main = JsonConvert.DeserializeObject<T_QsMainLog>(mainLog);
             var detail = JsonConvert.DeserializeObject<T_QsDetailLog6>(detailLog);
-
+            //描述项
+            var suggest = new List<T_QsSuggest>();
+            if (!string.IsNullOrEmpty(qsSuggest))
+            {
+                suggest = JsonConvert.DeserializeObject<List<T_QsSuggest>>(qsSuggest);
+            }
+            else
+            {
+                suggest.Add(new T_QsSuggest() { AddTime = DateTime.Now, Suggest = "" });
+            }
             var user = AppLog.Repository.FindSingle(x => x.Id.Equals(userId));
             if (user == null)
             {
@@ -1207,6 +1401,33 @@ namespace OpenAuth.Mvc.Controllers
 
                     AppDetail6.Repository.Update(detail);
 
+
+                    //建议
+                    QsSuggestApp.Repository.ExecuteSql("delete from  T_QsSuggest  where   MainId='" + main.Id + "'");
+
+
+                    //描述
+                    foreach (var item in suggest)
+                    {
+                        item.MainId = main.Id;
+                        item.Id = Guid.NewGuid().ToString();
+                        item.AddTime = DateTime.Now;
+                        item.AddUserName = user.Name;
+                        item.AddUserGuid = user.Id;
+                        item.TemplateType = main.TemplateType;
+                        item.ComapnyName = main.ComapnyName;
+                        item.DanZhaoName = main.DanZhaoName;
+                        item.Address = main.Address;
+                        item.BusinessPro = main.BusinessPro;
+                        item.LegalName = main.LegalName;
+                        item.SecutyName = main.SecutyName;
+                        item.LinkTel = main.LinkTel;
+                        item.BelongArea = main.BelongArea;
+                        item.CompanyType = main.CompanyType;
+
+                    }
+
+                    QsSuggestApp.Repository.BatchAdd(suggest.ToArray());
 
                     train.Complete();
 
@@ -1444,7 +1665,7 @@ namespace OpenAuth.Mvc.Controllers
             row2.GetCell(2).SetCellValue(mian?.Address ?? "");
 
             //店    招
-            row2.GetCell(2).SetCellValue(mian?.DanZhaoName ?? "");
+            row2.GetCell(4).SetCellValue(mian?.DanZhaoName ?? "");
 
             #endregion
 
@@ -1457,7 +1678,7 @@ namespace OpenAuth.Mvc.Controllers
             row3.GetCell(2).SetCellValue(mian?.BelongArea ?? "");
 
             //经营项目      
-            row3.GetCell(2).SetCellValue(mian?.BusinessPro ?? "");
+            row3.GetCell(4).SetCellValue(mian?.BusinessPro ?? "");
 
 
             #endregion
@@ -1472,7 +1693,7 @@ namespace OpenAuth.Mvc.Controllers
             row4.GetCell(2).SetCellValue(mian?.CompanyType ?? "");
 
             //不适用分数      
-            row4.GetCell(2).SetCellValue(mian?.NotCount.ToString() ?? "");
+            row4.GetCell(4).SetCellValue(mian?.NotCount.ToString() ?? "");
 
 
             #endregion
@@ -1480,31 +1701,31 @@ namespace OpenAuth.Mvc.Controllers
 
             #region  第五行
 
-            IRow row5 = sheet.GetRow(4); //获取第五行
+            IRow row5 = sheet.GetRow(5); //获取第五行
 
             //得分率
             var mayCount = mian?.MyCount ?? 0;
             var totalCount = mian?.TotalCount ?? 0;
             var notCount = mian?.NotCount ?? 0;
 
-            var percent = 0.00M;
-            if (totalCount == 0)
-            {
+            var percent = mian.PercentValue;
+            //if (totalCount == 0)
+            //{
 
-            }
-            else {
-                percent = (decimal.Round(mayCount / (totalCount - notCount) * 100, 4) * 100);
-            }
-            row5.GetCell(2).SetCellValue(percent.ToString());
+            //}
+            //else {
+            //    percent = (decimal.Round(mayCount / (totalCount - notCount) * 100, 4) * 100);
+            //}
+            row5.GetCell(2).SetCellValue(mian.PercentValue.ToString());
 
             //结     论      
 
             if (percent >= 0.85M)
             {
-                row5.GetCell(2).SetCellValue("推荐");
+                row5.GetCell(4).SetCellValue("推荐");
             }
             else {
-                row5.GetCell(2).SetCellValue("不推荐");
+                row5.GetCell(4).SetCellValue("不推荐");
             }
 
 
@@ -1521,7 +1742,7 @@ namespace OpenAuth.Mvc.Controllers
             row6.GetCell(2).SetCellValue(mian?.AddUserName ?? "");
 
             //整改时间    
-            row6.GetCell(2).SetCellValue("一周");
+            row6.GetCell(4).SetCellValue("一周");
 
 
             #endregion
@@ -1554,11 +1775,16 @@ namespace OpenAuth.Mvc.Controllers
                     notesStyle.WrapText = true;//设置换行这个要先设置
 
                     rownew.GetCell(2).SetCellValue(suggest[i].MiaoShu + "\n");
-                    rownew.GetCell(2).CellStyle = notesStyle;//设置换行
+                    rownew.GetCell(2).CellStyle = style;//设置换行
 
 
-                    //合并单元格
-                    rownew.GetCell(3).SetCellValue(suggest[i].Suggest + "\n");
+                        rownew.GetCell(3).SetCellValue(suggest[i].Suggest + "\n");
+                        rownew.GetCell(3).CellStyle = style;//设置换行
+
+
+
+                        //合并单元格
+                       
                     CellRangeAddress region = new CellRangeAddress(8 + i, 8 + i, 3, 4);
                     sheet.AddMergedRegion(region);
 
@@ -1817,8 +2043,122 @@ namespace OpenAuth.Mvc.Controllers
            
         }
 
-        #endregion 
+        #endregion
 
 
-    }
+
+        #region  统计页面
+        /// <summary>
+        /// 统计页面
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetTongJi() {
+            return View();
+        }
+        #endregion
+
+
+        /// <summary>
+        /// 统计数据
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="belongQu"></param>
+        /// <returns></returns>
+        public JsonResult GetAllTongJi(string belongQu)
+        {
+            string whereStr = "  where 1=1 and PercentValue>=0.85   and  AddUserName<>'test'  ";
+            string whereStr1 = "  where 1=1 and PercentValue<0.85   and  AddUserName<>'test'  ";
+            if (!string.IsNullOrEmpty(belongQu))
+            {
+                whereStr += "  and   BelongArea  like '"+ belongQu + "%'";
+                whereStr1 += "  and   BelongArea  like '" + belongQu + "%'";
+            }
+            string sql = " select  count(Id) as   PassCount  from  T_QsMainLog ";
+            string sql1 = " select  count(Id) as   NotPassCount  from  T_QsMainLog ";
+
+            List<TongJi> list = new List<TongJi>();
+
+            //适用于便利店
+              OpenAuthDBContext Context = new OpenAuthDBContext();
+              int PassCount = Context.Database.SqlQuery<int>(sql+ whereStr+ "  and TemplateType='适用于便利店' ").FirstOrDefault();
+              int NotPassCount = Context.Database.SqlQuery<int>(sql1 + whereStr1 + "  and TemplateType='适用于便利店' ").FirstOrDefault();
+
+            //适用于标准超市
+            int PassCount1 = Context.Database.SqlQuery<int>(sql + whereStr + "  and TemplateType='适用于标准超市' ").FirstOrDefault();
+            int NotPassCount1 = Context.Database.SqlQuery<int>(sql1 + whereStr1 + "  and TemplateType='适用于标准超市' ").FirstOrDefault();
+
+            //适用于大卖场
+            int PassCount2 = Context.Database.SqlQuery<int>(sql + whereStr + "  and TemplateType='适用于大卖场' ").FirstOrDefault();
+            int NotPassCount2 = Context.Database.SqlQuery<int>(sql1 + whereStr1 + "  and TemplateType='适用于大卖场' ").FirstOrDefault();
+
+            //适用于单位食堂
+            int PassCount3 = Context.Database.SqlQuery<int>(sql + whereStr + "  and TemplateType='适用于单位食堂' ").FirstOrDefault();
+            int NotPassCount3 = Context.Database.SqlQuery<int>(sql1 + whereStr1 + "  and TemplateType='适用于单位食堂' ").FirstOrDefault();
+
+            //适用于小型餐饮单位
+            int PassCount4 = Context.Database.SqlQuery<int>(sql + whereStr + "  and TemplateType='适用于小型餐饮单位' ").FirstOrDefault();
+            int NotPassCount4 = Context.Database.SqlQuery<int>(sql1 + whereStr1 + "  and TemplateType='适用于小型餐饮单位' ").FirstOrDefault();
+
+            //适用于中型饭店及以上
+            int PassCount5 = Context.Database.SqlQuery<int>(sql + whereStr + "  and TemplateType='适用于中型饭店及以上' ").FirstOrDefault();
+            int NotPassCount5 = Context.Database.SqlQuery<int>(sql1 + whereStr1 + "  and TemplateType='适用于中型饭店及以上' ").FirstOrDefault();
+
+
+            list.Add(new TongJi()
+            {
+                Type= "适用于便利店",
+                PassCount= PassCount,
+                NotPassCount= NotPassCount
+            });
+
+            list.Add(new TongJi()
+            {
+                Type = "适用于标准超市",
+                PassCount = PassCount1,
+                NotPassCount = NotPassCount1
+            });
+
+
+            list.Add(new TongJi()
+            {
+                Type = "适用于大卖场",
+                PassCount = PassCount2,
+                NotPassCount = NotPassCount2
+            });
+
+
+            list.Add(new TongJi()
+            {
+                Type = "适用于单位食堂",
+                PassCount = PassCount3,
+                NotPassCount = NotPassCount3
+            });
+
+
+            list.Add(new TongJi()
+            {
+                Type = "适用于小型餐饮单位",
+                PassCount = PassCount4,
+                NotPassCount = NotPassCount4
+            });
+
+
+            list.Add(new TongJi()
+            {
+                Type = "适用于中型饭店及以上",
+                PassCount = PassCount5,
+                NotPassCount = NotPassCount5
+            });
+
+            return Json(new { code = 0, msg = "查询成功", count = 6, data = list });
+        }
+
+
+        public class TongJi { 
+           public string Type { get; set; }
+           public int PassCount { get; set; }
+
+          public int NotPassCount { get; set; }
+        }
+    } 
 }

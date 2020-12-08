@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "GetTongJi";
+}
+  <link rel="stylesheet" href="/demo/css/style.css">
+<!--上面的查询按钮-->
+<blockquote class="layui-elem-quote layui-text">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+          
+
+           
+			<div class="layui-inline">
+               
+			    <label class="layui-form-label">区</label>
+                <div class="layui-input-inline">
+                    <select id="txt_belongQu" name="txt_belongQu">
+                        <option value="">所有</option>
+                        <option value="黄浦区">黄浦区</option>
+                        <option value="徐汇区">徐汇区</option>
+                        <option value="长宁区">长宁区</option>
+					    <option value="静安区">静安区</option>
+                        <option value="普陀区">普陀区</option>
+                        <option value="虹口区">虹口区</option>
+
+
+						<option value="杨浦区">杨浦区</option>
+                        <option value="闵行区">闵行区</option>
+                        <option value="宝山区">宝山区</option>
+                        <option value="嘉定区">嘉定区</option>
+					    <option value="浦东新区">浦东新区</option>
+                        <option value="金山区">金山区</option>
+                        <option value="松江区">松江区</option>
+
+						 <option value="青浦区">青浦区</option>
+						 <option value="奉贤区">奉贤区</option>
+						 <option value="崇明区">崇明区</option>
+                    </select>
+                </div>
+               
+            </div>
+			
+                </div>
+               
+            </div>
+
+			 <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn" id="btn_ok">查询</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</blockquote>
+
+<table class="layui-hide" id="grid" lay-filter="grid"></table>
+
+<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript" src="/demo/js/jquery-1.11.3.js"></script>
+
+<script type="text/javascript" src="/demo/js/jquery-citys.js"></script>
+<script type="text/javascript">
+    layui.config({
+        base: "/js/"
+    }).use(['form', 'layer', 'jquery', 'table', 'laydate'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.jquery;
+        var table = layui.table;
+        var laydate = layui.laydate;
+       
+
+	   //js
+
+	    table.render({
+            elem: '#grid'
+            , url: '/QsMainLog/GetAllTongJi'
+            , page: true
+            , toolbar: "#toolBarDemo"
+            , method: 'POST'
+            , limit: 10
+            , limits: [10, 20, 30]
+            , event: true
+            , loading: true
+            , id: 'grid'
+            , cols: [[
+                { checkbox: true, title: '序号' }
+			  
+                , { field: 'Type', width: 250, title: '类型'}
+			    , { field: 'PassCount', width: 80, title: '推荐' }
+                , { field: 'NotPassCount', width:80, title: '不推荐' }
+				
+			
+				
+
+            ]]
+            , where: {
+                              
+                belongQu: $("#txt_belongQu").val()
+               
+            }
+
+        });
+
+
+		 //点击查询
+        $("#btn_ok").click(function () {
+
+            table.reload('grid', {
+                page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+                , where: {
+                                  
+                belongQu: $("#txt_belongQu").val()
+
+                }
+            })
+        });
+
+		})
+
+
+		
+
+		</script>
+

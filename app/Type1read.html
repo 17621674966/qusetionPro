@@ -4782,7 +4782,7 @@ color:white;background-color:blueviolet
       //保存
       $.ajax({
         type: "post",
-        url: "http://106.14.181.6:8086/QsMainLog/EditMessage",
+        url: "http://localhost:7071/QsMainLog/EditMessage",
         data: { mainLog: JSON.stringify(obj1), detailLog: JSON.stringify(obj2), userId: window.localStorage.getItem("userId") },
         async: true,
         dataType: "json",
